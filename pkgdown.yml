@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   releases: releases.html
-last_built: 2021-01-28T06:45Z
+last_built: 2021-01-28T06:47Z
 urls:
   reference: https://rmagno.eu/quincunx/reference
   article: https://rmagno.eu/quincunx/articles
