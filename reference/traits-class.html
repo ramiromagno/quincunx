@@ -149,34 +149,57 @@ the <code>traits</code> table --- main table. All tables have the column
     
 
 <dl>
-<dt><code>traits</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>pgs_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>traits</code></dt><dd><p>A table of traits. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>trait</dt><dd><p>Trait name.</p></dd>
+<dt>description</dt><dd><p>Detailed description of the trait from EFO.</p></dd>
+<dt>url</dt><dd><p>External link to the EFO entry.</p></dd></dl></p></dd>
 
-<dt><code>child_pgs_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>pgs_ids</code></dt><dd><p>A table of associated polygenic score identifiers. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd></dl></p></dd>
 
-<dt><code>trait_categories</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>child_pgs_ids</code></dt><dd><p>A table of polygenic score identifiers associated with
+  the child traits. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>child_pgs_id</dt><dd><p>Polygenic Score (PGS) identifiers associated with child traits.</p></dd></dl></p></dd>
 
-<dt><code>trait_synonyms</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>trait_categories</code></dt><dd><p>A table of associated trait categories. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>trait_category</dt><dd><p>Trait category name.</p></dd></dl></p></dd>
 
-<dt><code>trait_mapped_terms</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>trait_synonyms</code></dt><dd><p>A table of associated trait synonyms. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>trait_synonyms</dt><dd><p>Trait synonyms.</p></dd></dl></p></dd>
+
+<dt><code>trait_mapped_terms</code></dt><dd><p>A table of associated external references,
+  identifiers or other terms. Columns:
+<dl>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>parent_efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier of
+the parent trait.</p></dd>
+<dt>is_child</dt><dd><p>Is this trait obtained because it is a child of other trait?</p></dd>
+<dt>trait_mapped_terms</dt><dd><p>Trait mapped terms.</p></dd></dl></p></dd>
 
 </dl>
 

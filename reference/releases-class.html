@@ -49,11 +49,9 @@
   
 
 <meta property="og:title" content="An S4 class to represent a set of PGS Catalog Releases — releases-class" />
-<meta property="og:description" content="The releases object consists of four slots, each a table
-(tibble), that combined form a relational database of a
-subset of PGS Catalog releases. Each score is an observation (row) in
-the scores table --- main table. All tables have the column
-date as primary key." />
+<meta property="og:description" content="The releases object consists of four tables (slots) that combined form a
+relational database of a subset of PGS Catalog releases. Each release is an
+observation (row) in the releases table (first table)." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -135,11 +133,9 @@ date as primary key." />
     </div>
 
     <div class="ref-description">
-    <p>The releases object consists of four slots, each a table
-(<code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>), that combined form a relational database of a
-subset of PGS Catalog releases. Each score is an observation (row) in
-the <code>scores</code> table --- main table. All tables have the column
-<code>date</code> as primary key.</p>
+    <p>The releases object consists of four tables (slots) that combined form a
+relational database of a subset of PGS Catalog releases. Each release is an
+observation (row) in the <code>releases</code> table (first table).</p>
     </div>
 
 
@@ -149,24 +145,30 @@ the <code>scores</code> table --- main table. All tables have the column
     
 
 <dl>
-<dt><code>releases</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>pgs_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>releases</code></dt><dd><p>A table of PGS Catalog releases. Each release (row) is
+  uniquely identified by the release date (<code>date</code>). Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>date</dt><dd><p>Release date.</p></dd>
+<dt>n_pgs</dt><dd><p>Number of newly released Polygenic Scores.</p></dd>
+<dt>n_ppm</dt><dd><p>Number of newly released PGS Performance Metrics.</p></dd>
+<dt>n_pgp</dt><dd><p>Number of newly released PGS Publications.</p></dd></dl></p></dd>
 
-<dt><code>ppm_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>pgs_ids</code></dt><dd><p>A table of released Polygenic Scores (PGS) identifiers.
+  Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>date</dt><dd><p>Release date.</p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier. Example: <code>"PGS000001"</code>.</p></dd></dl></p></dd>
 
-<dt><code>pgp_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>ppm_ids</code></dt><dd><p>A table of the released PGS Performance Metrics identifiers.
+  Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>date</dt><dd><p>Release date.</p></dd>
+<dt>ppm_id</dt><dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd></dl></p></dd>
+
+<dt><code>pgp_ids</code></dt><dd><p>A table of the released PGS Publication identifiers. Columns:
+<dl>
+<dt>date</dt><dd><p>Release date.</p></dd>
+<dt>pgp_id</dt><dd><p>PGS Publication identifier. Example: <code>"PGP000001"</code>.</p></dd></dl></p></dd>
 
 </dl>
 

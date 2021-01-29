@@ -49,11 +49,10 @@
   
 
 <meta property="og:title" content="An S4 class to represent a set of PGS Catalog Publications — publications-class" />
-<meta property="og:description" content="The publications object consists of two slots, each a table
-(tibble), that combined form a relational database of a
-subset of PGS Catalog Publications. Each publication is an observation (row) in
-the publications table --- main table. All tables have the column
-pgp_id as primary key." />
+<meta property="og:description" content="The publications object consists of two tables (slots), each a table that
+combined form a relational database of a subset of PGS Catalog Publications.
+Each publication is an observation (row) in the publications table
+(first table)." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -135,11 +134,10 @@ pgp_id as primary key." />
     </div>
 
     <div class="ref-description">
-    <p>The publications object consists of two slots, each a table
-(<code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>), that combined form a relational database of a
-subset of PGS Catalog Publications. Each publication is an observation (row) in
-the <code>publications</code> table --- main table. All tables have the column
-<code>pgp_id</code> as primary key.</p>
+    <p>The publications object consists of two tables (slots), each a table that
+combined form a relational database of a subset of PGS Catalog Publications.
+Each publication is an observation (row) in the <code>publications</code> table
+(first table).</p>
     </div>
 
 
@@ -149,14 +147,28 @@ the <code>publications</code> table --- main table. All tables have the column
     
 
 <dl>
-<dt><code>publications</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>pgs_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>publications</code></dt><dd><p>A table of publications. Each publication (row) is
+  uniquely identified by the <code>pgp_id</code> column. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgp_id</dt><dd><p>PGS Publication identifier. Example: <code>"PGP000001"</code>.</p></dd>
+<dt>pubmed_id</dt><dd><p><a href='https://en.wikipedia.org/wiki/PubMed'>PubMed</a>
+identifier. Example: <code>"25855707"</code>.</p></dd>
+<dt>publication_date</dt><dd><p>Publication date. Example: <code>"2020-09-28"</code>. Note
+that the class of <code>publication_date</code> is <code><a href='https://rdrr.io/r/base/Dates.html'>Date</a></code>.</p></dd>
+<dt>publication</dt><dd><p>Abbreviated name of the journal. Example: <code>"Am J Hum
+Genet"</code>.</p></dd>
+<dt>title</dt><dd><p>Publication title.</p></dd>
+<dt>author_fullname</dt><dd><p>First author of the publication. Example:
+<code>'Mavaddat N'</code>.</p></dd>
+<dt>doi</dt><dd><p>Digital Object Identifier (DOI). This variable is also curated to
+allow unpublished work (e.g. pre-prints) to be added to the catalog. Example:
+<code>"10.1093/jnci/djv036"</code>.</p></dd>
+<dt>authors</dt><dd><p>Concatenated list of all the publication authors.</p></dd></dl></p></dd>
+
+<dt><code>pgs_ids</code></dt><dd><p>A table of publication and associated PGS identifiers. Columns:
+<dl>
+<dt>pgp_id</dt><dd><p>PGS Publication identifier. Example: <code>"PGP000001"</code>.</p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd></dl></p></dd>
 
 </dl>
 

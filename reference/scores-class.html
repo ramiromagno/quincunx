@@ -49,11 +49,9 @@
   
 
 <meta property="og:title" content="An S4 class to represent a set of PGS Catalog Polygenic Scores — scores-class" />
-<meta property="og:description" content="The scores object consists of eleven slots, each a table
-(tibble), that combined form a relational database of a
-subset of PGS Catalog polygenic scores. Each score is an observation (row) in
-the scores table --- main table. All tables have the column
-pgs_id as primary key." />
+<meta property="og:description" content="The scores object consists of six tables (slots) that combined form a
+relational database of a subset of PGS Catalog polygenic scores. Each score
+is an observation (row) in the scores table (the first table)." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -135,11 +133,9 @@ pgs_id as primary key." />
     </div>
 
     <div class="ref-description">
-    <p>The scores object consists of eleven slots, each a table
-(<code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>), that combined form a relational database of a
-subset of PGS Catalog polygenic scores. Each score is an observation (row) in
-the <code>scores</code> table --- main table. All tables have the column
-<code>pgs_id</code> as primary key.</p>
+    <p>The scores object consists of six tables (slots) that combined form a
+relational database of a subset of PGS Catalog polygenic scores. Each score
+is an observation (row) in the <code>scores</code> table (the first table).</p>
     </div>
 
 
@@ -149,34 +145,126 @@ the <code>scores</code> table --- main table. All tables have the column
     
 
 <dl>
-<dt><code>scores</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>publications</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>scores</code></dt><dd><p>A table of polygenic scores. Each polygenic score (row) is
+  uniquely identified by the <code>pgs_id</code> column. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier. Example: <code>"PGS000001"</code>.</p></dd>
+<dt>pgs_name</dt><dd><p>This may be the name that the authors describe the PGS with
+in the source publication, or a name that a curator of the PGS Catalog has
+assigned to identify the score during the curation process (before a PGS
+identifier has been given). Example: <code>PRS77_BC</code>.</p></dd>
+<dt>scoring_file</dt><dd><p>URL to the scoring file on the PGS FTP server. Example:
+<code>"http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000001/ScoringFiles/PGS000001.txt.gz"</code>.</p></dd>
+<dt>matches_publication</dt><dd><p>Indicate if the PGS data matches the published
+polygenic score (<code>TRUE</code>). If not (<code>FALSE</code>), the authors have
+provided an alternative polygenic for the Catalog and some other data, such
+as performance metrics, may differ from the publication.</p></dd>
+<dt>reported_trait</dt><dd><p>The author-reported trait that the PGS has been
+developed to predict. Example: <code>"Breast Cancer"</code>.</p></dd>
+<dt>trait_additional_description</dt><dd><p>Any additional description not captured
+in the other columns. Example: <code>"Femoral neck BMD (g/cm2)"</code>.</p></dd>
+<dt>pgs_method_name</dt><dd><p>The name or description of the method or computational
+algorithm used to develop the PGS.</p></dd>
+<dt>pgs_method_params</dt><dd><p>A description of the relevant inputs and parameters
+relevant to the PGS development method/process.</p></dd>
+<dt>n_variants</dt><dd><p>Number of variants used to calculate the PGS.</p></dd>
+<dt>n_variants_interactions</dt><dd><p>Number of higher-order variant interactions
+included in the PGS.</p></dd>
+<dt>assembly</dt><dd><p>The version of the genome assembly that the variants present
+in the PGS are associated with. Example: <code>GRCh37</code>.</p></dd>
+<dt>license</dt><dd><p>The PGS Catalog distributes its data according to EBI’s
+standard Terms of Use. Some PGS have specific terms, licenses, or
+restrictions (e.g. non-commercial use) that we highlight in this field, if
+known.</p></dd></dl></p></dd>
 
-<dt><code>samples</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>publications</code></dt><dd><p>A table of publications. Each publication (row) is
+  uniquely identified by the <code>pgp_id</code> column. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
+<dt>pgp_id</dt><dd><p>PGS Publication identifier. Example: <code>"PGP000001"</code>.</p></dd>
+<dt>pubmed_id</dt><dd><p><a href='https://en.wikipedia.org/wiki/PubMed'>PubMed</a>
+identifier. Example: <code>"25855707"</code>.</p></dd>
+<dt>publication_date</dt><dd><p>Publication date. Example: <code>"2020-09-28"</code>. Note
+that the class of <code>publication_date</code> is <code><a href='https://rdrr.io/r/base/Dates.html'>Date</a></code>.</p></dd>
+<dt>publication</dt><dd><p>Abbreviated name of the journal. Example: <code>"Am J Hum
+Genet"</code>.</p></dd>
+<dt>title</dt><dd><p>Publication title.</p></dd>
+<dt>author_fullname</dt><dd><p>First author of the publication. Example:
+<code>'Mavaddat N'</code>.</p></dd>
+<dt>doi</dt><dd><p>Digital Object Identifier (DOI). This variable is also curated to
+allow unpublished work (e.g. pre-prints) to be added to the catalog. Example:
+<code>"10.1093/jnci/djv036"</code>.</p></dd></dl></p></dd>
 
-<dt><code>demographics</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>samples</code></dt><dd><p>A table of samples. Each sample (row) is uniquely identified by
+  the combination of values from the columns: <code>pgs_id</code>, <code>stage</code> and
+  <code>sample_id</code>. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic score identifier. An identifier that starts with
+<code>'PGS'</code> and is followed by six digits, e.g. <code>'PGS000001'</code>.</p></dd>
+<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
+<dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate key to identify each sample.</p></dd>
+<dt>sample_size</dt><dd><p>Number of individuals included in the sample.</p></dd>
+<dt>sample_cases</dt><dd><p>Number of cases.</p></dd>
+<dt>sample_controls</dt><dd><p>Number of controls.</p></dd>
+<dt>sample_percent_male</dt><dd><p>Percentage of male participants.</p></dd>
+<dt>phenotype_description</dt><dd><p>Detailed phenotype description.</p></dd>
+<dt>ancestry</dt><dd><p>Author reported ancestry is mapped to the best matching
+ancestry category from the NHGRI-EBI GWAS Catalog framework (see
+<code><a href='ancestry_categories.html'>ancestry_categories</a></code>) for possible values.</p></dd>
+<dt>ancestry_description</dt><dd><p>A more detailed description of sample ancestry
+that usually matches the most specific description described by the authors
+(e.g. French, Chinese).</p></dd>
+<dt>ancestry_country</dt><dd><p>Author reported countries of recruitment (if available).</p></dd>
+<dt>ancestry_additional_description</dt><dd><p>Any additional description not
+captured in the other columns (e.g. founder or genetically isolated
+populations, or further description of admixed samples).</p></dd>
+<dt>study_id</dt><dd><p>Associated GWAS Catalog study accession identifier, e.g.,
+<code>"GCST002735"</code>.</p></dd>
+<dt>pubmed_id</dt><dd><p><a href='https://en.wikipedia.org/wiki/PubMed'>PubMed</a>
+identifier.</p></dd>
+<dt>cohorts_additional_description</dt><dd><p>Any additional description about the
+samples (e.g. sub-cohort information).</p></dd></dl></p></dd>
 
-<dt><code>cohorts</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>demographics</code></dt><dd><p>A table of sample demographics' variables. Each
+  demographics' variable (row) is uniquely identified by the combination of
+  values from the columns: <code>pgs_id</code>, <code>stage</code>, <code>sample_id</code> and
+  <code>variable</code>. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
+<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
+<dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate identifier to
+identify each sample.</p></dd>
+<dt>variable</dt><dd><p>Demographics variable. Following columns report about the
+indicated variable.</p></dd>
+<dt>estimate_type</dt><dd><p>Type of statistical estimate for variable.</p></dd>
+<dt>estimate</dt><dd><p>The variable's statistical value.</p></dd>
+<dt>unit</dt><dd><p>Unit of the variable.</p></dd>
+<dt>variability_type</dt><dd><p>Measure of statistical dispersion for variable, e.g.
+standard error (se) or standard deviation (sd).</p></dd>
+<dt>variability</dt><dd><p>The value of the measure of dispersion.</p></dd>
+<dt>interval_type</dt><dd><p>Type of statistical interval for variable: range, iqr
+(interquartile), ci (confidence interval).</p></dd>
+<dt>interval_lower</dt><dd><p>Interval lower bound.</p></dd>
+<dt>interval_upper</dt><dd><p>Interval upper bound.</p></dd></dl></p></dd>
 
-<dt><code>traits</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>cohorts</code></dt><dd><p>A table of cohorts. Each cohort (row) is uniquely identified by
+  the combination of values from the columns: <code>pgs_id</code>, <code>stage</code>,
+  <code>sample_id</code> and <code>cohort_symbol</code>. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
+<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
+<dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate key to identify each sample.</p></dd>
+<dt>cohort_symbol</dt><dd><p>Cohort symbol.</p></dd>
+<dt>cohort_name</dt><dd><p>Cohort full name.</p></dd></dl></p></dd>
+
+<dt><code>traits</code></dt><dd><p>A table of EFO traits. Each trait (row) is uniquely identified
+  by the combination of the columns <code>pgs_id</code> and <code>efo_id</code>. Columns:
+<dl>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>trait</dt><dd><p>Trait name.</p></dd>
+<dt>description</dt><dd><p>Detailed description of the trait from EFO.</p></dd>
+<dt>url</dt><dd><p>External link to the EFO entry.</p></dd></dl></p></dd>
 
 </dl>
 

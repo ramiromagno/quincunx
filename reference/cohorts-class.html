@@ -49,10 +49,9 @@
   
 
 <meta property="og:title" content="An S4 class to represent a set of cohorts — cohorts-class" />
-<meta property="og:description" content="The cohorts object consists of two slots, each a table
-(tibble), that combined form a relational database of a
-subset of PGS Catalog cohorts. Each cohort is an observation (row) in
-the cohorts table --- main table." />
+<meta property="og:description" content="The cohorts object consists of two tables (slots) that combined form a
+relational database of a subset of cohorts. Each cohort is an observation
+(row) in the cohorts table (first table)." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -134,10 +133,9 @@ the cohorts table --- main table." />
     </div>
 
     <div class="ref-description">
-    <p>The cohorts object consists of two slots, each a table
-(<code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>), that combined form a relational database of a
-subset of PGS Catalog cohorts. Each cohort is an observation (row) in
-the <code>cohorts</code> table --- main table.</p>
+    <p>The cohorts object consists of two tables (slots) that combined form a
+relational database of a subset of cohorts. Each cohort is an observation
+(row) in the <code>cohorts</code> table (first table).</p>
     </div>
 
 
@@ -147,14 +145,19 @@ the <code>cohorts</code> table --- main table.</p>
     
 
 <dl>
-<dt><code>cohorts</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>pgs_ids</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>cohorts</code></dt><dd><p>A table of cohorts. Each cohort (row) is identified by its
+  <code>cohort_symbol</code>. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>cohort_symbol</dt><dd><p>Cohort symbol. Example: <code>"CECILE"</code>.</p></dd>
+<dt>cohort_name</dt><dd><p>Cohort full name. Example: <code>"CECILE Breast Cancer
+Study"</code>.</p></dd></dl></p></dd>
+
+<dt><code>pgs_ids</code></dt><dd><p>A table of cohorts and their associated polygenic scores
+  identifiers. Columns:
+<dl>
+<dt>cohort_symbol</dt><dd><p>Cohort symbol. Example: <code>"CECILE"</code>.</p></dd>
+<dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
+<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd></dl></p></dd>
 
 </dl>
 

@@ -49,10 +49,9 @@
   
 
 <meta property="og:title" content="An S4 class to represent a set of PGS Catalog Trait Categories — trait_categories-class" />
-<meta property="og:description" content="The trait_categories object consists of two slots, each a table
-(tibble), that combined form a relational database of a
-subset of PGS Catalog trait categories. Each score is an observation (row) in
-the trait_categories table --- main table." />
+<meta property="og:description" content="The trait_categories object consists of two tables (slots) that combined form
+a relational database of a subset of PGS Catalog trait categories. Each score
+is an observation (row) in the trait_categories table (first table)." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -134,10 +133,9 @@ the trait_categories table --- main table." />
     </div>
 
     <div class="ref-description">
-    <p>The trait_categories object consists of two slots, each a table
-(<code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code>), that combined form a relational database of a
-subset of PGS Catalog trait categories. Each score is an observation (row) in
-the <code>trait_categories</code> table --- main table.</p>
+    <p>The trait_categories object consists of two tables (slots) that combined form
+a relational database of a subset of PGS Catalog trait categories. Each score
+is an observation (row) in the <code>trait_categories</code> table (first table).</p>
     </div>
 
 
@@ -147,14 +145,17 @@ the <code>trait_categories</code> table --- main table.</p>
     
 
 <dl>
-<dt><code>trait_categories</code></dt><dd><p><dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
-
-<dt><code>traits</code></dt><dd><p>A <code><a href='https://tibble.tidyverse.org/reference/tibble.html'>tibble</a></code> listing TODO. Columns:
+<dt><code>trait_categories</code></dt><dd><p>A table of trait categories. Columns:
 <dl>
-<dt>TODO</dt><dd><p>TODO</p></dd>
-<dt>TODO</dt><dd><p>TODO</p></dd></dl></p></dd>
+<dt>trait_category</dt><dd><p>Trait category name.</p></dd></dl></p></dd>
+
+<dt><code>traits</code></dt><dd><p>A table of associated traits. Columns:
+<dl>
+<dt>trait_category</dt><dd><p>Trait category name.</p></dd>
+<dt>efo_id</dt><dd><p>An <a href='https://www.ebi.ac.uk/efo/'>EFO</a> identifier.</p></dd>
+<dt>trait</dt><dd><p>Trait name.</p></dd>
+<dt>description</dt><dd><p>Detailed description of the trait from EFO.</p></dd>
+<dt>url</dt><dd><p>External link to the EFO entry.</p></dd></dl></p></dd>
 
 </dl>
 
