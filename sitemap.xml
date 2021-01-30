@@ -103,6 +103,9 @@
     <loc>https://rmagno.eu/quincunx/reference/publications.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/read_scoring_file.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/releases-class.html</loc>
   </url>
   <url>
@@ -182,6 +185,12 @@
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/user_agent_id.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/identifiers.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/pgs-scoring-file.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/articles/releases.html</loc>
