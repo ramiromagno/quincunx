@@ -3,9 +3,10 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   identifiers: identifiers.html
+  learning-about-a-pgs: learning-about-a-pgs.html
   pgs-scoring-file: pgs-scoring-file.html
   releases: releases.html
-last_built: 2021-01-30T15:56Z
+last_built: 2021-02-01T19:02Z
 urls:
   reference: https://rmagno.eu/quincunx/reference
   article: https://rmagno.eu/quincunx/articles
