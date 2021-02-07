@@ -205,13 +205,13 @@ allow unpublished work (e.g. pre-prints) to be added to the catalog. Example:
 <code>"10.1093/jnci/djv036"</code>.</p></dd></dl></p></dd>
 
 <dt><code>samples</code></dt><dd><p>A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: <code>pgs_id</code>, <code>stage</code> and
+  the combination of values from the columns: <code>pgs_id</code> and
   <code>sample_id</code>. Columns:
 <dl>
 <dt>pgs_id</dt><dd><p>Polygenic score identifier. An identifier that starts with
 <code>'PGS'</code> and is followed by six digits, e.g. <code>'PGS000001'</code>.</p></dd>
-<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
 <dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate key to identify each sample.</p></dd>
+<dt>stage</dt><dd><p>Sample stage: either <code>"discovery"</code> or <code>"training"</code>.</p></dd>
 <dt>sample_size</dt><dd><p>Number of individuals included in the sample.</p></dd>
 <dt>sample_cases</dt><dd><p>Number of cases.</p></dd>
 <dt>sample_controls</dt><dd><p>Number of controls.</p></dd>
@@ -236,11 +236,10 @@ samples (e.g. sub-cohort information).</p></dd></dl></p></dd>
 
 <dt><code>demographics</code></dt><dd><p>A table of sample demographics' variables. Each
   demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: <code>pgs_id</code>, <code>stage</code>, <code>sample_id</code> and
+  values from the columns: <code>pgs_id</code>, <code>sample_id</code> and
   <code>variable</code>. Columns:
 <dl>
 <dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
-<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
 <dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate identifier to
 identify each sample.</p></dd>
 <dt>variable</dt><dd><p>Demographics variable. Following columns report about the
@@ -257,11 +256,10 @@ standard error (se) or standard deviation (sd).</p></dd>
 <dt>interval_upper</dt><dd><p>Interval upper bound.</p></dd></dl></p></dd>
 
 <dt><code>cohorts</code></dt><dd><p>A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: <code>pgs_id</code>, <code>stage</code>,
-  <code>sample_id</code> and <code>cohort_symbol</code>. Columns:
+  the combination of values from the columns: <code>pgs_id</code>, <code>sample_id</code>
+  and <code>cohort_symbol</code>. Columns:
 <dl>
 <dt>pgs_id</dt><dd><p>Polygenic Score (PGS) identifier.</p></dd>
-<dt>stage</dt><dd><p>PGS lifecycle stage: gwas, development or evaluation.</p></dd>
 <dt>sample_id</dt><dd><p>Sample identifier. This is a surrogate key to identify each sample.</p></dd>
 <dt>cohort_symbol</dt><dd><p>Cohort symbol.</p></dd>
 <dt>cohort_name</dt><dd><p>Cohort full name.</p></dd></dl></p></dd>

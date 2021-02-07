@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Map GWAS studies identifiers to PGS identifiers — study_to_pgs • quincunx</title>
+<title>Map PGS identifiers to PSS identifiers — pgs_to_pss • quincunx</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,8 +48,8 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Map GWAS studies identifiers to PGS identifiers — study_to_pgs" />
-<meta property="og:description" content="Map GWAS studies identifiers to PGS identifiers." />
+<meta property="og:title" content="Map PGS identifiers to PSS identifiers — pgs_to_pss" />
+<meta property="og:description" content="Map PGS identifiers to PSS identifiers." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -134,24 +134,36 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Map GWAS studies identifiers to PGS identifiers</h1>
+    <h1>Map PGS identifiers to PSS identifiers</h1>
     
-    <div class="hidden name"><code>study_to_pgs.Rd</code></div>
+    <div class="hidden name"><code>pgs_to_pss.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Map GWAS studies identifiers to PGS identifiers.</p>
+    <p>Map PGS identifiers to PSS identifiers.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>study_to_pgs</span><span class='op'>(</span><span class='va'>study_id</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span>, warnings <span class='op'>=</span> <span class='cn'>TRUE</span>, progress_bar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>pgs_to_pss</span><span class='op'>(</span>
+  pgs_id <span class='op'>=</span> <span class='cn'>NULL</span>,
+  interactive <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  verbose <span class='op'>=</span> <span class='cn'>FALSE</span>,
+  warnings <span class='op'>=</span> <span class='cn'>TRUE</span>,
+  progress_bar <span class='op'>=</span> <span class='cn'>TRUE</span>
+<span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>study_id</th>
-      <td><p>A character vector of GWAS Catalog study accession
-identifiers, e.g., "GCST001937".</p></td>
+      <th>pgs_id</th>
+      <td><p>A character vector of PGS identifiers,
+e.g., "PGS000001". If <code>NULL</code> then returns results for all PGS
+identifiers in the Catalog.</p></td>
+    </tr>
+    <tr>
+      <th>interactive</th>
+      <td><p>A logical. If all scores are requested, whether to ask
+interactively if we really want to proceed.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
@@ -172,38 +184,25 @@ performed.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame of two columns: <code>study_id</code> and <code>pgs_id</code>.</p>
+    <p>A data frame of two columns: <code>pgs_id</code> and <code>pss_id</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>study_to_pgs</span><span class='op'>(</span><span class='st'>'GCST001937'</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 14 x 2</span><span>
-#&gt;    study_id   pgs_id   
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span> GCST001937 PGS000001
-#&gt; </span><span style='color: #555555;'> 2</span><span> GCST001937 PGS000002
-#&gt; </span><span style='color: #555555;'> 3</span><span> GCST001937 PGS000003
-#&gt; </span><span style='color: #555555;'> 4</span><span> GCST001937 PGS000028
-#&gt; </span><span style='color: #555555;'> 5</span><span> GCST001937 PGS000045
-#&gt; </span><span style='color: #555555;'> 6</span><span> GCST001937 PGS000046
-#&gt; </span><span style='color: #555555;'> 7</span><span> GCST001937 PGS000047
-#&gt; </span><span style='color: #555555;'> 8</span><span> GCST001937 PGS000051
-#&gt; </span><span style='color: #555555;'> 9</span><span> GCST001937 PGS000072
-#&gt; </span><span style='color: #555555;'>10</span><span> GCST001937 PGS000153
-#&gt; </span><span style='color: #555555;'>11</span><span> GCST001937 PGS000485
-#&gt; </span><span style='color: #555555;'>12</span><span> GCST001937 PGS000486
-#&gt; </span><span style='color: #555555;'>13</span><span> GCST001937 PGS000487
-#&gt; </span><span style='color: #555555;'>14</span><span> GCST001937 PGS000488</div><div class='input'>
-<span class='fu'>study_to_pgs</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'GCST000998'</span>, <span class='st'>'GCST000338'</span><span class='op'>)</span><span class='op'>)</span>
-</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 7 x 2</span><span>
-#&gt;   study_id   pgs_id   
-#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>      </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'>1</span><span> GCST000998 PGS000010
-#&gt; </span><span style='color: #555555;'>2</span><span> GCST000998 PGS000011
-#&gt; </span><span style='color: #555555;'>3</span><span> GCST000998 PGS000200
-#&gt; </span><span style='color: #555555;'>4</span><span> GCST000998 PGS000349
-#&gt; </span><span style='color: #555555;'>5</span><span> GCST000338 PGS000011
-#&gt; </span><span style='color: #555555;'>6</span><span> GCST000338 PGS000059
-#&gt; </span><span style='color: #555555;'>7</span><span> GCST000338 PGS000200</div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>pgs_to_pss</span><span class='op'>(</span><span class='st'>'PGS000001'</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 6 x 2</span><span>
+#&gt;   pgs_id    pss_id   
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'>1</span><span> PGS000001 PSS000001
+#&gt; </span><span style='color: #555555;'>2</span><span> PGS000001 PSS000004
+#&gt; </span><span style='color: #555555;'>3</span><span> PGS000001 PSS000070
+#&gt; </span><span style='color: #555555;'>4</span><span> PGS000001 PSS000071
+#&gt; </span><span style='color: #555555;'>5</span><span> PGS000001 PSS000484
+#&gt; </span><span style='color: #555555;'>6</span><span> PGS000001 PSS000486</div><div class='input'>
+<span class='fu'>pgs_to_pss</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'PGS000017'</span>, <span class='st'>'PGS000042'</span><span class='op'>)</span><span class='op'>)</span>
+</div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 2 x 2</span><span>
+#&gt;   pgs_id    pss_id   
+#&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'>1</span><span> PGS000017 PSS000016
+#&gt; </span><span style='color: #555555;'>2</span><span> PGS000042 PSS000065</div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

@@ -16,6 +16,12 @@
     <loc>https://rmagno.eu/quincunx/reference/cohorts.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/collect_pgs_ids.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/collect_samples.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/contains_question_mark.html</loc>
   </url>
   <url>
@@ -91,10 +97,25 @@
     <loc>https://rmagno.eu/quincunx/reference/performance_metrics.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgp_to_pgs.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/pgs_server.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgs_to_pgp.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgs_to_pss.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgs_to_study.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/pipe.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pss_to_pgs.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/publications-class.html</loc>
@@ -185,6 +206,9 @@
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/user_agent_id.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/write_xlsx.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/articles/identifiers.html</loc>

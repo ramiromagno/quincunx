@@ -114,6 +114,11 @@
 <p>To check if we are fortunate enough to have the polygenic risk scores for breast cancer (<a href="https://doi.org/10.1016/j.ajhg.2018.11.002">Mavaddat et al. (2018)</a>) in the PGS Catalog, we start by loading the quincunx package and by searching for this publication in the PGS Catalog. To do this we will use the function <code><a href="../reference/get_publications.html">get_publications()</a></code> and start by searching by the first author’s last name, i.e. “Mavaddat”:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">quincunx</span><span class="op">)</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt; Attaching package: 'quincunx'</span>
+<span class="co">#&gt; The following object is masked from 'package:dplyr':</span>
+<span class="co">#&gt; </span>
+<span class="co">#&gt;     n</span>
 
 <span class="va">pub_by_mavaddat</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_publications.html">get_publications</a></span><span class="op">(</span>author <span class="op">=</span> <span class="st">'Mavaddat'</span><span class="op">)</span> <span class="co"># Not case sensitive,</span>
                                                          <span class="co"># so "mavaddat" would</span>
@@ -157,15 +162,24 @@
 <span class="co">#&gt; # … with 1 more variable: authors &lt;chr&gt;</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Slot "pgs_ids":</span>
-<span class="co">#&gt; # A tibble: 6 x 2</span>
-<span class="co">#&gt;   pgp_id    pgs_id   </span>
-<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;    </span>
-<span class="co">#&gt; 1 PGP000002 PGS000004</span>
-<span class="co">#&gt; 2 PGP000002 PGS000005</span>
-<span class="co">#&gt; 3 PGP000002 PGS000006</span>
-<span class="co">#&gt; 4 PGP000002 PGS000007</span>
-<span class="co">#&gt; 5 PGP000002 PGS000008</span>
-<span class="co">#&gt; 6 PGP000002 PGS000009</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 15 x 3</span>
+<span class="co">#&gt;    pgp_id    pgs_id    stage      </span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 PGP000002 PGS000004 development</span>
+<span class="co">#&gt;  2 PGP000002 PGS000005 development</span>
+<span class="co">#&gt;  3 PGP000002 PGS000006 development</span>
+<span class="co">#&gt;  4 PGP000002 PGS000007 development</span>
+<span class="co">#&gt;  5 PGP000002 PGS000008 development</span>
+<span class="co">#&gt;  6 PGP000002 PGS000009 development</span>
+<span class="co">#&gt;  7 PGP000002 PGS000001 evaluation </span>
+<span class="co">#&gt;  8 PGP000002 PGS000002 evaluation </span>
+<span class="co">#&gt;  9 PGP000002 PGS000003 evaluation </span>
+<span class="co">#&gt; 10 PGP000002 PGS000004 evaluation </span>
+<span class="co">#&gt; 11 PGP000002 PGS000005 evaluation </span>
+<span class="co">#&gt; 12 PGP000002 PGS000006 evaluation </span>
+<span class="co">#&gt; 13 PGP000002 PGS000007 evaluation </span>
+<span class="co">#&gt; 14 PGP000002 PGS000008 evaluation </span>
+<span class="co">#&gt; 15 PGP000002 PGS000009 evaluation</span></code></pre></div>
 <p>We see now that the <code>publications</code> table contains one entry only, and that the PGS Catalog identifier assigned to this publication is PGP000002:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018</span><span class="op">@</span><span class="va">publications</span><span class="op">$</span><span class="va">pgp_id</span>
@@ -187,15 +201,24 @@
 <span class="co">#&gt; # … with 1 more variable: authors &lt;chr&gt;</span>
 <span class="co">#&gt; </span>
 <span class="co">#&gt; Slot "pgs_ids":</span>
-<span class="co">#&gt; # A tibble: 6 x 2</span>
-<span class="co">#&gt;   pgp_id    pgs_id   </span>
-<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;    </span>
-<span class="co">#&gt; 1 PGP000002 PGS000004</span>
-<span class="co">#&gt; 2 PGP000002 PGS000005</span>
-<span class="co">#&gt; 3 PGP000002 PGS000006</span>
-<span class="co">#&gt; 4 PGP000002 PGS000007</span>
-<span class="co">#&gt; 5 PGP000002 PGS000008</span>
-<span class="co">#&gt; 6 PGP000002 PGS000009</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 15 x 3</span>
+<span class="co">#&gt;    pgp_id    pgs_id    stage      </span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 PGP000002 PGS000004 development</span>
+<span class="co">#&gt;  2 PGP000002 PGS000005 development</span>
+<span class="co">#&gt;  3 PGP000002 PGS000006 development</span>
+<span class="co">#&gt;  4 PGP000002 PGS000007 development</span>
+<span class="co">#&gt;  5 PGP000002 PGS000008 development</span>
+<span class="co">#&gt;  6 PGP000002 PGS000009 development</span>
+<span class="co">#&gt;  7 PGP000002 PGS000001 evaluation </span>
+<span class="co">#&gt;  8 PGP000002 PGS000002 evaluation </span>
+<span class="co">#&gt;  9 PGP000002 PGS000003 evaluation </span>
+<span class="co">#&gt; 10 PGP000002 PGS000004 evaluation </span>
+<span class="co">#&gt; 11 PGP000002 PGS000005 evaluation </span>
+<span class="co">#&gt; 12 PGP000002 PGS000006 evaluation </span>
+<span class="co">#&gt; 13 PGP000002 PGS000007 evaluation </span>
+<span class="co">#&gt; 14 PGP000002 PGS000008 evaluation </span>
+<span class="co">#&gt; 15 PGP000002 PGS000009 evaluation</span></code></pre></div>
 </div>
 </div>
 <div id="from-publication-to-polygenic-risk-scores" class="section level2">
@@ -205,16 +228,25 @@
 <p>To get all PGS identifiers associated with Mavaddat’s publication we turn to the second table <code>pgs_ids</code> that maps publication identifiers (PGP) to PGS identifiers:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span>
-<span class="co">#&gt; # A tibble: 6 x 2</span>
-<span class="co">#&gt;   pgp_id    pgs_id   </span>
-<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;    </span>
-<span class="co">#&gt; 1 PGP000002 PGS000004</span>
-<span class="co">#&gt; 2 PGP000002 PGS000005</span>
-<span class="co">#&gt; 3 PGP000002 PGS000006</span>
-<span class="co">#&gt; 4 PGP000002 PGS000007</span>
-<span class="co">#&gt; 5 PGP000002 PGS000008</span>
-<span class="co">#&gt; 6 PGP000002 PGS000009</span></code></pre></div>
-<p>There are 6 scores. To retrieve information about them, we use the quincunx function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
+<span class="co">#&gt; # A tibble: 15 x 3</span>
+<span class="co">#&gt;    pgp_id    pgs_id    stage      </span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;chr&gt;      </span>
+<span class="co">#&gt;  1 PGP000002 PGS000004 development</span>
+<span class="co">#&gt;  2 PGP000002 PGS000005 development</span>
+<span class="co">#&gt;  3 PGP000002 PGS000006 development</span>
+<span class="co">#&gt;  4 PGP000002 PGS000007 development</span>
+<span class="co">#&gt;  5 PGP000002 PGS000008 development</span>
+<span class="co">#&gt;  6 PGP000002 PGS000009 development</span>
+<span class="co">#&gt;  7 PGP000002 PGS000001 evaluation </span>
+<span class="co">#&gt;  8 PGP000002 PGS000002 evaluation </span>
+<span class="co">#&gt;  9 PGP000002 PGS000003 evaluation </span>
+<span class="co">#&gt; 10 PGP000002 PGS000004 evaluation </span>
+<span class="co">#&gt; 11 PGP000002 PGS000005 evaluation </span>
+<span class="co">#&gt; 12 PGP000002 PGS000006 evaluation </span>
+<span class="co">#&gt; 13 PGP000002 PGS000007 evaluation </span>
+<span class="co">#&gt; 14 PGP000002 PGS000008 evaluation </span>
+<span class="co">#&gt; 15 PGP000002 PGS000009 evaluation</span></code></pre></div>
+<p>There are 15 scores. To retrieve information about them, we use the quincunx function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_scores.html">get_scores</a></span><span class="op">(</span>pgs_id <span class="op">=</span> <span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span><span class="op">$</span><span class="va">pgs_id</span><span class="op">)</span>
 <span class="fu">slotNames</span><span class="op">(</span><span class="va">mavaddat2018_scores</span><span class="op">)</span>
@@ -231,69 +263,113 @@
 <p>The S4 scores object <code>mavaddat2018_scores</code> starts with a table named <code>scores</code> that lists each score in one row each. All scores are identified by the PGS identifier (column <code>pgs_id</code>). In addition, scores can have a name (column <code>pgs_name</code>). This may be the name that the authors describe the PGS with in the source publication, or a name that a curator of the PGS Catalog has assigned to identify the score during the curation process.</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">scores</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'pgs_id'</span>, <span class="st">'pgs_name'</span><span class="op">)</span><span class="op">]</span>
-<span class="co">#&gt; # A tibble: 6 x 2</span>
-<span class="co">#&gt;   pgs_id    pgs_name     </span>
-<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;        </span>
-<span class="co">#&gt; 1 PGS000004 PRS313_BC    </span>
-<span class="co">#&gt; 2 PGS000005 PRS313_ERpos </span>
-<span class="co">#&gt; 3 PGS000006 PRS313_ERneg </span>
-<span class="co">#&gt; 4 PGS000007 PRS3820_BC   </span>
-<span class="co">#&gt; 5 PGS000008 PRS3820_ERpos</span>
-<span class="co">#&gt; 6 PGS000009 PRS3820_ERneg</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 15 x 2</span>
+<span class="co">#&gt;    pgs_id    pgs_name     </span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;        </span>
+<span class="co">#&gt;  1 PGS000004 PRS313_BC    </span>
+<span class="co">#&gt;  2 PGS000005 PRS313_ERpos </span>
+<span class="co">#&gt;  3 PGS000006 PRS313_ERneg </span>
+<span class="co">#&gt;  4 PGS000007 PRS3820_BC   </span>
+<span class="co">#&gt;  5 PGS000008 PRS3820_ERpos</span>
+<span class="co">#&gt;  6 PGS000009 PRS3820_ERneg</span>
+<span class="co">#&gt;  7 PGS000001 PRS77_BC     </span>
+<span class="co">#&gt;  8 PGS000002 PRS77_ERpos  </span>
+<span class="co">#&gt;  9 PGS000003 PRS77_ERneg  </span>
+<span class="co">#&gt; 10 PGS000004 PRS313_BC    </span>
+<span class="co">#&gt; 11 PGS000005 PRS313_ERpos </span>
+<span class="co">#&gt; 12 PGS000006 PRS313_ERneg </span>
+<span class="co">#&gt; 13 PGS000007 PRS3820_BC   </span>
+<span class="co">#&gt; 14 PGS000008 PRS3820_ERpos</span>
+<span class="co">#&gt; 15 PGS000009 PRS3820_ERneg</span></code></pre></div>
 <p>From the PGS names we can already see the presence of the suffixes “ERpos” and “ERneg”, suggestive of specialised polygenic risk scores for estrogen-receptor positive and negative samples.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">scores</span><span class="op">[</span><span class="st">'scoring_file'</span><span class="op">]</span>
-<span class="co">#&gt; # A tibble: 6 x 1</span>
-<span class="co">#&gt;   scoring_file                                                                  </span>
-<span class="co">#&gt;   &lt;chr&gt;                                                                         </span>
-<span class="co">#&gt; 1 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000004/ScoringFiles/PGS…</span>
-<span class="co">#&gt; 2 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000005/ScoringFiles/PGS…</span>
-<span class="co">#&gt; 3 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000006/ScoringFiles/PGS…</span>
-<span class="co">#&gt; 4 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000007/ScoringFiles/PGS…</span>
-<span class="co">#&gt; 5 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000008/ScoringFiles/PGS…</span>
-<span class="co">#&gt; 6 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000009/ScoringFiles/PGS…</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 15 x 1</span>
+<span class="co">#&gt;    scoring_file                                                                 </span>
+<span class="co">#&gt;    &lt;chr&gt;                                                                        </span>
+<span class="co">#&gt;  1 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000004/ScoringFiles/PG…</span>
+<span class="co">#&gt;  2 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000005/ScoringFiles/PG…</span>
+<span class="co">#&gt;  3 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000006/ScoringFiles/PG…</span>
+<span class="co">#&gt;  4 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000007/ScoringFiles/PG…</span>
+<span class="co">#&gt;  5 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000008/ScoringFiles/PG…</span>
+<span class="co">#&gt;  6 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000009/ScoringFiles/PG…</span>
+<span class="co">#&gt;  7 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000001/ScoringFiles/PG…</span>
+<span class="co">#&gt;  8 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000002/ScoringFiles/PG…</span>
+<span class="co">#&gt;  9 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000003/ScoringFiles/PG…</span>
+<span class="co">#&gt; 10 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000004/ScoringFiles/PG…</span>
+<span class="co">#&gt; 11 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000005/ScoringFiles/PG…</span>
+<span class="co">#&gt; 12 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000006/ScoringFiles/PG…</span>
+<span class="co">#&gt; 13 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000007/ScoringFiles/PG…</span>
+<span class="co">#&gt; 14 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000008/ScoringFiles/PG…</span>
+<span class="co">#&gt; 15 http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000009/ScoringFiles/PG…</span></code></pre></div>
 <p>The column <code>scoring_file</code> contains the URL to the FTP location of the PGS scoring file. PGS scoring files are the files provided by the PGS Catalog that allow you to compute polygenic scores for your samples. You can learn more about scoring files in <code><a href="../articles/pgs-scoring-file.html">vignette("pgs-scoring-file")</a></code>.</p>
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">scores</span><span class="op">[</span><span class="st">'matches_publication'</span><span class="op">]</span>
-<span class="co">#&gt; # A tibble: 6 x 1</span>
-<span class="co">#&gt;   matches_publication</span>
-<span class="co">#&gt;   &lt;lgl&gt;              </span>
-<span class="co">#&gt; 1 TRUE               </span>
-<span class="co">#&gt; 2 TRUE               </span>
-<span class="co">#&gt; 3 TRUE               </span>
-<span class="co">#&gt; 4 TRUE               </span>
-<span class="co">#&gt; 5 TRUE               </span>
-<span class="co">#&gt; 6 TRUE</span></code></pre></div>
-<p>The column <code>matches_publication</code> is a logical value indicating whether the published polygenic score is exactly the same as the one provided to the PGS Catalog. In this case all of the 6 scores are provided exactly as published.</p>
+<span class="co">#&gt; # A tibble: 15 x 1</span>
+<span class="co">#&gt;    matches_publication</span>
+<span class="co">#&gt;    &lt;lgl&gt;              </span>
+<span class="co">#&gt;  1 TRUE               </span>
+<span class="co">#&gt;  2 TRUE               </span>
+<span class="co">#&gt;  3 TRUE               </span>
+<span class="co">#&gt;  4 TRUE               </span>
+<span class="co">#&gt;  5 TRUE               </span>
+<span class="co">#&gt;  6 TRUE               </span>
+<span class="co">#&gt;  7 TRUE               </span>
+<span class="co">#&gt;  8 TRUE               </span>
+<span class="co">#&gt;  9 TRUE               </span>
+<span class="co">#&gt; 10 TRUE               </span>
+<span class="co">#&gt; 11 TRUE               </span>
+<span class="co">#&gt; 12 TRUE               </span>
+<span class="co">#&gt; 13 TRUE               </span>
+<span class="co">#&gt; 14 TRUE               </span>
+<span class="co">#&gt; 15 TRUE</span></code></pre></div>
+<p>The column <code>matches_publication</code> is a logical value indicating whether the published polygenic score is exactly the same as the one provided to the PGS Catalog. In this case all of the 15 scores are provided exactly as published.</p>
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">scores</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'pgs_name'</span>, <span class="st">'pgs_method_name'</span>, <span class="st">'pgs_method_params'</span>, <span class="st">'n_variants'</span>, <span class="st">'assembly'</span><span class="op">)</span><span class="op">]</span>
-<span class="co">#&gt; # A tibble: 6 x 5</span>
-<span class="co">#&gt;   pgs_name    pgs_method_name               pgs_method_para… n_variants assembly</span>
-<span class="co">#&gt;   &lt;chr&gt;       &lt;chr&gt;                         &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt;   </span>
-<span class="co">#&gt; 1 PRS313_BC   Hard-Thresholding Stepwise F… p &lt; 10^-5               313 GRCh37  </span>
-<span class="co">#&gt; 2 PRS313_ERp… Hard-Thresholding Stepwise F… p &lt; 10^-5               313 GRCh37  </span>
-<span class="co">#&gt; 3 PRS313_ERn… Hard-Thresholding Stepwise F… p &lt; 10^-5               313 GRCh37  </span>
-<span class="co">#&gt; 4 PRS3820_BC  LASSO penalized regression    p &lt; 0.001              3820 GRCh37  </span>
-<span class="co">#&gt; 5 PRS3820_ER… LASSO penalized regression    p &lt; 0.001              3820 GRCh37  </span>
-<span class="co">#&gt; 6 PRS3820_ER… LASSO penalized regression    p &lt; 0.001              3820 GRCh37</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 15 x 5</span>
+<span class="co">#&gt;    pgs_name    pgs_method_name              pgs_method_para… n_variants assembly</span>
+<span class="co">#&gt;    &lt;chr&gt;       &lt;chr&gt;                        &lt;chr&gt;                 &lt;int&gt; &lt;chr&gt;   </span>
+<span class="co">#&gt;  1 PRS313_BC   Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt;  2 PRS313_ERp… Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt;  3 PRS313_ERn… Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt;  4 PRS3820_BC  LASSO penalized regression   p &lt; 0.001              3820 GRCh37  </span>
+<span class="co">#&gt;  5 PRS3820_ER… LASSO penalized regression   p &lt; 0.001              3820 GRCh37  </span>
+<span class="co">#&gt;  6 PRS3820_ER… LASSO penalized regression   p &lt; 0.001              3820 GRCh37  </span>
+<span class="co">#&gt;  7 PRS77_BC    SNPs passing genome-wide si… P&lt;5x10-8                 77 NR      </span>
+<span class="co">#&gt;  8 PRS77_ERpos SNPs passing genome-wide si… P&lt;5x10-8                 77 NR      </span>
+<span class="co">#&gt;  9 PRS77_ERneg SNPs passing genome-wide si… P&lt;5x10-8                 77 NR      </span>
+<span class="co">#&gt; 10 PRS313_BC   Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt; 11 PRS313_ERp… Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt; 12 PRS313_ERn… Hard-Thresholding Stepwise … p &lt; 10^-5               313 GRCh37  </span>
+<span class="co">#&gt; 13 PRS3820_BC  LASSO penalized regression   p &lt; 0.001              3820 GRCh37  </span>
+<span class="co">#&gt; 14 PRS3820_ER… LASSO penalized regression   p &lt; 0.001              3820 GRCh37  </span>
+<span class="co">#&gt; 15 PRS3820_ER… LASSO penalized regression   p &lt; 0.001              3820 GRCh37</span></code></pre></div>
 <p>In addition, columns such as <code>pgs_method_name</code> and <code>pgs_method_params</code> provide extra details about the PGS development method. Finally, <code>n_variants</code> informs about the number of variants comprising each polygenic risk score, and <code>assembly</code> indicates the genome assembly.</p>
 </div>
 <div id="publications-table" class="section level3">
 <h3 class="hasAnchor">
 <a href="#publications-table" class="anchor"></a>Publications table</h3>
-<p>The S4 scores object contains a table about the publications. In this case, it is not surprising that all PGS scores map to the same publication identifier, i.e., PGP000002, as that was our starting point.</p>
+<p>The S4 scores object contains a table about the publications. In this case, it is not surprising that all PGS scores map to the same publication identifier, i.e., PGP000002, PGP000001, as that was our starting point.</p>
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">publications</span>
-<span class="co">#&gt; # A tibble: 6 x 8</span>
-<span class="co">#&gt;   pgs_id pgp_id pubmed_id publication_date publication title author_fullname</span>
-<span class="co">#&gt;   &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;     &lt;date&gt;           &lt;chr&gt;       &lt;chr&gt; &lt;chr&gt;          </span>
-<span class="co">#&gt; 1 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; 2 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; 3 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; 4 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; 5 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; 6 PGS00… PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span>
-<span class="co">#&gt; # … with 1 more variable: doi &lt;chr&gt;</span></code></pre></div>
+<code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">publications</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'pgs_id'</span>, <span class="st">'pgp_id'</span>, <span class="st">'publication_date'</span>, <span class="st">'author_fullname'</span><span class="op">)</span><span class="op">]</span>
+<span class="co">#&gt; # A tibble: 15 x 4</span>
+<span class="co">#&gt;    pgs_id    pgp_id    publication_date author_fullname</span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;     &lt;date&gt;           &lt;chr&gt;          </span>
+<span class="co">#&gt;  1 PGS000004 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  2 PGS000005 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  3 PGS000006 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  4 PGS000007 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  5 PGS000008 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  6 PGS000009 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt;  7 PGS000001 PGP000001 2015-04-08       Mavaddat N     </span>
+<span class="co">#&gt;  8 PGS000002 PGP000001 2015-04-08       Mavaddat N     </span>
+<span class="co">#&gt;  9 PGS000003 PGP000001 2015-04-08       Mavaddat N     </span>
+<span class="co">#&gt; 10 PGS000004 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt; 11 PGS000005 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt; 12 PGS000006 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt; 13 PGS000007 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt; 14 PGS000008 PGP000002 2018-12-13       Mavaddat N     </span>
+<span class="co">#&gt; 15 PGS000009 PGP000002 2018-12-13       Mavaddat N</span></code></pre></div>
 </div>
 <div id="samples-table" class="section level3">
 <h3 class="hasAnchor">
@@ -301,28 +377,20 @@
 <p>The third table (slot) of the S4 scores object pertains the samples used in the development of the PGS scores.</p>
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">samples</span>
-<span class="co">#&gt; # A tibble: 18 x 15</span>
-<span class="co">#&gt;    pgs_id stage sample_id sample_size sample_cases sample_controls</span>
-<span class="co">#&gt;    &lt;chr&gt;  &lt;chr&gt;     &lt;int&gt;       &lt;int&gt;        &lt;int&gt;           &lt;int&gt;</span>
-<span class="co">#&gt;  1 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt;  2 PGS00… deve…         1      158648        88916           69732</span>
-<span class="co">#&gt;  3 PGS00… deve…         2       10444         5159            5285</span>
-<span class="co">#&gt;  4 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt;  5 PGS00… deve…         1       87368        55391           31977</span>
-<span class="co">#&gt;  6 PGS00… deve…         2        5159         4233             926</span>
-<span class="co">#&gt;  7 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt;  8 PGS00… deve…         1       87368        15404           71964</span>
-<span class="co">#&gt;  9 PGS00… deve…         2        5159          926            4233</span>
-<span class="co">#&gt; 10 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt; 11 PGS00… deve…         1      158648        88916           69732</span>
-<span class="co">#&gt; 12 PGS00… deve…         2       10444         5159            5285</span>
-<span class="co">#&gt; 13 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt; 14 PGS00… deve…         1       87368        55391           31977</span>
-<span class="co">#&gt; 15 PGS00… deve…         2        5159         4233             926</span>
-<span class="co">#&gt; 16 PGS00… gwas          1      139274           NA              NA</span>
-<span class="co">#&gt; 17 PGS00… deve…         1       87368        15404           71964</span>
-<span class="co">#&gt; 18 PGS00… deve…         2        5159          926            4233</span>
-<span class="co">#&gt; # … with 9 more variables: sample_percent_male &lt;dbl&gt;,</span>
+<span class="co">#&gt; # A tibble: 39 x 15</span>
+<span class="co">#&gt;    pgs_id sample_id stage sample_size sample_cases sample_controls</span>
+<span class="co">#&gt;    &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;       &lt;int&gt;        &lt;int&gt;           &lt;int&gt;</span>
+<span class="co">#&gt;  1 PGS00…         1 disc…      139274           NA              NA</span>
+<span class="co">#&gt;  2 PGS00…         2 trai…      158648        88916           69732</span>
+<span class="co">#&gt;  3 PGS00…         3 trai…       10444         5159            5285</span>
+<span class="co">#&gt;  4 PGS00…         1 disc…      139274           NA              NA</span>
+<span class="co">#&gt;  5 PGS00…         2 trai…       87368        55391           31977</span>
+<span class="co">#&gt;  6 PGS00…         3 trai…        5159         4233             926</span>
+<span class="co">#&gt;  7 PGS00…         1 disc…      139274           NA              NA</span>
+<span class="co">#&gt;  8 PGS00…         2 trai…       87368        15404           71964</span>
+<span class="co">#&gt;  9 PGS00…         3 trai…        5159          926            4233</span>
+<span class="co">#&gt; 10 PGS00…         1 disc…      139274           NA              NA</span>
+<span class="co">#&gt; # … with 29 more rows, and 9 more variables: sample_percent_male &lt;dbl&gt;,</span>
 <span class="co">#&gt; #   phenotype_description &lt;chr&gt;, ancestry &lt;chr&gt;, ancestry_description &lt;chr&gt;,</span>
 <span class="co">#&gt; #   ancestry_country &lt;chr&gt;, ancestry_additional_description &lt;chr&gt;,</span>
 <span class="co">#&gt; #   study_id &lt;chr&gt;, pubmed_id &lt;chr&gt;, cohorts_additional_description &lt;chr&gt;</span></code></pre></div>
@@ -335,11 +403,11 @@
 <p>TODO: Link here another vignette with an example for which all slots are not empty.</p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">demographics</span>
-<span class="co">#&gt; # A tibble: 0 x 12</span>
-<span class="co">#&gt; # … with 12 variables: pgs_id &lt;chr&gt;, stage &lt;chr&gt;, sample_id &lt;int&gt;,</span>
-<span class="co">#&gt; #   variable &lt;chr&gt;, estimate_type &lt;chr&gt;, estimate &lt;dbl&gt;, unit &lt;chr&gt;,</span>
-<span class="co">#&gt; #   variability_type &lt;chr&gt;, variability &lt;dbl&gt;, interval_type &lt;chr&gt;,</span>
-<span class="co">#&gt; #   interval_lower &lt;dbl&gt;, interval_upper &lt;dbl&gt;</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 0 x 11</span>
+<span class="co">#&gt; # … with 11 variables: pgs_id &lt;chr&gt;, sample_id &lt;int&gt;, variable &lt;chr&gt;,</span>
+<span class="co">#&gt; #   estimate_type &lt;chr&gt;, estimate &lt;dbl&gt;, unit &lt;chr&gt;, variability_type &lt;chr&gt;,</span>
+<span class="co">#&gt; #   variability &lt;dbl&gt;, interval_type &lt;chr&gt;, interval_lower &lt;dbl&gt;,</span>
+<span class="co">#&gt; #   interval_upper &lt;dbl&gt;</span></code></pre></div>
 </div>
 <div id="cohorts-table" class="section level3">
 <h3 class="hasAnchor">
@@ -348,20 +416,20 @@
 <p>TODO: Add here link to a vignette about samples.</p>
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">cohorts</span>
-<span class="co">#&gt; # A tibble: 558 x 5</span>
-<span class="co">#&gt;    pgs_id   stage     sample_id cohort_symbol cohort_name                       </span>
-<span class="co">#&gt;    &lt;chr&gt;    &lt;chr&gt;         &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;                             </span>
-<span class="co">#&gt;  1 PGS0000… developm…         1 ABCFS         "Australian Breast Cancer Family …</span>
-<span class="co">#&gt;  2 PGS0000… developm…         1 MCCS          "Melbourne Collaborative Cohort S…</span>
-<span class="co">#&gt;  3 PGS0000… developm…         1 HMBCS         "Hannover-Minsk Breast Cancer Stu…</span>
-<span class="co">#&gt;  4 PGS0000… developm…         1 LMBC          "Leuven Multidisciplinary Breast …</span>
-<span class="co">#&gt;  5 PGS0000… developm…         1 MTLGEBCS      "Montreal Gene-Environment Breast…</span>
-<span class="co">#&gt;  6 PGS0000… developm…         1 CGPS          "Copenhagen General Population St…</span>
-<span class="co">#&gt;  7 PGS0000… developm…         1 KBCP          "Kuopio Breast Cancer Project "   </span>
-<span class="co">#&gt;  8 PGS0000… developm…         1 OBCS          "Oulu Breast Cancer Study "       </span>
-<span class="co">#&gt;  9 PGS0000… developm…         1 CECILE        "CECILE Breast Cancer Study "     </span>
-<span class="co">#&gt; 10 PGS0000… developm…         1 BBCC          "Bavarian Breast Cancer Cases and…</span>
-<span class="co">#&gt; # … with 548 more rows</span></code></pre></div>
+<span class="co">#&gt; # A tibble: 1,116 x 4</span>
+<span class="co">#&gt;    pgs_id    sample_id cohort_symbol cohort_name                                </span>
+<span class="co">#&gt;    &lt;chr&gt;         &lt;int&gt; &lt;chr&gt;         &lt;chr&gt;                                      </span>
+<span class="co">#&gt;  1 PGS000004         2 ABCFS         Australian Breast Cancer Family Study      </span>
+<span class="co">#&gt;  2 PGS000004         2 MCCS          Melbourne Collaborative Cohort Study       </span>
+<span class="co">#&gt;  3 PGS000004         2 HMBCS         Hannover-Minsk Breast Cancer Study         </span>
+<span class="co">#&gt;  4 PGS000004         2 LMBC          Leuven Multidisciplinary Breast Centre     </span>
+<span class="co">#&gt;  5 PGS000004         2 MTLGEBCS      Montreal Gene-Environment Breast Cancer St…</span>
+<span class="co">#&gt;  6 PGS000004         2 CGPS          Copenhagen General Population Study        </span>
+<span class="co">#&gt;  7 PGS000004         2 KBCP          Kuopio Breast Cancer Project               </span>
+<span class="co">#&gt;  8 PGS000004         2 OBCS          Oulu Breast Cancer Study                   </span>
+<span class="co">#&gt;  9 PGS000004         2 CECILE        CECILE Breast Cancer Study                 </span>
+<span class="co">#&gt; 10 PGS000004         2 BBCC          Bavarian Breast Cancer Cases and Controls  </span>
+<span class="co">#&gt; # … with 1,106 more rows</span></code></pre></div>
 </div>
 <div id="traits-table" class="section level3">
 <h3 class="hasAnchor">
@@ -369,25 +437,34 @@
 <p>Finally, in the traits table, you have access to the associated traits with these polygenic scores. With no surprise, all scores indicate breast cancer or a subtype thereof (column <code>trait</code>):</p>
 <div class="sourceCode" id="cb18"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">traits</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">'pgs_id'</span>, <span class="st">'efo_id'</span>, <span class="st">'trait'</span><span class="op">)</span><span class="op">]</span>
-<span class="co">#&gt; # A tibble: 6 x 3</span>
-<span class="co">#&gt;   pgs_id    efo_id      trait                                   </span>
-<span class="co">#&gt;   &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;                                   </span>
-<span class="co">#&gt; 1 PGS000004 EFO_0000305 breast carcinoma                        </span>
-<span class="co">#&gt; 2 PGS000005 EFO_1000649 estrogen-receptor positive breast cancer</span>
-<span class="co">#&gt; 3 PGS000006 EFO_1000650 estrogen-receptor negative breast cancer</span>
-<span class="co">#&gt; 4 PGS000007 EFO_0000305 breast carcinoma                        </span>
-<span class="co">#&gt; 5 PGS000008 EFO_1000649 estrogen-receptor positive breast cancer</span>
-<span class="co">#&gt; 6 PGS000009 EFO_1000650 estrogen-receptor negative breast cancer</span></code></pre></div>
-<p>Compared to the author-reported trait (column <code>reported_trait</code> from table <code>scores</code>), the trait description in this table follow the controlled vocabulary of an ontology, i.e., the <a href="https://www.ebi.ac.uk/efo/">Experimental Factor Ontology (EFO)</a>. This way, traits are described objectively. This is very useful for comparing trait data among different studies (where different reported trait descriptions might have been used). For example, if you wanted now to know what other polygenic scores may be deposited in the PGS Catalog that also study breast cancer — namely, breast carcinoma, estrogen-receptor positive breast cancer, and estrogen-receptor negative breast cancer — then you could use their respective EFO identifiers (EFO_0000305, EFO_1000649, and EFO_1000650) with the function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
+<span class="co">#&gt; # A tibble: 15 x 3</span>
+<span class="co">#&gt;    pgs_id    efo_id      trait                                   </span>
+<span class="co">#&gt;    &lt;chr&gt;     &lt;chr&gt;       &lt;chr&gt;                                   </span>
+<span class="co">#&gt;  1 PGS000004 EFO_0000305 breast carcinoma                        </span>
+<span class="co">#&gt;  2 PGS000005 EFO_1000649 estrogen-receptor positive breast cancer</span>
+<span class="co">#&gt;  3 PGS000006 EFO_1000650 estrogen-receptor negative breast cancer</span>
+<span class="co">#&gt;  4 PGS000007 EFO_0000305 breast carcinoma                        </span>
+<span class="co">#&gt;  5 PGS000008 EFO_1000649 estrogen-receptor positive breast cancer</span>
+<span class="co">#&gt;  6 PGS000009 EFO_1000650 estrogen-receptor negative breast cancer</span>
+<span class="co">#&gt;  7 PGS000001 EFO_0000305 breast carcinoma                        </span>
+<span class="co">#&gt;  8 PGS000002 EFO_1000649 estrogen-receptor positive breast cancer</span>
+<span class="co">#&gt;  9 PGS000003 EFO_1000650 estrogen-receptor negative breast cancer</span>
+<span class="co">#&gt; 10 PGS000004 EFO_0000305 breast carcinoma                        </span>
+<span class="co">#&gt; 11 PGS000005 EFO_1000649 estrogen-receptor positive breast cancer</span>
+<span class="co">#&gt; 12 PGS000006 EFO_1000650 estrogen-receptor negative breast cancer</span>
+<span class="co">#&gt; 13 PGS000007 EFO_0000305 breast carcinoma                        </span>
+<span class="co">#&gt; 14 PGS000008 EFO_1000649 estrogen-receptor positive breast cancer</span>
+<span class="co">#&gt; 15 PGS000009 EFO_1000650 estrogen-receptor negative breast cancer</span></code></pre></div>
+<p>Compared to the author-reported trait (column <code>reported_trait</code> from table <code>scores</code>), the trait description in this table follows the controlled vocabulary of an ontology, i.e., the <a href="https://www.ebi.ac.uk/efo/">Experimental Factor Ontology (EFO)</a>. This way, traits are described objectively. This is very useful for comparing trait data among different studies where different reported trait descriptions might have been used. For example, if you wanted now to know what other polygenic scores may be deposited in the PGS Catalog that also study breast cancer — namely, breast carcinoma, estrogen-receptor positive breast cancer, and estrogen-receptor negative breast cancer — then you could use their respective EFO identifiers (EFO_0000305, EFO_1000649, and EFO_1000650) with the function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">scores_bc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_scores.html">get_scores</a></span><span class="op">(</span>efo_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html">unique</a></span><span class="op">(</span><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">traits</span><span class="op">[[</span><span class="st">'efo_id'</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span>
 <span class="fu"><a href="../reference/n.html">n</a></span><span class="op">(</span><span class="va">scores_bc</span><span class="op">)</span>
 <span class="co">#&gt; [1] 96</span></code></pre></div>
-<p>So there are 96 scores present in the Catalog. Included in this set are the 6 scores originating from <a href="https://doi.org/10.1016/j.ajhg.2018.11.002">Mavaddat et al. (2018)</a>. If we wanted to proceed in analysing these other scores without those of Mavaddat’s study, we could use the function <code><a href="../reference/setop.html">setdiff()</a></code> to remove them from the S4 scores object:</p>
+<p>So there are 96 scores present in the Catalog. Included in this set are the 15 scores originating from <a href="https://doi.org/10.1016/j.ajhg.2018.11.002">Mavaddat et al. (2018)</a>. If we wanted to proceed in analysing these other scores without those of Mavaddat’s study, we could use the function <code><a href="../reference/setop.html">setdiff()</a></code> to remove them from the S4 scores object:</p>
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">bc_scores_not_mavaddat2018</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/setop.html">setdiff</a></span><span class="op">(</span><span class="va">scores_bc</span>, <span class="va">mavaddat2018_scores</span><span class="op">)</span>
 <span class="fu"><a href="../reference/n.html">n</a></span><span class="op">(</span><span class="va">bc_scores_not_mavaddat2018</span><span class="op">)</span>
-<span class="co">#&gt; [1] 90</span></code></pre></div>
+<span class="co">#&gt; [1] 87</span></code></pre></div>
 <p>For other set operations check their documentation page: <code><a href="../reference/setop.html">union()</a></code>, <code><a href="../reference/setop.html">intersect()</a></code> and <code><a href="../reference/setop.html">setequal()</a></code>.</p>
 </div>
 </div>
