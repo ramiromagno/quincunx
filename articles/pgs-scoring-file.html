@@ -192,6 +192,7 @@
 <div id="pgs-scoring-file-format" class="section level2">
 <h2 class="hasAnchor">
 <a href="#pgs-scoring-file-format" class="anchor"></a>PGS scoring file format</h2>
+<p>Each scoring file contains variant identification, effect alleles and respective score weights. The file is formatted as a gzipped tab-delimited text file, with a header containing brief metada about the score.</p>
 <div id="header" class="section level3">
 <h3 class="hasAnchor">
 <a href="#header" class="anchor"></a>Header</h3>
@@ -205,12 +206,12 @@
 ## SOURCE INFORMATION
 # PGP ID = &lt;PGS publication idenfier, e.g. 'PGP000001'&gt;
 # Citation = &lt;Information about the publication&gt;
-# LICENSE = &lt;License and terms of PGS use/distribution - refers to the EMBL-EBI Terms of Use by default&gt;
-rsIDchr_namechr_positioneffect_allelereference_allele...</code></pre>
+# LICENSE = &lt;License and terms of PGS use/distribution - refers to the EMBL-EBI Terms of Use by default&gt;</code></pre>
 </div>
 <div id="columns" class="section level3">
 <h3 class="hasAnchor">
 <a href="#columns" class="anchor"></a>Columns</h3>
+<p>The following table lists all possible columns in a PGS scoring file. A few columns are required, and most are optional; either the <code>rsID</code> alone or the combination of <code>chr_name</code> and <code>chr_position</code> are required, with the other being optional. The <code><a href="../reference/read_scoring_file.html">read_scoring_file()</a></code> function automatically reads all available columns with the right R types into a data frame.</p>
 <table class="table">
 <colgroup>
 <col width="12%">
