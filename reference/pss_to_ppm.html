@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Map PSS identifiers to PGS identifiers — pss_to_pgs • quincunx</title>
+<title>Map PSS identifiers to PPM identifiers — pss_to_ppm • quincunx</title>
 
 <!-- favicons -->
 <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
@@ -48,10 +48,9 @@
   <link href="../extra.css" rel="stylesheet">
   
 
-<meta property="og:title" content="Map PSS identifiers to PGS identifiers — pss_to_pgs" />
-<meta property="og:description" content="Map PSS identifiers to PGS identifiers. This is a slow function because it
-starts by downloading first all Performance Metrics, as this is the linkage
-between PSS and PGS." />
+<meta property="og:title" content="Map PSS identifiers to PPM identifiers — pss_to_ppm" />
+<meta property="og:description" content="Map PSS identifiers to PPM identifiers. This is a slow function because it
+starts by downloading first all Performance Metrics." />
 <meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg" />
 
 
@@ -136,18 +135,17 @@ between PSS and PGS." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Map PSS identifiers to PGS identifiers</h1>
+    <h1>Map PSS identifiers to PPM identifiers</h1>
     
-    <div class="hidden name"><code>pss_to_pgs.Rd</code></div>
+    <div class="hidden name"><code>pss_to_ppm.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Map PSS identifiers to PGS identifiers. This is a slow function because it
-starts by downloading first all Performance Metrics, as this is the linkage
-between PSS and PGS.</p>
+    <p>Map PSS identifiers to PPM identifiers. This is a slow function because it
+starts by downloading first all Performance Metrics.</p>
     </div>
 
-    <pre class="usage"><span class='fu'>pss_to_pgs</span><span class='op'>(</span><span class='va'>pss_id</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span>, warnings <span class='op'>=</span> <span class='cn'>TRUE</span>, progress_bar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
+    <pre class="usage"><span class='fu'>pss_to_ppm</span><span class='op'>(</span><span class='va'>pss_id</span>, verbose <span class='op'>=</span> <span class='cn'>FALSE</span>, warnings <span class='op'>=</span> <span class='cn'>TRUE</span>, progress_bar <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -176,22 +174,22 @@ performed.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A data frame of two columns: <code>pss_id</code> and <code>pgs_id</code>.</p>
+    <p>A data frame of two columns: <code>pss_id</code> and <code>ppm_id</code>.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>pss_to_pgs</span><span class='op'>(</span><span class='st'>'PSS000001'</span><span class='op'>)</span>
+    <pre class="examples"><div class='input'><span class='fu'>pss_to_ppm</span><span class='op'>(</span><span class='st'>'PSS000001'</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1 x 2</span><span>
-#&gt;   pss_id    pgs_id   
+#&gt;   pss_id    ppm_id   
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'>1</span><span> PSS000001 PGS000001</div><div class='input'>
-<span class='fu'>pss_to_pgs</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'PSS000017'</span>, <span class='st'>'PSS000042'</span><span class='op'>)</span><span class='op'>)</span>
+#&gt; </span><span style='color: #555555;'>1</span><span> PSS000001 PPM000001</div><div class='input'>
+<span class='fu'>pss_to_ppm</span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>'PSS000017'</span>, <span class='st'>'PSS000042'</span><span class='op'>)</span><span class='op'>)</span>
 </div><div class='output co'>#&gt; </span><span style='color: #555555;'># A tibble: 4 x 2</span><span>
-#&gt;   pss_id    pgs_id   
+#&gt;   pss_id    ppm_id   
 #&gt;   </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'>1</span><span> PSS000017 PGS000014
-#&gt; </span><span style='color: #555555;'>2</span><span> PSS000042 PGS000031
-#&gt; </span><span style='color: #555555;'>3</span><span> PSS000042 PGS000032
-#&gt; </span><span style='color: #555555;'>4</span><span> PSS000042 PGS000033</div><div class='input'>
+#&gt; </span><span style='color: #555555;'>1</span><span> PSS000017 PPM000023
+#&gt; </span><span style='color: #555555;'>2</span><span> PSS000042 PPM000064
+#&gt; </span><span style='color: #555555;'>3</span><span> PSS000042 PPM000067
+#&gt; </span><span style='color: #555555;'>4</span><span> PSS000042 PPM000070</div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

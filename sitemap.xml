@@ -10,6 +10,9 @@
     <loc>https://rmagno.eu/quincunx/reference/bind.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/clear_cache.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/cohorts-class.html</loc>
   </url>
   <url>
@@ -103,10 +106,19 @@
     <loc>https://rmagno.eu/quincunx/reference/pgp_to_pgs.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgp_to_ppm.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgp_to_pss.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/pgs_server.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/pgs_to_pgp.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pgs_to_ppm.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/pgs_to_pss.html</loc>
@@ -118,7 +130,22 @@
     <loc>https://rmagno.eu/quincunx/reference/pipe.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/ppm_to_pgp.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/ppm_to_pgs.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/ppm_to_pss.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pss_to_pgp.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/pss_to_pgs.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/pss_to_ppm.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/publications-class.html</loc>

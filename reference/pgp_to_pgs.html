@@ -145,7 +145,6 @@
 
     <pre class="usage"><span class='fu'>pgp_to_pgs</span><span class='op'>(</span>
   pgp_id <span class='op'>=</span> <span class='cn'>NULL</span>,
-  interactive <span class='op'>=</span> <span class='cn'>TRUE</span>,
   verbose <span class='op'>=</span> <span class='cn'>FALSE</span>,
   warnings <span class='op'>=</span> <span class='cn'>TRUE</span>,
   progress_bar <span class='op'>=</span> <span class='cn'>TRUE</span>
@@ -159,11 +158,6 @@
       <td><p>A character vector of PGS Catalog Publication identifiers,
 e.g., "PGP000001". If <code>NULL</code> then returns results for all PGP
 identifiers in the Catalog.</p></td>
-    </tr>
-    <tr>
-      <th>interactive</th>
-      <td><p>A logical. If all scores are requested, whether to ask
-interactively if we really want to proceed.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
