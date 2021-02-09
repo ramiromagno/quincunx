@@ -61,17 +61,51 @@
     <span class="caret"></span>
   </a>
   <ul class="dropdown-menu" role="menu">
-<li>
+<li class="divider">
+    <li class="dropdown-header">PGS Catalog Concepts</li>
+    <li>
       <a href="../articles/identifiers.html">Identifiers</a>
     </li>
     <li>
-      <a href="../articles/learning-about-a-pgs.html">Learning about published polygenic risk score(s)</a>
+      <a href="../articles/pgs-construction-process.html">PGS Construction Process</a>
+    </li>
+    <li>
+      <a href="../articles/cohorts-samples-sample-sets.html">Cohorts, Samples and Sample Sets</a>
+    </li>
+    <li class="divider">
+    <li class="dropdown-header">Getting PGS Catalog Data</li>
+    <li>
+      <a href="../articles/getting-pgs-scores.html">Getting PGS Scores</a>
+    </li>
+    <li>
+      <a href="../articles/getting-pgs-publications.html">Getting PGS Publications</a>
+    </li>
+    <li>
+      <a href="../articles/getting-pgs-sample-sets.html">Getting PGS Sample Sets</a>
+    </li>
+    <li>
+      <a href="../articles/getting-pgs-performance-metrics.html">Getting PGS Performance Metrics</a>
+    </li>
+    <li>
+      <a href="../articles/getting-traits.html">Getting Traits</a>
+    </li>
+    <li>
+      <a href="../articles/getting-cohorts.html">Getting Cohorts</a>
+    </li>
+    <li>
+      <a href="../articles/getting-releases.html">PGS Catalog Releases</a>
     </li>
     <li>
       <a href="../articles/pgs-scoring-file.html">PGS scoring file</a>
     </li>
+    <li class="divider">
+    <li class="dropdown-header">Case Studies</li>
     <li>
-      <a href="../articles/releases.html">PGS Catalog Releases</a>
+      <a href="../articles/pgs-scores-mavaddat.html">PGS scores by Mavaddat et al. (2018)</a>
+    </li>
+    <li class="divider">
+    <li>
+      <a href="../articles/index.html">More...</a>
     </li>
   </ul>
 </li>
@@ -99,7 +133,7 @@
 
     
     
-<p>The data provided by quincunx includes various identifiers. This document serves as a quick reference list for the identifers you might find in objects returned by quincunx functions.</p>
+<p>The data provided by quincunx includes various identifiers. This document serves as a quick reference list for the identifiers you might find in objects returned by quincunx functions.</p>
 <p>Some of these identifiers are externally defined while others are created by quincunx to aid linking rows among tables. The external identifiers have global scope, i.e., their meaning is valid regardless of context, e.g., a PGS identifier is unique and always identifies the same polygenic score. Identifiers whose scope is local are surrogate IDs that help relating data observations across tables, and do not have any other special meaning outside the tables they appear (<code>sample_id</code>, <code>effect_size_id</code>, <code>classification_metrics_id</code> and <code>other_metrics_id</code>.)</p>
 <table class="table">
 <colgroup>
@@ -207,11 +241,18 @@
 </tr>
 </tbody>
 </table>
+<div id="mapping-between-identifiers" class="section level2">
+<h2 class="hasAnchor">
+<a href="#mapping-between-identifiers" class="anchor"></a>Mapping between identifiers</h2>
+<p>TODO (image explaining one-to-one mappings and one-to-many, also overview of mapping functions )</p>
 </div>
+  </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
 
-      </div>
+        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
+    </nav>
+</div>
 
 </div>
 

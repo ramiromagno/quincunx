@@ -67,6 +67,9 @@
     <loc>https://rmagno.eu/quincunx/reference/is_pgs_id.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/is_pubmed_id.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/list_to_s4.html</loc>
   </url>
   <url>
@@ -94,7 +97,13 @@
     <loc>https://rmagno.eu/quincunx/reference/offsets.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/reference/open_in_dbsnp.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/reference/open_in_pgs_catalog.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/reference/open_in_pubmed.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/reference/performance_metrics-class.html</loc>
@@ -241,13 +250,43 @@
     <loc>https://rmagno.eu/quincunx/reference/write_xlsx.html</loc>
   </url>
   <url>
+    <loc>https://rmagno.eu/quincunx/articles/cohorts-samples-sample-sets.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-cohorts.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-pgs-performance-metrics.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-pgs-publications.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-pgs-sample-sets.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-pgs-scores.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-releases.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/getting-traits.html</loc>
+  </url>
+  <url>
     <loc>https://rmagno.eu/quincunx/articles/identifiers.html</loc>
   </url>
   <url>
-    <loc>https://rmagno.eu/quincunx/articles/learning-about-a-pgs.html</loc>
+    <loc>https://rmagno.eu/quincunx/articles/pgs-construction-process.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/pgs-scores-mavaddat.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/articles/pgs-scoring-file.html</loc>
+  </url>
+  <url>
+    <loc>https://rmagno.eu/quincunx/articles/quincunx-development.html</loc>
   </url>
   <url>
     <loc>https://rmagno.eu/quincunx/articles/releases.html</loc>
