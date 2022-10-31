@@ -19,7 +19,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
 <!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Exploring PGS scores by Mavaddat et al. (2018)">
 <meta property="og:description" content="quincunx">
-<meta property="og:image" content="https://maialab.org/quincunx/logo.svg">
+<meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -33,7 +33,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.5</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.6</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,7 +83,7 @@
 
       <ul class="navbar-nav">
 <li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/maialab/quincunx/" aria-label="github">
+  <a class="external-link nav-link" href="https://github.com/ramiromagno/quincunx/" aria-label="github">
     <span class="fab fa fab fa-github fa-lg"></span>
      
   </a>
@@ -102,7 +102,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>Exploring PGS scores by Mavaddat et al. (2018)</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/maialab/quincunx/blob/HEAD/vignettes/pgs-scores-mavaddat.Rmd" class="external-link"><code>vignettes/pgs-scores-mavaddat.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ramiromagno/quincunx/blob/HEAD/vignettes/pgs-scores-mavaddat.Rmd" class="external-link"><code>vignettes/pgs-scores-mavaddat.Rmd</code></a></small>
       <div class="d-none name"><code>pgs-scores-mavaddat.Rmd</code></div>
     </div>
 
@@ -123,7 +123,7 @@ However, if these scores have already been indexed and manually curated by the <
 </h3>
 <p>To check if we are fortunate enough to have the polygenic risk scores for breast cancer <span class="citation">1</span> in the PGS Catalog, we start by loading the quincunx package and by searching for this publication in the PGS Catalog. To do this we will use the function <code><a href="../reference/get_publications.html">get_publications()</a></code> and start by searching by the first author’s last name, i.e. “Mavaddat”:</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/maialab/quincunx" class="external-link">quincunx</a></span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ramiromagno/quincunx" class="external-link">quincunx</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">pub_by_mavaddat</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_publications.html">get_publications</a></span><span class="op">(</span>author <span class="op">=</span> <span class="st">'Mavaddat'</span><span class="op">)</span> <span class="co"># Not case sensitive,</span></span>
@@ -259,19 +259,34 @@ However, if these scores have already been indexed and manually curated by the <
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGP000002 PGS000007 eval    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGP000002 PGS000008 eval    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> PGP000002 PGS000009 eval</span></span></code></pre></div>
-<p>Please note that there are <code>r length(unique(pub_by_pmid_30554720@pgs_ids$pgs_id))</code> unique scores, both from the <em>development</em> and the <em>evaluation</em> stages, meaning that this paper published new polygenic scores (<em>development</em> stage), and tested them (<em>evaluation</em> stage). But this paper has also evaluated 3 other polygenic scores previously developed (and firstly published in another publication by the same author). This distinction between stages is important because when we query the database for the scores from all the pgp_ids present in this publication, only the newly developed ones (from the <em>development stage</em>) will be retrieved. (See below: section about the <code><a href="../reference/get_scores.html">get_scores()</a></code> function).</p>
+<p>Please note that there are 9 unique scores, both from the <em>development</em> and the <em>evaluation</em> stages, meaning that this paper published new polygenic scores (<em>development</em> stage), and tested them (<em>evaluation</em> stage). But this paper has also evaluated 3 other polygenic scores previously developed (and firstly published in another publication by the same author). This distinction between stages is important because when we query the database for the scores from all the pgp_ids present in this publication, only the newly developed ones (from the <em>development stage</em>) will be retrieved. (See below: section about the <code><a href="../reference/get_scores.html">get_scores()</a></code> function).</p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Newly published PGS scores (development stage)</span></span>
-<span><span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">stage</span> <span class="op">==</span> <span class="st">"development"</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 3</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 3 variables: pgp_id &lt;chr&gt;, pgs_id &lt;chr&gt;, stage &lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span>
+<span><span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">stage</span> <span class="op">==</span> <span class="st">"gwas/dev"</span><span class="op">)</span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 3</span></span></span>
+<span><span class="co">#&gt;   pgp_id    pgs_id    stage   </span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002 PGS000004 gwas/dev</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGP000002 PGS000005 gwas/dev</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGP000002 PGS000006 gwas/dev</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGP000002 PGS000007 gwas/dev</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGP000002 PGS000008 gwas/dev</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGP000002 PGS000009 gwas/dev</span></span>
 <span></span>
 <span><span class="co"># All PGS scores evaluated (evaluation stage)  </span></span>
-<span><span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">stage</span> <span class="op">==</span> <span class="st">"evaluation"</span><span class="op">)</span> </span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 3</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 3 variables: pgp_id &lt;chr&gt;, pgs_id &lt;chr&gt;, stage &lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span></code></pre></div>
+<span><span class="va">pub_by_pmid_30554720</span><span class="op">@</span><span class="va">pgs_ids</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">stage</span> <span class="op">==</span> <span class="st">"eval"</span><span class="op">)</span> </span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 9 × 3</span></span></span>
+<span><span class="co">#&gt;   pgp_id    pgs_id    stage</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002 PGS000001 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGP000002 PGS000002 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGP000002 PGS000003 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGP000002 PGS000004 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGP000002 PGS000005 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGP000002 PGS000006 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> PGP000002 PGS000007 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">8</span> PGP000002 PGS000008 eval </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">9</span> PGP000002 PGS000009 eval</span></span></code></pre></div>
 <p>If we knew, before hand, that PGP000002 was associated with Mavaddat’s publication, we could have also taken advantage of the neat function <code><a href="../reference/pgp_to_pgs.html">pgp_to_pgs()</a></code> to quickly get all the associated polygenic score ids:</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/pgp_to_pgs.html">pgp_to_pgs</a></span><span class="op">(</span><span class="st">'PGP000002'</span><span class="op">)</span></span>
@@ -506,8 +521,7 @@ If this sounds confusing check our <a href="https://github.com/ramiromagno/cheat
 <span><span class="co">#&gt; <span style="color: #949494;"># … with 11 variables: pgs_id &lt;chr&gt;, sample_id &lt;int&gt;, variable &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   estimate_type &lt;chr&gt;, estimate &lt;dbl&gt;, unit &lt;chr&gt;, variability_type &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   variability &lt;dbl&gt;, interval_type &lt;chr&gt;, interval_lower &lt;dbl&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   interval_upper &lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;">#   interval_upper &lt;dbl&gt;</span></span></span></code></pre></div>
 <p>Nevertheless, the demographics variables, when present, are follow-up time, and age of study participants.</p>
 <p>If you want to confirm that <em>quincunx</em> is retrieving exactly the same info as provided by the PGS Catalog web interface, you can always check this by showing online the metadata for your PGP publication of interest using the function <code>open_in_pgs_catalog</code>.</p>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
@@ -533,8 +547,7 @@ To learn more about the meaning of cohorts for the PGS Catalog, visit our check 
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS000004         1 OBCS          Oulu Breast Cancer Study                   </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000004         1 CECILE        CECILE Breast Cancer Study                 </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000004         1 BBCC          Bavarian Breast Cancer Cases and Controls  </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 548 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 548 more rows</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="scores-object-traits-table">scores object | traits table<a class="anchor" aria-label="anchor" href="#scores-object-traits-table"></a>
@@ -576,8 +589,7 @@ To learn more about the meaning of cohorts for the PGS Catalog, visit our check 
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS000052 <span style="color: #949494;">"</span>Breast cancer<span style="color: #949494;">"</span>         161</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000072 <span style="color: #949494;">"</span>Breast cancer<span style="color: #949494;">"</span>         187</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000153 <span style="color: #949494;">"</span>Breast cancer<span style="color: #949494;">"</span>          66</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 91 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 91 more rows</span></span></span></code></pre></div>
 <p>For other set operations, check their documentation page: <code><a href="../reference/setop.html">union()</a></code>, <code><a href="../reference/setop.html">intersect()</a></code> and <code><a href="../reference/setop.html">setequal()</a></code>.</p>
 </div>
 </div>
@@ -617,7 +629,7 @@ Also, a description of each variable is annotated in the <code>performance_metri
 Note that all performance metrics are indexed with an unique identifier that starts with “PPM”.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">performance_metrics</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 143 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 144 × 4</span></span></span>
 <span><span class="co">#&gt;    ppm_id    pgs_id    reported_trait                                    covar…¹</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PPM000004 PGS000004 Invasive breast cancer                            study,…</span></span>
@@ -630,8 +642,7 @@ Note that all performance metrics are indexed with an unique identifier that sta
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000934 PGS000004 Metachronous contralateral breast cancer          Country</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000935 PGS000004 Metachronous contralateral breast cancer          Countr…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000936 PGS000004 Invasive metachronous contralateral breast cancer Country</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 133 more rows, and abbreviated variable name ¹​covariates</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 134 more rows, and abbreviated variable name ¹​covariates</span></span></span></code></pre></div>
 <p>According to the PGS Catalog documentation (<a href="http://www.pgscatalog.org/docs/" class="external-link uri">http://www.pgscatalog.org/docs/</a>):</p>
 <ul>
 <li>The <code>reported_trait</code> displays the reported trait, often corresponding to the test set names reported in the publication, or more specific aspects of the phenotype being tested (e.g. if the disease cases are incident vs. recurrent events).<br>
@@ -640,10 +651,10 @@ Note that all performance metrics are indexed with an unique identifier that sta
 </li>
 <li>The <code>comments</code> column is a field where additional relevant information can be added to aid with understanding a particular performance metrics.</li>
 </ul>
-<p>Looking at the <code>performance_metrics</code> table, we can see that one polygenic score (<code>pgs_id</code>) can be associated with several performance metrics (<code>ppm_id</code>), e.g., PGS000007 associates with 8 PPMs:</p>
+<p>Looking at the <code>performance_metrics</code> table, we can see that one polygenic score (<code>pgs_id</code>) can be associated with several performance metrics (<code>ppm_id</code>), e.g., PGS000007 associates with 9 PPMs:</p>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">performance_metrics</span>, <span class="va">pgs_id</span> <span class="op">==</span> <span class="st">'PGS000007'</span><span class="op">)</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 8 × 5</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 9 × 5</span></span></span>
 <span><span class="co">#&gt;   ppm_id    pgs_id    reported_trait                   covariates        comme…¹</span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PPM000008 PGS000007 Invasive breast cancer           study, genetic P… <span style="color: #BB0000;">NA</span>     </span></span>
@@ -654,6 +665,7 @@ Note that all performance metrics are indexed with an unique identifier that sta
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PPM005163 PGS000007 Breast cancer                    Age, family hist… <span style="color: #BB0000;">NA</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> PPM005169 PGS000007 Breast cancer                    <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">8</span> PPM005172 PGS000007 Breast cancer                    <span style="color: #BB0000;">NA</span>                <span style="color: #BB0000;">NA</span>     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">9</span> PPM015517 PGS000007 Breast cancer                    4 genetic PCs     <span style="color: #BB0000;">NA</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># … with abbreviated variable name ¹​comments</span></span></span></code></pre></div>
 <p>This means that the polygenic score (PGS000007) has been validated several times, using different models. In this case, we can immediately see that PGS000007 performance has been evaluated, for example, for alternative breast cancer types (different <code>reported_traits</code>), namely:</p>
 <ul>
@@ -667,7 +679,7 @@ Note that all performance metrics are indexed with an unique identifier that sta
 <p>The publications table is dedicated to hold information related to the publications associated with the performance metrics. The column <code>pgp_id</code> links each performance metrics to the respective publication where that performance metrics was reported and collected.</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">publications</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 143 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 144 × 8</span></span></span>
 <span><span class="co">#&gt;    ppm_id    pgp_id    pubmed_id publication_date publicat…¹ title autho…² doi  </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PPM000004 PGP000002 30554720  2018-12-13       Am J Hum … Poly… Mavadd… 10.1…</span></span>
@@ -680,9 +692,8 @@ Note that all performance metrics are indexed with an unique identifier that sta
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000934 PGP000109 33022221  2020-10-05       Am J Hum … Brea… Kramer… 10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000935 PGP000109 33022221  2020-10-05       Am J Hum … Brea… Kramer… 10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000936 PGP000109 33022221  2020-10-05       Am J Hum … Brea… Kramer… 10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 133 more rows, and abbreviated variable names ¹​publication,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   ²​author_fullname</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 134 more rows, and abbreviated variable names ¹​publication,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   ²​author_fullname</span></span></span></code></pre></div>
 <p>Here we can immediately see that there are more publications than just the Mavaddat <em>et al.</em> (pubmed_id = 30554720) that we started with.<br>
 This is expected because we requested all the performance metrics for the PGS scores that were newly <strong>developed</strong> by Mavaddat <em>et al.</em>; but these scores have been subsequently <strong>evaluated</strong> by other posterior publications, and accordingly have performance metrics reported in these posterior evaluations.<br>
 This is easily confirmed by checking that all other publications are dated after December 13th 2018, which is the date of publication of the original Mavaddat <em>et al.</em> paper.</p>
@@ -691,7 +702,7 @@ This is easily confirmed by checking that all other publications are dated after
 <span><span class="co">#&gt;  [1] "2018-12-13" "2020-05-18" "2020-10-05" "2020-07-15" "2020-12-14"</span></span>
 <span><span class="co">#&gt;  [6] "2020-03-12" "2021-04-01" "2020-08-20" "2021-03-26" "2021-07-28"</span></span>
 <span><span class="co">#&gt; [11] "2021-07-14" "2021-08-02" "2022-02-09" "2022-01-01" "2022-06-02"</span></span>
-<span><span class="co">#&gt; [16] "2019-11-26"</span></span></code></pre></div>
+<span><span class="co">#&gt; [16] "2019-11-26" "2022-04-18"</span></span></code></pre></div>
 <p>We can choose to look at those publications later to see what evaluations (performance metrics) were reported in them (for which traits, adjusting for which covariates, etc.).</p>
 <p>But for now, we are only interested in studying the performance metrics reported by Mavaddat <em>et al.</em> for the PGS scores newly developed in this publication. So, let’s proceed with creating a vector containing only the <code>ppm_ids</code> of interest. We will do this by filtering the <code>ppm_ids</code> for the <code>pubmed_id</code> corresponding to the Mavaddat publication. We will then use this vector to subset the following tables (to display only the metrics for these PPMs of interest).</p>
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r">
@@ -756,8 +767,7 @@ This is easily confirmed by checking that all other publications are dated after
 <span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_additional_description &lt;chr&gt;, study_id &lt;chr&gt;, pubmed_id &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   cohorts_additional_description &lt;chr&gt;, and abbreviated variable names</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ¹​sample_id, ²​sample_size, ³​sample_cases, ⁴​sample_controls,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   ⁵​sample_percent_male, ⁶​phenotype_description, ⁷​ancestry_category</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;">#   ⁵​sample_percent_male, ⁶​phenotype_description, ⁷​ancestry_category</span></span></span></code></pre></div>
 <p>Here we can, for example see that the sample sizes are very different for each evaluation. Let’s take a quick look at their values.</p>
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">samples</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
@@ -815,8 +825,7 @@ This is easily confirmed by checking that all other publications are dated after
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000004 PSS000004         1 PROCAS        Breast Screening Programme (NHSB…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000004 PSS000004         1 KARMA         Karolinska Mammography Project f…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000004 PSS000004         1 SISTER        The Sister Study                 </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># … with 51 more rows</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `print(n = ...)` to see more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># … with 51 more rows</span></span></span></code></pre></div>
 </div>
 <div class="section level3">
 <h3 id="performance_metrics-object-pgs-effect-sizes-pgs-classification-metrics-pgs-other-metrics-tables">performance_metrics object | PGS effect sizes &amp; PGS classification metrics &amp; PGS other metrics tables<a class="anchor" aria-label="anchor" href="#performance_metrics-object-pgs-effect-sizes-pgs-classification-metrics-pgs-other-metrics-tables"></a>
@@ -849,7 +858,6 @@ This is easily confirmed by checking that all other publications are dated after
 <span><span class="co">#&gt; <span style="color: #949494;"># … with 1 more variable: interval_upper &lt;dbl&gt;, and abbreviated variable names</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ¹​effect_size_id, ²​estimate_type_long, ³​estimate_type, ⁴​estimate,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ⁵​variability_type, ⁶​variability, ⁷​interval_type, ⁸​interval_lower</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span>
 <span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">pgs_classification_metrics</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">ppm_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">mavaddat2018_ppm_ids</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 11</span></span></span>
 <span><span class="co">#&gt;   ppm_id   class…¹ estim…² estim…³ estim…⁴ unit  varia…⁵ varia…⁶ inter…⁷ inter…⁸</span></span>
@@ -863,14 +871,12 @@ This is easily confirmed by checking that all other publications are dated after
 <span><span class="co">#&gt; <span style="color: #949494;"># … with 1 more variable: interval_upper &lt;dbl&gt;, and abbreviated variable names</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ¹​classification_metrics_id, ²​estimate_type_long, ³​estimate_type, ⁴​estimate,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ⁵​variability_type, ⁶​variability, ⁷​interval_type, ⁸​interval_lower</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span>
 <span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">pgs_other_metrics</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">ppm_id</span> <span class="op"><a href="https://rdrr.io/r/base/match.html" class="external-link">%in%</a></span> <span class="va">mavaddat2018_ppm_ids</span><span class="op">)</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 11</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># … with 11 variables: ppm_id &lt;chr&gt;, other_metrics_id &lt;int&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   estimate_type_long &lt;chr&gt;, estimate_type &lt;chr&gt;, estimate &lt;dbl&gt;, unit &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   variability_type &lt;chr&gt;, variability &lt;dbl&gt;, interval_type &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   interval_lower &lt;dbl&gt;, interval_upper &lt;dbl&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ Use `colnames()` to see all variable names</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;">#   interval_lower &lt;dbl&gt;, interval_upper &lt;dbl&gt;</span></span></span></code></pre></div>
 <p>We can immediately see that the third table (reserved for metrics other than effect sizes and classification metrics) is empty; and that the effect sizes were estimated using Odds Ratio and Hazard Ratio, and the classification metric applied was AUROC.</p>
 <p>Now we can look at the reported values for each PPM metrics and decide if the validation is relevant, and therefore make an informed choice to use the associated PGS score for our own study, and eventually apply it to our own dataset.</p>
 </div>
@@ -911,7 +917,7 @@ This is easily confirmed by checking that all other publications are dated after
 
     <footer><div class="pkgdown-footer-left">
   <p></p>
-<p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://maialab.org/quincunx/reference/figures/cintesis.svg" height="24"></a>.</p>
+<p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/cintesis.svg" height="24"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
