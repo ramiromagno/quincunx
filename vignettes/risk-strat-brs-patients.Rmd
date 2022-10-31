@@ -62,9 +62,7 @@ We can see that indeed there is one trait specifically associated with the
 Brugada syndrome, and that it has the EFO trait `r brs_traits@traits$efo_id`,
 whose description confirms it to be a *genetic disease ventricular arrhythmia that
 may result in sudden death*. In addition, from the table `pgs_ids` we can
-retrieve the associated PGS score identifiers. To date, only one polygenic score
-is associated with the Brugada syndrome:
-PGS000737.
+retrieve the associated PGS score identifiers:
 
 ```{r}
 # EFO Id

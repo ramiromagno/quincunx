@@ -20,7 +20,7 @@ scores](https://en.wikipedia.org/wiki/Polygenic_score) and associated
 metadata describing their development and respective assessment.
 
 Browse the online documentation at
-[maialab.org/quincunx](https://maialab.org/quincunx/) to get started.
+[rmagno.eu/quincunx](https://rmagno.eu/quincunx/) to get started.
 
 ## Installation
 
@@ -99,7 +99,7 @@ of Use](https://www.ebi.ac.uk/about/terms-of-use/).
 
 Please note that the `{quincunx`} project is released with a
 [Contributor Code of
-Conduct](https://maialab.org/quincunx/CODE_OF_CONDUCT.html). By
+Conduct](https://rmagno.eu/quincunx/CODE_OF_CONDUCT.html). By
 contributing to this project, you agree to abide by its terms.
 
 ## Acknowledgements

@@ -105,8 +105,8 @@ To get all PGS identifiers associated with Mavaddat's publication we turn to the
 pub_by_pmid_30554720@pgs_ids
 ```
 
-Please note that there are `r
-length(unique(pub_by_pmid_30554720@pgs_ids$pgs_id))` unique scores, both from
+Please note that there are `r length(unique(pub_by_pmid_30554720@pgs_ids$pgs_id))`
+unique scores, both from
 the *development* and the *evaluation* stages, meaning that this paper published
 new polygenic scores (*development* stage), and tested them (*evaluation*
 stage). But this paper has also evaluated 3 other polygenic scores previously
@@ -118,10 +118,10 @@ section about the `get_scores()` function).
 
 ```{r pgs_develop_eval_stages}
 # Newly published PGS scores (development stage)
-pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "development")
+pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "gwas/dev")
 
 # All PGS scores evaluated (evaluation stage)  
-pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "evaluation") 
+pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "eval") 
 
 ```
 
