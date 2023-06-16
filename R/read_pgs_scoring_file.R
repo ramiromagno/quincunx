@@ -28,10 +28,19 @@ read_pgs_scoring_file_data <- function(file) {
     # Other information
     OR = vroom::col_double(),
     HR = vroom::col_double(),
-    allelefrequency_effect = vroom::col_double()
+    allelefrequency_effect = vroom::col_double(),
 
     # TODO: support the column allelefrequency_effect_<Ancestry>. Note that
     # <Ancestry> is variable making the name of this column unpredictable.
+
+    # Harmonized columns
+    hm_source = vroom::col_character(),
+    hm_rsID = vroom::col_character(),
+    hm_chr = vroom::col_character(),
+    hm_pos = vroom::col_integer(),
+    hm_inferOtherAllele = vroom::col_character(),
+    hm_match_chr = vroom::col_logical(),
+    hm_match_pos = vroom::col_logical()
 )
 
   col_names <- read_file_column_names(file)
@@ -63,6 +72,7 @@ read_pgs_scoring_file_metadata <- function(file) {
 
   comment_block_lines <- read_comment_block(file)
 
+  format_version <- extract_from_comment(comment_block_lines, pattern = '^#format_version=(.+)')
   pgs_id <- extract_from_comment(comment_block_lines, pattern = '^#pgs_id=(PGS\\d{6})')
   pgs_name <- extract_from_comment(comment_block_lines, pattern = '^#pgs_name=(.+)')
 
@@ -75,8 +85,16 @@ read_pgs_scoring_file_metadata <- function(file) {
   number_of_variants <- extract_from_comment(comment_block_lines, pattern = '^#variants_number=(\\d+)')
   pgp_id <- extract_from_comment(comment_block_lines, pattern = '^#pgp_id=(PGP\\d{6})')
   citation <- extract_from_comment(comment_block_lines, pattern = '^#citation=(.+)')
+  license <- extract_from_comment(comment_block_lines, pattern = '^#license=(.+)')
+
+  # Harmonized-specific fields
+  HmPOS_build <- extract_from_comment(comment_block_lines, pattern = '^#HmPOS_build=(.+)')
+  HmPOS_date <- extract_from_comment(comment_block_lines, pattern = '^#HmPOS_date=(.+)')
+  HmPOS_match_chr <- extract_from_comment(comment_block_lines, pattern = '^#HmPOS_match_chr=(.+)')
+  HmPOS_match_pos <- extract_from_comment(comment_block_lines, pattern = '^#HmPOS_match_pos=(.+)')
 
   metadata_tbl <- tibble::tibble(
+    format_version = nr_to_na(format_version),
     pgs_id = nr_to_na(pgs_id),
     pgs_name = nr_to_na(pgs_name),
     reported_trait = nr_to_na(reported_trait),
@@ -86,7 +104,12 @@ read_pgs_scoring_file_metadata <- function(file) {
     weight_type = nr_to_na(weight_type),
     number_of_variants = as.integer(nr_to_na(number_of_variants)),
     pgp_id = nr_to_na(pgp_id),
-    citation = nr_to_na(citation)
+    citation = nr_to_na(citation),
+    license = nr_to_na(license),
+    HmPOS_build = nr_to_na(HmPOS_build),
+    HmPOS_date = lubridate::as_date(nr_to_na(HmPOS_date)),
+    HmPOS_match_chr = nr_to_na(HmPOS_match_chr),
+    HmPOS_match_pos = nr_to_na(HmPOS_match_pos)
   )
 
   return(metadata_tbl)
@@ -127,6 +150,13 @@ tryCatch(expr = read_one_pgs_scoring_file(file = file, metadata_only = metadata_
 #'   \code{"~/PGS000001.txt"} or \code{"~/PGS000001.txt.gz"} or (iii) a direct
 #'   URL to the PGS Catalog FTP server, e.g.
 #'   \code{"http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000001/ScoringFiles/PGS000001.txt.gz"}.
+#' @param harmonized Whether to read an alternative, harmonized version of the
+#'   PGS scoring file. This version contains harmonized variant information.
+#'   This information is provided in extra columns whose names are prefixed with
+#'   `"hm_"`.
+#' @param assembly If `harmonized` is `TRUE`, `assembly` indicates which the
+#'   genome assembly to choose for the harmonized variant data. `assembly` must
+#'   be either `"GRCh38"` (default) or `"GRCh37"`.
 #' @param protocol Network protocol for communication with the PGS Catalog FTP
 #'   server: either \code{"http"} or \code{"ftp"}.
 #' @param metadata_only Whether to read only the comment block (header) from the
@@ -168,15 +198,30 @@ tryCatch(expr = read_one_pgs_scoring_file(file = file, metadata_only = metadata_
 #' try(read_scoring_file("~/PGS000655.txt.gz"))
 #' }
 #' @export
-read_scoring_file <- function(source, protocol = 'http', metadata_only = FALSE) {
+read_scoring_file <-
+  function(source,
+           harmonized = FALSE,
+           assembly = c("GRCh38", "GRCh37"),
+           protocol = 'http',
+           metadata_only = FALSE) {
+
 
   pgs_ids <- source[is_pgs_id(source)]
 
-  ftp_resources <- glue::glue(
-    '{protocol}://ftp.ebi.ac.uk',
-    '/pub/databases/spot/pgs/scores/',
-    '{pgs_ids}/ScoringFiles/{pgs_ids}.txt.gz'
+  if (!harmonized) {
+    ftp_resources <- glue::glue(
+      '{protocol}://ftp.ebi.ac.uk',
+      '/pub/databases/spot/pgs/scores/',
+      '{pgs_ids}/ScoringFiles/{pgs_ids}.txt.gz'
     )
+  } else {
+    assembly <- match.arg(assembly)
+    ftp_resources <- glue::glue(
+      '{protocol}://ftp.ebi.ac.uk',
+      '/pub/databases/spot/pgs/scores/',
+      '{pgs_ids}/ScoringFiles/Harmonized/{pgs_ids}_hmPOS_{assembly}.txt.gz'
+    )
+  }
 
   # Replace PGS identifiers with their corresponding ftp resource URLs
   # All other sources, e.g., local files or other sources at left untouched.

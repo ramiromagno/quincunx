@@ -1,3 +1,7 @@
+# quincunx 0.1.7
+
+* Support reading harmonized PGS scoring files with `read_scoring_file()`.
+
 # quincunx 0.1.6
 
 * Make official online documentation at https://rmagno.eu/quincunx/.

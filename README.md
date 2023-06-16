@@ -80,14 +80,14 @@ citation('quincunx')
 Also, please do not forget to cite the authors behind the original
 studies and the papers associated with the PGS Catalog project:
 
--   Lambert, S.A., Gil, L., Jupp, S. et al. The Polygenic Score Catalog
-    as an open database for reproducibility and systematic evaluation.
-    Nat Genet 53, 420–425 (2021). doi:
-    [10.1038/s41588-021-00783-5](https://doi.org/10.1038/s41588-021-00783-5)
--   Wand, H., Lambert, S.A., Tamburro, C. et al. Improving reporting
-    standards for polygenic scores in risk prediction studies. Nature
-    591, 211–219 (2021). doi:
-    [10.1038/s41586-021-03243-6](https://doi.org/10.1038/s41586-021-03243-6)
+- Lambert, S.A., Gil, L., Jupp, S. et al. The Polygenic Score Catalog as
+  an open database for reproducibility and systematic evaluation. Nat
+  Genet 53, 420–425 (2021). doi:
+  [10.1038/s41588-021-00783-5](https://doi.org/10.1038/s41588-021-00783-5)
+- Wand, H., Lambert, S.A., Tamburro, C. et al. Improving reporting
+  standards for polygenic scores in risk prediction studies. Nature 591,
+  211–219 (2021). doi:
+  [10.1038/s41586-021-03243-6](https://doi.org/10.1038/s41586-021-03243-6)
 
 ## Terms of use
 

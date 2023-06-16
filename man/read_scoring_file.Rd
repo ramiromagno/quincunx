@@ -4,7 +4,13 @@
 \alias{read_scoring_file}
 \title{Read a polygenic scoring file}
 \usage{
-read_scoring_file(source, protocol = "http", metadata_only = FALSE)
+read_scoring_file(
+  source,
+  harmonized = FALSE,
+  assembly = c("GRCh38", "GRCh37"),
+  protocol = "http",
+  metadata_only = FALSE
+)
 }
 \arguments{
 \item{source}{PGS scoring file. This can be specified in three forms: (i) a
@@ -12,6 +18,15 @@ PGS identifier, e.g. \code{"PGS000001"}, (ii) a path to a local file, e.g.
 \code{"~/PGS000001.txt"} or \code{"~/PGS000001.txt.gz"} or (iii) a direct
 URL to the PGS Catalog FTP server, e.g.
 \code{"http://ftp.ebi.ac.uk/pub/databases/spot/pgs/scores/PGS000001/ScoringFiles/PGS000001.txt.gz"}.}
+
+\item{harmonized}{Whether to read an alternative, harmonized version of the
+PGS scoring file. This version contains harmonized variant information.
+This information is provided in extra columns whose names are prefixed with
+`"hm_"`.}
+
+\item{assembly}{If `harmonized` is `TRUE`, `assembly` indicates which the
+genome assembly to choose for the harmonized variant data. `assembly` must
+be either `"GRCh38"` (default) or `"GRCh37"`.}
 
 \item{protocol}{Network protocol for communication with the PGS Catalog FTP
 server: either \code{"http"} or \code{"ftp"}.}
