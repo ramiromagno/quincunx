@@ -21,7 +21,7 @@ progress from the REST API server.}
 }
 \value{
 Return a tibble of mappings between the ancestry symbols and their
-  name, e.g. EUR and European, respectively.
+name, e.g. EUR and European, respectively.
 }
 \description{
 Retrieves the mappings between the ancestry class symbols and ancestry class

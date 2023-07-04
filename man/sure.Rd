@@ -25,7 +25,7 @@ non-interactive mode.}
 }
 \value{
 A logical indicating if answer was \code{'yes'}/\code{'y'}
-  (\code{TRUE}) or otherwise (\code{FALSE}).
+(\code{TRUE}) or otherwise (\code{FALSE}).
 }
 \description{
 This function asks you interactively for permission to continue or not. You

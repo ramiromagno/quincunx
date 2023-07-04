@@ -13,14 +13,14 @@ is an observation (row) in the \code{sample_sets} table (first table).
 
 \describe{
 \item{\code{sample_sets}}{A table of sample sets. Each sample set (row) is uniquely
-  identified by the column \code{pss_id}. Columns:
+identified by the column \code{pss_id}. Columns:
 \describe{
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
 }}
 
 \item{\code{samples}}{A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: \code{pss_id} and
-  \code{sample_id}. Columns:
+the combination of values from the columns: \code{pss_id} and
+\code{sample_id}. Columns:
 \describe{
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
 \item{sample_id}{Sample identifier. This is a surrogate key to identify each sample.}
@@ -49,9 +49,9 @@ samples (e.g. sub-cohort information).}
 }}
 
 \item{\code{demographics}}{A table of sample demographics' variables. Each
-  demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: \code{pss_id}, \code{sample_id}, and
-  \code{variable}. Columns:
+demographics' variable (row) is uniquely identified by the combination of
+values from the columns: \code{pss_id}, \code{sample_id}, and
+\code{variable}. Columns:
 \describe{
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
 \item{sample_id}{Sample identifier. This is a surrogate identifier to
@@ -71,8 +71,8 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{cohorts}}{A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: \code{pss_id}, \code{sample_id}
-  and \code{cohort_symbol}. Columns:
+the combination of values from the columns: \code{pss_id}, \code{sample_id}
+and \code{cohort_symbol}. Columns:
 \describe{
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
 \item{sample_id}{Sample identifier. This is a surrogate key to identify each sample.}

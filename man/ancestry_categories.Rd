@@ -7,25 +7,25 @@
 \format{
 A data frame with 19 ancestry categories (rows) and 6 columns:
 \describe{
-  \item{ancestry_category}{Ancestry category.}
-  \item{ancestry_class}{To reduce the complexity associated with the many
-  ancestry categories, some have been merged into higher-level groupings
-  (\code{ancestry_class}). These groupings represent the current breadth of
-  data in the PGS Catalog and are likely to change as more data is added.}
-  \item{ancestry_class_symbol}{3-letter code for the \code{ancestry_class}
-  e.g. \code{"EUR"} or \code{"MAE"}.}
-  \item{ancestry_class_colour}{Hexadecimal colour code associated with
-  ancestry groupings (\code{ancestry_class}). This can be useful when
-  visually communicating about ancestries.}
-  \item{definition}{Description of the ancestry category.}
-  \item{examples}{Examples of detailed descriptions of sample ancestries
-  included in the category.}
+\item{ancestry_category}{Ancestry category.}
+\item{ancestry_class}{To reduce the complexity associated with the many
+ancestry categories, some have been merged into higher-level groupings
+(\code{ancestry_class}). These groupings represent the current breadth of
+data in the PGS Catalog and are likely to change as more data is added.}
+\item{ancestry_class_symbol}{3-letter code for the \code{ancestry_class}
+e.g. \code{"EUR"} or \code{"MAE"}.}
+\item{ancestry_class_colour}{Hexadecimal colour code associated with
+ancestry groupings (\code{ancestry_class}). This can be useful when
+visually communicating about ancestries.}
+\item{definition}{Description of the ancestry category.}
+\item{examples}{Examples of detailed descriptions of sample ancestries
+included in the category.}
 }
 }
 \source{
 \describe{
-  \item{Table 1 of Moralles et al. (2018):}{\doi{10.1186/s13059-018-1396-2}}
-  \item{PGS Catalog Ancestry Documentation:}{\url{http://www.pgscatalog.org/docs/ancestry/}}
+\item{Table 1 of Moralles et al. (2018):}{\doi{10.1186/s13059-018-1396-2}}
+\item{PGS Catalog Ancestry Documentation:}{\url{http://www.pgscatalog.org/docs/ancestry/}}
 }
 }
 \usage{

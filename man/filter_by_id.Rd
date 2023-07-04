@@ -15,8 +15,8 @@ filter_by_id(x, id)
 }
 \value{
 Returns an object of class either \linkS4class{scores},
-  \linkS4class{publications}, \linkS4class{traits},
-  \linkS4class{performance_metrics}, or \linkS4class{sample_sets}.
+\linkS4class{publications}, \linkS4class{traits},
+\linkS4class{performance_metrics}, or \linkS4class{sample_sets}.
 }
 \description{
 Use \code{filter_by_id} to filter PGS Catalog objects by their respective

@@ -8,8 +8,8 @@ get_ancestry_categories()
 }
 \value{
 A tibble with ancestry categories, classes and associated
-  information. See  \code{\link{ancestry_categories}} for details about each
-  column.
+information. See  \code{\link{ancestry_categories}} for details about each
+column.
 }
 \description{
 Retrieves ancestry categories and classes. This function simply returns the

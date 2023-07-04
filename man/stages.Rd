@@ -7,10 +7,10 @@
 \format{
 A data frame with 5 stages (rows) and 4 columns:
 \describe{
-  \item{stage}{Study stage.}
-  \item{symbol}{One-letter symbol for the stage, or a comma separated combination thereof.}
-  \item{name}{Stage name.}
-  \item{definition}{Stage description.}
+\item{stage}{Study stage.}
+\item{symbol}{One-letter symbol for the stage, or a comma separated combination thereof.}
+\item{name}{Stage name.}
+\item{definition}{Stage description.}
 }
 }
 \source{

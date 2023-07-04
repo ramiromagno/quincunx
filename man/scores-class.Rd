@@ -13,7 +13,7 @@ is an observation (row) in the \code{scores} table (the first table).
 
 \describe{
 \item{\code{scores}}{A table of polygenic scores. Each polygenic score (row) is
-  uniquely identified by the \code{pgs_id} column. Columns:
+uniquely identified by the \code{pgs_id} column. Columns:
 \describe{
 \item{pgs_id}{Polygenic Score (PGS) identifier. Example: \code{"PGS000001"}.}
 \item{pgs_name}{This may be the name that the authors describe the PGS with
@@ -46,7 +46,7 @@ known.}
 }}
 
 \item{\code{publications}}{A table of publications. Each publication (row) is
-  uniquely identified by the \code{pgp_id} column. Columns:
+uniquely identified by the \code{pgp_id} column. Columns:
 \describe{
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
 \item{pgp_id}{PGS Publication identifier. Example: \code{"PGP000001"}.}
@@ -65,8 +65,8 @@ allow unpublished work (e.g. preprints) to be added to the catalog. Example:
 }}
 
 \item{\code{samples}}{A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: \code{pgs_id} and
-  \code{sample_id}. Columns:
+the combination of values from the columns: \code{pgs_id} and
+\code{sample_id}. Columns:
 \describe{
 \item{pgs_id}{Polygenic score identifier. An identifier that starts with
 \code{'PGS'} and is followed by six digits, e.g. \code{'PGS000001'}.}
@@ -96,9 +96,9 @@ samples (e.g. sub-cohort information).}
 }}
 
 \item{\code{demographics}}{A table of sample demographics' variables. Each
-  demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: \code{pgs_id}, \code{sample_id} and
-  \code{variable}. Columns:
+demographics' variable (row) is uniquely identified by the combination of
+values from the columns: \code{pgs_id}, \code{sample_id} and
+\code{variable}. Columns:
 \describe{
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
 \item{sample_id}{Sample identifier. This is a surrogate identifier to
@@ -118,8 +118,8 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{cohorts}}{A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: \code{pgs_id}, \code{sample_id}
-  and \code{cohort_symbol}. Columns:
+the combination of values from the columns: \code{pgs_id}, \code{sample_id}
+and \code{cohort_symbol}. Columns:
 \describe{
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
 \item{sample_id}{Sample identifier. This is a surrogate key to identify each sample.}
@@ -128,7 +128,7 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{traits}}{A table of EFO traits. Each trait (row) is uniquely identified
-  by the combination of the columns \code{pgs_id} and \code{efo_id}. Columns:
+by the combination of the columns \code{pgs_id} and \code{efo_id}. Columns:
 \describe{
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
 \item{efo_id}{An \href{https://www.ebi.ac.uk/efo/}{EFO} identifier.}

@@ -19,7 +19,7 @@ identifiers passed in \code{identifier}.}
 }
 \value{
 Returns \code{TRUE} if successful, or \code{FALSE} otherwise. But
-  note that this function is run for its side effect.
+note that this function is run for its side effect.
 }
 \description{
 This function launches the web browser and opens a tab for each identifier on

@@ -14,7 +14,7 @@ table).
 
 \describe{
 \item{\code{performance_metrics}}{A table of PGS Performance Metrics (PPM). Each PPM (row) is
-  uniquely identified by the \code{ppm_id} column. Columns:
+uniquely identified by the \code{ppm_id} column. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
@@ -27,7 +27,7 @@ performance metrics.}
 }}
 
 \item{\code{publications}}{A table of publications. Each publication (row) is
-  uniquely identified by the column \code{pgp_id}. Columns:
+uniquely identified by the column \code{pgp_id}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{pgp_id}{PGS Publication identifier. Example: \code{"PGP000001"}.}
@@ -46,15 +46,15 @@ allow unpublished work (e.g. preprints) to be added to the catalog. Example:
 }}
 
 \item{\code{sample_sets}}{A table of sample sets. Each sample set (row) is uniquely
-  identified by the column \code{pss_id}. Columns:
+identified by the column \code{pss_id}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
 }}
 
 \item{\code{samples}}{A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: \code{ppm_id}, \code{pss_id},
-  and \code{sample_id}. Columns:
+the combination of values from the columns: \code{ppm_id}, \code{pss_id},
+and \code{sample_id}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
@@ -84,9 +84,9 @@ samples (e.g. sub-cohort information).}
 }}
 
 \item{\code{demographics}}{A table of sample demographics' variables. Each
-  demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: \code{ppm_id}, \code{pss_id}, \code{sample_id},
-  and \code{variable}. Columns:
+demographics' variable (row) is uniquely identified by the combination of
+values from the columns: \code{ppm_id}, \code{pss_id}, \code{sample_id},
+and \code{variable}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{pss_id}{A PGS Sample Set identifier. Example: \code{"PSS000042"}.}
@@ -107,8 +107,8 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{cohorts}}{A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: \code{ppm_id}, \code{sample_id}
-  and \code{cohort_symbol}. Columns:
+the combination of values from the columns: \code{ppm_id}, \code{sample_id}
+and \code{cohort_symbol}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{sample_id}{Sample identifier. This is a surrogate key to identify each sample.}
@@ -117,11 +117,11 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{pgs_effect_sizes}}{A table of effect sizes per standard deviation change
-  in PGS. Examples include regression coefficients (betas) for continuous
-  traits, odds ratios (OR) and/or hazard ratios (HR) for dichotomous traits
-  depending on the availability of time-to-event data. Each effect size is
-  uniquely identified by the combination of values from the columns:
-  \code{ppm_id} and \code{effect_size_id}. Columns:
+in PGS. Examples include regression coefficients (betas) for continuous
+traits, odds ratios (OR) and/or hazard ratios (HR) for dichotomous traits
+depending on the availability of time-to-event data. Each effect size is
+uniquely identified by the combination of values from the columns:
+\code{ppm_id} and \code{effect_size_id}. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{effect_size_id}{Effect size identifier. This is a surrogate identifier to
@@ -140,8 +140,8 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{pgs_classification_metrics}}{A table of classification metrics. Examples
-  include the Area under the Receiver Operating Characteristic (AUROC) or
-  Harrell's C-index (Concordance statistic). Columns:
+include the Area under the Receiver Operating Characteristic (AUROC) or
+Harrell's C-index (Concordance statistic). Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{classification_metrics_id}{Classification metric identifier. This is a
@@ -161,8 +161,8 @@ standard error (se) or standard deviation (sd).}
 }}
 
 \item{\code{pgs_other_metrics}}{A table of other metrics that are neither effect
-  sizes nor classification metrics. Examples include: R² (proportion of the
-  variance explained), or reclassification metrics. Columns:
+sizes nor classification metrics. Examples include: R² (proportion of the
+variance explained), or reclassification metrics. Columns:
 \describe{
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}
 \item{other_metrics_id}{Other metric identifier. This is a

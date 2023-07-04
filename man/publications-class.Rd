@@ -14,7 +14,7 @@ Each publication is an observation (row) in the \code{publications} table
 
 \describe{
 \item{\code{publications}}{A table of publications. Each publication (row) is
-  uniquely identified by the \code{pgp_id} column. Columns:
+uniquely identified by the \code{pgp_id} column. Columns:
 \describe{
 \item{pgp_id}{PGS Publication identifier. Example: \code{"PGP000001"}.}
 \item{pubmed_id}{\href{https://en.wikipedia.org/wiki/PubMed}{PubMed}

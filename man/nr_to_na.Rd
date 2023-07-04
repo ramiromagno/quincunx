@@ -11,7 +11,7 @@ nr_to_na(x)
 }
 \value{
 a character vector whose \code{'NR'} have been replaced with
-  \code{NA}.
+\code{NA}.
 }
 \description{
 This function converts the \code{'NR'} string to \code{NA}.

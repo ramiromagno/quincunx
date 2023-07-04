@@ -35,7 +35,7 @@ the parent trait.}
 }}
 
 \item{\code{child_pgs_ids}}{A table of polygenic score identifiers associated with
-  the child traits. Columns:
+the child traits. Columns:
 \describe{
 \item{efo_id}{An \href{https://www.ebi.ac.uk/efo/}{EFO} identifier.}
 \item{parent_efo_id}{An \href{https://www.ebi.ac.uk/efo/}{EFO} identifier of
@@ -63,7 +63,7 @@ the parent trait.}
 }}
 
 \item{\code{trait_mapped_terms}}{A table of associated external references,
-  identifiers or other terms. Columns:
+identifiers or other terms. Columns:
 \describe{
 \item{efo_id}{An \href{https://www.ebi.ac.uk/efo/}{EFO} identifier.}
 \item{parent_efo_id}{An \href{https://www.ebi.ac.uk/efo/}{EFO} identifier of

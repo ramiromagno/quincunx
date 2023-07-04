@@ -13,7 +13,7 @@ observation (row) in the \code{releases} table (first table).
 
 \describe{
 \item{\code{releases}}{A table of PGS Catalog releases. Each release (row) is
-  uniquely identified by the release date (\code{date}). Columns:
+uniquely identified by the release date (\code{date}). Columns:
 \describe{
 \item{date}{Release date.}
 \item{n_pgs}{Number of newly released Polygenic Scores.}
@@ -22,14 +22,14 @@ observation (row) in the \code{releases} table (first table).
 }}
 
 \item{\code{pgs_ids}}{A table of released Polygenic Scores (PGS) identifiers.
-  Columns:
+Columns:
 \describe{
 \item{date}{Release date.}
 \item{pgs_id}{Polygenic Score (PGS) identifier. Example: \code{"PGS000001"}.}
 }}
 
 \item{\code{ppm_ids}}{A table of the released PGS Performance Metrics identifiers.
-  Columns:
+Columns:
 \describe{
 \item{date}{Release date.}
 \item{ppm_id}{A PGS Performance Metrics identifier. Example: \code{"PPM000001"}.}

@@ -8,7 +8,7 @@ clear_cache()
 }
 \value{
 Returns a logical value, indicating whether the resetting of the
-  cache was successful (\code{TRUE}) or not  \code{FALSE}.
+cache was successful (\code{TRUE}) or not  \code{FALSE}.
 }
 \description{
 quincunx uses memoised functions for the REST API calls. Use this function to

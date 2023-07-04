@@ -13,7 +13,7 @@ relational database of a subset of cohorts. Each cohort is an observation
 
 \describe{
 \item{\code{cohorts}}{A table of cohorts. Each cohort (row) is identified by its
-  \code{cohort_symbol}. Columns:
+\code{cohort_symbol}. Columns:
 \describe{
 \item{cohort_symbol}{Cohort symbol. Example: \code{"CECILE"}.}
 \item{cohort_name}{Cohort full name. Example: \code{"CECILE Breast Cancer
@@ -21,7 +21,7 @@ Study"}.}
 }}
 
 \item{\code{pgs_ids}}{A table of cohorts and their associated polygenic scores
-  identifiers. Columns:
+identifiers. Columns:
 \describe{
 \item{cohort_symbol}{Cohort symbol. Example: \code{"CECILE"}.}
 \item{pgs_id}{Polygenic Score (PGS) identifier.}
