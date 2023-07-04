@@ -1,16 +1,12 @@
-## quincunx v0.1.5
+## quincunx v0.1.7
 
-This version adds support to the new format (v2.0) of pgs scoring files.
-I've also updated the website to use bootstrap 5 template.
+This version adds support to the harmonized version of pgs scoring files.
 
 ## R CMD check results
 
 0 errors | 0 warnings | 1 note
 
-This is the only NOTE:
-
-```
-N  checking for detritus in the temp directory
-     'lastMiKTeXException'
-   Found the following files/directories:
-```
+- The maintainer email has changed from ramiro.magno@gmail.com to
+rmagno@pattern.institute.
+- This is a resubmission, I have update the CITATION file and changed
+the invalid URL pointing to the MIT license.
