@@ -108,13 +108,13 @@ URL to the PGS Catalog FTP server, e.g.
 <dd><p>Whether to read an alternative, harmonized version of the
 PGS scoring file. This version contains harmonized variant information.
 This information is provided in extra columns whose names are prefixed with
-`"hm_"`.</p></dd>
+<code>"hm_"</code>.</p></dd>
 
 
 <dt>assembly</dt>
-<dd><p>If `harmonized` is `TRUE`, `assembly` indicates which the
-genome assembly to choose for the harmonized variant data. `assembly` must
-be either `"GRCh38"` (default) or `"GRCh37"`.</p></dd>
+<dd><p>If <code>harmonized</code> is <code>TRUE</code>, <code>assembly</code> indicates which the
+genome assembly to choose for the harmonized variant data. <code>assembly</code> must
+be either <code>"GRCh38"</code> (default) or <code>"GRCh37"</code>.</p></dd>
 
 
 <dt>protocol</dt>
@@ -132,22 +132,19 @@ scoring file.</p></dd>
     
 
 <p>The returned value is a named list. The names are copied from the
-  arguments passed in <code>source</code>. Each element of the list contains
-  another list of two elements: <code>"metadata"</code> and <code>"data"</code>. The
-  "metadata" element contains data parsed from the header of the PGS scoring
-  file. The "data" element contains a data frame with as many rows as
-  variants that constitute the PGS score. The columns can vary. There are
-  mandatory and optional columns. The mandatory columns are those that
-  identify the variant, effect allele (<code>effect_allele</code>), and its
-  respective weight (<code>effect_weight</code>) in the score. The columns that
-  identify the variant can either be the <code>rsID</code> or the combination of</p>
-<p></p>
-<p><code>chr_name</code> and <code>chr_position</code>. The "data" element will be</p>
-<p></p>
-<p><code>NULL</code> is argument <code>metadata_only</code> is <code>TRUE</code>. For more
-  information about the scoring file schema check</p>
-<p></p>
-<p><code><a href="../articles/pgs-scoring-file.html">vignette("pgs-scoring-file", package = "quincunx")</a></code>.</p>
+arguments passed in <code>source</code>. Each element of the list contains
+another list of two elements: <code>"metadata"</code> and <code>"data"</code>. The
+"metadata" element contains data parsed from the header of the PGS scoring
+file. The "data" element contains a data frame with as many rows as
+variants that constitute the PGS score. The columns can vary. There are
+mandatory and optional columns. The mandatory columns are those that
+identify the variant, effect allele (<code>effect_allele</code>), and its
+respective weight (<code>effect_weight</code>) in the score. The columns that
+identify the variant can either be the <code>rsID</code> or the combination of
+<code>chr_name</code> and <code>chr_position</code>. The "data" element will be
+<code>NULL</code> is argument <code>metadata_only</code> is <code>TRUE</code>. For more
+information about the scoring file schema check
+<code><a href="../articles/pgs-scoring-file.html">vignette("pgs-scoring-file", package = "quincunx")</a></code>.</p>
     </div>
 
     <div class="section level2">

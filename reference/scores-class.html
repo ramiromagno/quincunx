@@ -90,7 +90,7 @@ is an observation (row) in the <code>scores</code> table (the first table).</p>
 
 <dl><dt><code>scores</code></dt>
 <dd><p>A table of polygenic scores. Each polygenic score (row) is
-  uniquely identified by the <code>pgs_id</code> column. Columns:</p><dl><dt>pgs_id</dt>
+uniquely identified by the <code>pgs_id</code> column. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic Score (PGS) identifier. Example: <code>"PGS000001"</code>.</p></dd>
 
 <dt>pgs_name</dt>
@@ -148,7 +148,7 @@ known.</p></dd>
 
 <dt><code>publications</code></dt>
 <dd><p>A table of publications. Each publication (row) is
-  uniquely identified by the <code>pgp_id</code> column. Columns:</p><dl><dt>pgs_id</dt>
+uniquely identified by the <code>pgp_id</code> column. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic Score (PGS) identifier.</p></dd>
 
 <dt>pgp_id</dt>
@@ -184,8 +184,8 @@ allow unpublished work (e.g. preprints) to be added to the catalog. Example:
 
 <dt><code>samples</code></dt>
 <dd><p>A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: <code>pgs_id</code> and
-  <code>sample_id</code>. Columns:</p><dl><dt>pgs_id</dt>
+the combination of values from the columns: <code>pgs_id</code> and
+<code>sample_id</code>. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic score identifier. An identifier that starts with
 <code>'PGS'</code> and is followed by six digits, e.g. <code>'PGS000001'</code>.</p></dd>
 
@@ -246,9 +246,9 @@ samples (e.g. sub-cohort information).</p></dd>
 
 <dt><code>demographics</code></dt>
 <dd><p>A table of sample demographics' variables. Each
-  demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: <code>pgs_id</code>, <code>sample_id</code> and
-  <code>variable</code>. Columns:</p><dl><dt>pgs_id</dt>
+demographics' variable (row) is uniquely identified by the combination of
+values from the columns: <code>pgs_id</code>, <code>sample_id</code> and
+<code>variable</code>. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic Score (PGS) identifier.</p></dd>
 
 <dt>sample_id</dt>
@@ -291,8 +291,8 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>cohorts</code></dt>
 <dd><p>A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: <code>pgs_id</code>, <code>sample_id</code>
-  and <code>cohort_symbol</code>. Columns:</p><dl><dt>pgs_id</dt>
+the combination of values from the columns: <code>pgs_id</code>, <code>sample_id</code>
+and <code>cohort_symbol</code>. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic Score (PGS) identifier.</p></dd>
 
 <dt>sample_id</dt>
@@ -310,7 +310,7 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>traits</code></dt>
 <dd><p>A table of EFO traits. Each trait (row) is uniquely identified
-  by the combination of the columns <code>pgs_id</code> and <code>efo_id</code>. Columns:</p><dl><dt>pgs_id</dt>
+by the combination of the columns <code>pgs_id</code> and <code>efo_id</code>. Columns:</p><dl><dt>pgs_id</dt>
 <dd><p>Polygenic Score (PGS) identifier.</p></dd>
 
 <dt>efo_id</dt>

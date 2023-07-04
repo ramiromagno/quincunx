@@ -93,7 +93,7 @@ table).</p>
 
 <dl><dt><code>performance_metrics</code></dt>
 <dd><p>A table of PGS Performance Metrics (PPM). Each PPM (row) is
-  uniquely identified by the <code>ppm_id</code> column. Columns:</p><dl><dt>ppm_id</dt>
+uniquely identified by the <code>ppm_id</code> column. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>pgs_id</dt>
@@ -117,7 +117,7 @@ performance metrics.</p></dd>
 
 <dt><code>publications</code></dt>
 <dd><p>A table of publications. Each publication (row) is
-  uniquely identified by the column <code>pgp_id</code>. Columns:</p><dl><dt>ppm_id</dt>
+uniquely identified by the column <code>pgp_id</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>pgp_id</dt>
@@ -153,7 +153,7 @@ allow unpublished work (e.g. preprints) to be added to the catalog. Example:
 
 <dt><code>sample_sets</code></dt>
 <dd><p>A table of sample sets. Each sample set (row) is uniquely
-  identified by the column <code>pss_id</code>. Columns:</p><dl><dt>ppm_id</dt>
+identified by the column <code>pss_id</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>pss_id</dt>
@@ -165,8 +165,8 @@ allow unpublished work (e.g. preprints) to be added to the catalog. Example:
 
 <dt><code>samples</code></dt>
 <dd><p>A table of samples. Each sample (row) is uniquely identified by
-  the combination of values from the columns: <code>ppm_id</code>, <code>pss_id</code>,
-  and <code>sample_id</code>. Columns:</p><dl><dt>ppm_id</dt>
+the combination of values from the columns: <code>ppm_id</code>, <code>pss_id</code>,
+and <code>sample_id</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>pss_id</dt>
@@ -229,9 +229,9 @@ samples (e.g. sub-cohort information).</p></dd>
 
 <dt><code>demographics</code></dt>
 <dd><p>A table of sample demographics' variables. Each
-  demographics' variable (row) is uniquely identified by the combination of
-  values from the columns: <code>ppm_id</code>, <code>pss_id</code>, <code>sample_id</code>,
-  and <code>variable</code>. Columns:</p><dl><dt>ppm_id</dt>
+demographics' variable (row) is uniquely identified by the combination of
+values from the columns: <code>ppm_id</code>, <code>pss_id</code>, <code>sample_id</code>,
+and <code>variable</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>pss_id</dt>
@@ -277,8 +277,8 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>cohorts</code></dt>
 <dd><p>A table of cohorts. Each cohort (row) is uniquely identified by
-  the combination of values from the columns: <code>ppm_id</code>, <code>sample_id</code>
-  and <code>cohort_symbol</code>. Columns:</p><dl><dt>ppm_id</dt>
+the combination of values from the columns: <code>ppm_id</code>, <code>sample_id</code>
+and <code>cohort_symbol</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>sample_id</dt>
@@ -296,11 +296,11 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>pgs_effect_sizes</code></dt>
 <dd><p>A table of effect sizes per standard deviation change
-  in PGS. Examples include regression coefficients (betas) for continuous
-  traits, odds ratios (OR) and/or hazard ratios (HR) for dichotomous traits
-  depending on the availability of time-to-event data. Each effect size is
-  uniquely identified by the combination of values from the columns:
-  <code>ppm_id</code> and <code>effect_size_id</code>. Columns:</p><dl><dt>ppm_id</dt>
+in PGS. Examples include regression coefficients (betas) for continuous
+traits, odds ratios (OR) and/or hazard ratios (HR) for dichotomous traits
+depending on the availability of time-to-event data. Each effect size is
+uniquely identified by the combination of values from the columns:
+<code>ppm_id</code> and <code>effect_size_id</code>. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>effect_size_id</dt>
@@ -342,8 +342,8 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>pgs_classification_metrics</code></dt>
 <dd><p>A table of classification metrics. Examples
-  include the Area under the Receiver Operating Characteristic (AUROC) or
-  Harrell's C-index (Concordance statistic). Columns:</p><dl><dt>ppm_id</dt>
+include the Area under the Receiver Operating Characteristic (AUROC) or
+Harrell's C-index (Concordance statistic). Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>classification_metrics_id</dt>
@@ -386,8 +386,8 @@ standard error (se) or standard deviation (sd).</p></dd>
 
 <dt><code>pgs_other_metrics</code></dt>
 <dd><p>A table of other metrics that are neither effect
-  sizes nor classification metrics. Examples include: R² (proportion of the
-  variance explained), or reclassification metrics. Columns:</p><dl><dt>ppm_id</dt>
+sizes nor classification metrics. Examples include: R² (proportion of the
+variance explained), or reclassification metrics. Columns:</p><dl><dt>ppm_id</dt>
 <dd><p>A PGS Performance Metrics identifier. Example: <code>"PPM000001"</code>.</p></dd>
 
 <dt>other_metrics_id</dt>
