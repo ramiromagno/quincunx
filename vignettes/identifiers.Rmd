@@ -41,7 +41,7 @@ Some of these identifiers are externally defined while others are created by qui
 
 In the table below you can see the type of mappings---one-to-one or one-to-many---possible between the main PGS Catalog entity identifiers. Those mappings indicated as N/A are not implemented yet. These mappings are provided by a set of functions of the form `<from_id>_to_<to_id>()`, e.g., the function `pgs_to_pgp()` provides the mapping of PGS identifiers (`pgs_id`) to PGP identifiers (`pgp_id`). You can find all available id-mapping functions under [Accession identifier mapping](https://rmagno.eu/quincunx/reference/index.html#accession-identifier-mapping).
 
-```{r  out.width = "90%", echo=FALSE}
+```{r  out.width = "90%", echo=FALSE, fig.alt="id mapping"}
 knitr::include_graphics('../man/figures/id_mapping.svg') 
 ```
 

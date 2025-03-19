@@ -121,3 +121,4 @@ Depends:
 URL: https://github.com/ramiromagno/quincunx, https://rmagno.eu/quincunx/
 BugReports: https://github.com/ramiromagno/quincunx/issues
 Roxygen: list(markdown = TRUE)
+Config/Needs/website: patterninstitute/chic

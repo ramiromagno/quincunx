@@ -5,6 +5,7 @@ home:
   description: An R package to query, download and wrangle PGS Catalog data.
 
 template:
+  package: chic
   bootstrap: 5
   params:
     docsearch:
@@ -136,7 +137,7 @@ authors:
     href: https://www.linkedin.com/in/ana-teresa-maia-2a1a866/
   Pattern Institute:
     href: https://www.pattern.institute/
-    html: "<img src='https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg' height=24>"
+    html: "<img src='https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg' height=24 alt='Pattern Institute logo'>"
   CINTESIS:
     href: "https://cintesis.eu/"
-    html: "<img src='https://rmagno.eu/quincunx/reference/figures/cintesis.svg' height=24>"
+    html: "<img src='https://rmagno.eu/quincunx/reference/figures/cintesis.svg' height=24 alt='CINTESIS logo'>"

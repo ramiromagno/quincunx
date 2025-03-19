@@ -22,7 +22,7 @@ If you feel like contributing to quincunx source code please feel free to make a
 ## API underlying retrieval functions
 
 To gain a glimpse of how the core functions of quincunx are organised and dependent on each other please check out this table:
-```{r  out.width = "100%", echo=FALSE}
+```{r  out.width = "100%", echo=FALSE, fig.alt="Quincunx core functions"}
 knitr::include_graphics('../man/figures/quincunx_core_fns_nofonts.svg') 
 ```
 

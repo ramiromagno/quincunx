@@ -32,7 +32,7 @@ knitr::include_graphics('../man/figures/pgs-construction-process.png')
 
 ## PGS development and evaluation stages
 
-```{r  out.width = "80%", echo=FALSE}
+```{r  out.width = "80%", echo=FALSE, fig.alt="PGS stages"}
 knitr::include_graphics('../man/figures/pgs-stages.svg') 
 ```
 

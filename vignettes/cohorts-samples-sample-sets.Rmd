@@ -25,7 +25,7 @@ A cohort is a group of individuals with a shared characteristic. Cohorts are
 identified in quincunx by the `cohort_symbol` variable. See
 `vignette('getting-cohorts')` on how to find associated polygenic scores.
 
-```{r  out.width = "90%", echo=FALSE}
+```{r  out.width = "90%", echo=FALSE, fig.alt="cohorts"}
 knitr::include_graphics('../man/figures/cohorts.svg') 
 ```
 
@@ -44,7 +44,7 @@ Samples are not identified in PGS Catalog with a global unique identifier, but
 quincunx assigns a surrogate identifier (`sample_id`) to allow relations between
 tables.
 
-```{r  out.width = "90%", echo=FALSE}
+```{r  out.width = "90%", echo=FALSE, fig.alt="samples"}
 knitr::include_graphics('../man/figures/samples.svg') 
 ```
 
@@ -75,7 +75,7 @@ A sample set is a group of samples used in a polygenic score evaluation. Each
 sample set is identified in the PGS Catalog by a unique sample set identifier
 (`pss_id`).
 
-```{r  out.width = "90%", echo=FALSE}
+```{r  out.width = "90%", echo=FALSE, fig.alt="sample sets"}
 knitr::include_graphics('../man/figures/sample_sets.svg') 
 ```
 
