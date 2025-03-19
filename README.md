@@ -55,7 +55,6 @@ To generate a citation for this publication from within R:
 
 ``` r
 citation('quincunx')
-#> 
 #> To cite quincunx in publications use:
 #> 
 #>   Ramiro Magno, Isabel Duarte, Ana-Teresa Maia, quincunx: an R package
@@ -70,6 +69,8 @@ citation('quincunx')
 #>     author = {Ramiro Magno and Isabel Duarte and Ana-Teresa Maia},
 #>     journal = {Bioinformatics},
 #>     year = {2021},
+#>     volume = {38},
+#>     number = {1},
 #>     pages = {1--3},
 #>     url = {https://doi.org/10.1093/bioinformatics/btab522},
 #>   }
