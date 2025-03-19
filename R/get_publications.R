@@ -44,7 +44,7 @@ get_publication_by_pgp_id <-
   resource <- '/rest/publication'
   resource_urls <- sprintf("%s/%s", resource, pgp_id)
 
-  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = 0.75))
+  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -69,7 +69,7 @@ get_publication_by_pgs_id <-
   resource <- '/rest/publication/search'
   resource_urls <- sprintf("%s?pgs_id=%s", resource, pgs_id)
 
-  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = 0.75))
+  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -95,7 +95,7 @@ get_publication_by_pubmed_id <-
   resource <- '/rest/publication/search'
   resource_urls <- sprintf("%s?pmid=%s", resource, pubmed_id)
 
-  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = 0.75))
+  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -122,7 +122,7 @@ get_publication_by_author <-
   resource <- '/rest/publication/search'
   resource_urls <- sprintf("%s?author=%s", resource, author)
 
-  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = 0.75))
+  get_publication <- purrr::slowly(f = get_publication, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,

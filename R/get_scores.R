@@ -31,7 +31,7 @@ get_score_by_pgs_id <- function(pgs_id, limit = 20L, verbose = FALSE, warnings =
   resource <- '/rest/score'
   resource_urls <- sprintf("%s/%s", resource, pgs_id)
 
-  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = 0.75))
+  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -50,7 +50,7 @@ get_score_by_pubmed_id <- function(pubmed_id, limit = 20L, verbose = FALSE, warn
   resource <- '/rest/score/search'
   resource_urls <- sprintf("%s?pmid=%s", resource, pubmed_id)
 
-  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = 0.75))
+  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -69,7 +69,7 @@ get_score_by_trait_id <- function(efo_id, limit = 20L, verbose = FALSE, warnings
   resource <- '/rest/score/search'
   resource_urls <- sprintf("%s?trait_id=%s", resource, efo_id)
 
-  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = 0.75))
+  get_score <- purrr::slowly(f = get_score, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,

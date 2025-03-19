@@ -47,7 +47,7 @@ get_trait_by_efo_id <-
   flag <- ifelse(include_children, '1', '0')
   resource_urls <- sprintf("%s/%s?include_children=%s", resource, efo_id, flag)
 
-  get_trait <- purrr::slowly(f = get_trait, rate = purrr::rate_delay(pause = 0.75))
+  get_trait <- purrr::slowly(f = get_trait, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,
@@ -84,7 +84,7 @@ get_trait_by_trait_term <-
       exact_term_flag
     )
 
-  get_trait <- purrr::slowly(f = get_trait, rate = purrr::rate_delay(pause = 0.75))
+  get_trait <- purrr::slowly(f = get_trait, rate = purrr::rate_delay(pause = delay()))
 
   purrr::map(
     resource_urls,

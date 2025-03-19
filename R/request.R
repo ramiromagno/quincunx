@@ -177,8 +177,7 @@ request_all <- function(resource_url = "/",
     request2 <- request
   }
 
-  # Pause 0.75 sec between requests, i.e. 80 requests per minute.
-  request2_slowly <- purrr::slowly(request2, rate = purrr::rate_delay(pause = 0.75))
+  request2_slowly <- purrr::slowly(request2, rate = purrr::rate_delay(pause = delay()))
 
   # Each element of this list is a returned object from a page
   objs <-purrr::map(resource_url_by_page,

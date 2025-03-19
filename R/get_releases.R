@@ -25,7 +25,7 @@ get_release_by_release_date <-
     resource <- '/rest/release'
     resource_urls <- sprintf("%s/%s", resource, release_date)
 
-    get_release <- purrr::slowly(f = get_release, rate = purrr::rate_delay(pause = 0.75))
+    get_release <- purrr::slowly(f = get_release, rate = purrr::rate_delay(pause = delay()))
 
     purrr::map(
       resource_urls,

@@ -63,6 +63,7 @@ Collate:
     'clear_cache.R'
     'contains_question_mark.R'
     'count.R'
+    'delay.R'
     'drop_metadata_cols.R'
     'first_non_na.R'
     'generics.R'
