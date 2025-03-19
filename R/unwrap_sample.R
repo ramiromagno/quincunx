@@ -1,6 +1,5 @@
 #' @importFrom rlang .data
 unwrap_sample <- function(tbl_json) {
-
   tbl_json %>%
     tidyjson::spread_values(
       sample_size = tidyjson::jnumber('sample_number'),
@@ -13,12 +12,15 @@ unwrap_sample <- function(tbl_json) {
       country = tidyjson::jstring('ancestry_country'),
       ancestry_additional_description = tidyjson::jstring('ancestry_additional'),
       study_id = tidyjson::jstring('source_GWAS_catalog'),
-      pubmed_id = tidyjson::jstring('source_PMID'),
+      pubmed_id = tidyjson::jinteger('source_PMID'),
       cohorts_additional_description = tidyjson::jstring('cohorts_additional')
     ) %>%
-    # Coerce json number (default is R's double) to integer.
-    dplyr::mutate(sample_size = as.integer(.data$sample_size),
-                  sample_cases = as.integer(.data$sample_cases),
-                  sample_controls = as.integer(.data$sample_controls)) %>%
+    dplyr::mutate(
+      # pubmed_id = as.character(.data$pubmed_id),
+      # Coerce json number (default is R's double) to integer.
+      sample_size = as.integer(.data$sample_size),
+      sample_cases = as.integer(.data$sample_cases),
+      sample_controls = as.integer(.data$sample_controls)
+    ) %>%
     tidyjson::as_tibble()
 }

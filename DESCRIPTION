@@ -1,7 +1,7 @@
 Package: quincunx
 Type: Package
 Title: REST API Client for the 'PGS' Catalog
-Version: 0.1.7
+Version: 0.1.8
 Authors@R: c(
     person(given = "Ramiro", family = "Magno",
       email = "rmagno@pattern.institute",
@@ -23,7 +23,7 @@ Description: Programmatic access to the 'PGS' Catalog.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.2.3
+RoxygenNote: 7.3.2
 Suggests: 
     testthat,
     knitr,
@@ -48,7 +48,8 @@ Imports:
     methods,
     writexl,
     concatenate,
-    memoise
+    memoise,
+    readr
 Collate: 
     'ancestry_categories.R'
     'class-cohorts.R'
@@ -97,6 +98,7 @@ Collate:
     'parse-scores.R'
     'parse-trait_categories.R'
     'parse-traits.R'
+    'parse_estimate.R'
     'read_file_column_names.R'
     'read_pgs_scoring_file.R'
     'relocate_metadata_cols.R'

@@ -43,24 +43,18 @@ get_publications(pgp_id = c('PGP000001', 'PGP000002'))
 By `pgs_id`:
 
 ```{r}
-library(quincunx)
-
 get_publications(pgs_id = 'PGS000003')
 ```
 
 By `pubmed_id`:
 
 ```{r}
-library(quincunx)
-
 get_publications(pubmed_id = '30554720')
 ```
 
 By `author`:
 
 ```{r}
-library(quincunx)
-
 get_publications(author = 'Natarajan')
 ```
 
