@@ -20,13 +20,16 @@ get_sample_sets_by_pss_id <- function(pss_id, limit = 20L, verbose = FALSE, warn
   resource <- '/rest/sample_set'
   resource_urls <- sprintf("%s/%s", resource, pss_id)
 
+  get_sample_set <- purrr::slowly(f = get_sample_set, rate = purrr::rate_delay(pause = 0.75))
+
   purrr::map(
     resource_urls,
     get_sample_set,
     limit = limit,
     warnings = warnings,
     verbose = verbose,
-    progress_bar = progress_bar
+    progress_bar = FALSE,
+    .progress = progress_bar
   ) %>%
     purrr::pmap(dplyr::bind_rows)
 }
@@ -36,13 +39,16 @@ get_sample_sets_by_pgs_id <- function(pgs_id, limit = 20L, verbose = FALSE, warn
   resource <- '/rest/sample_set/search'
   resource_urls <- sprintf("%s?pgs_id=%s", resource, pgs_id)
 
+  get_sample_set <- purrr::slowly(f = get_sample_set, rate = purrr::rate_delay(pause = 0.75))
+
   purrr::map(
     resource_urls,
     get_sample_set,
     limit = limit,
     warnings = warnings,
     verbose = verbose,
-    progress_bar = progress_bar
+    progress_bar = FALSE,
+    .progress = progress_bar
   ) %>%
     purrr::pmap(dplyr::bind_rows)
 }
