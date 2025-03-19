@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="quincunx">
 <title>PGS scoring file • quincunx</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -14,84 +13,72 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="PGS scoring file">
-<meta property="og:description" content="quincunx">
-<meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/Inconsolata-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="PGS scoring file">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-none" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.8</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <h6 class="dropdown-header" data-toc-skip>PGS Catalog Concepts</h6>
-    <a class="dropdown-item" href="../articles/identifiers.html">Identifiers</a>
-    <a class="dropdown-item" href="../articles/pgs-construction-process.html">PGS Construction Process and Stages</a>
-    <a class="dropdown-item" href="../articles/cohorts-samples-sample-sets.html">Cohorts, Samples and Sample Sets</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Getting PGS Catalog Data</h6>
-    <a class="dropdown-item" href="../articles/getting-pgs-scores.html">Getting PGS Scores</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-publications.html">Getting PGS Publications</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-sample-sets.html">Getting PGS Sample Sets</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-performance-metrics.html">Getting PGS Performance Metrics</a>
-    <a class="dropdown-item" href="../articles/getting-traits.html">Getting Traits</a>
-    <a class="dropdown-item" href="../articles/getting-cohorts.html">Getting Cohorts</a>
-    <a class="dropdown-item" href="../articles/getting-releases.html">PGS Catalog Releases</a>
-    <a class="dropdown-item" href="../articles/pgs-scoring-file.html">PGS scoring file</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Wrangling PGS Catalog Data</h6>
-    <a class="dropdown-item" href="../articles/pgs-cat-ent-subsetting.html">PGS Catalog Entity Subsetting</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Case Studies</h6>
-    <a class="dropdown-item" href="../articles/risk-strat-brs-patients.html">Risk of Brugada syndrome patients</a>
-    <a class="dropdown-item" href="../articles/pgs-scores-mavaddat.html">Exploring PGS scores by Mavaddat et al. (2018)</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="../articles/index.html">More articles...</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>PGS Catalog Concepts</h6></li>
+    <li><a class="dropdown-item" href="../articles/identifiers.html">Identifiers</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-construction-process.html">PGS Construction Process and Stages</a></li>
+    <li><a class="dropdown-item" href="../articles/cohorts-samples-sample-sets.html">Cohorts, Samples and Sample Sets</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Getting PGS Catalog Data</h6></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-scores.html">Getting PGS Scores</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-publications.html">Getting PGS Publications</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-sample-sets.html">Getting PGS Sample Sets</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-performance-metrics.html">Getting PGS Performance Metrics</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-traits.html">Getting Traits</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-cohorts.html">Getting Cohorts</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-releases.html">PGS Catalog Releases</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-scoring-file.html">PGS scoring file</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Wrangling PGS Catalog Data</h6></li>
+    <li><a class="dropdown-item" href="../articles/pgs-cat-ent-subsetting.html">PGS Catalog Entity Subsetting</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Case Studies</h6></li>
+    <li><a class="dropdown-item" href="../articles/risk-strat-brs-patients.html">Risk of Brugada syndrome patients</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-scores-mavaddat.html">Exploring PGS scores by Mavaddat et al. (2018)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../news/index.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/ramiromagno/quincunx/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ramiromagno/quincunx/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -103,7 +90,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>PGS scoring file</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/ramiromagno/quincunx/blob/HEAD/vignettes/pgs-scoring-file.Rmd" class="external-link"><code>vignettes/pgs-scoring-file.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ramiromagno/quincunx/blob/master/vignettes/pgs-scoring-file.Rmd" class="external-link"><code>vignettes/pgs-scoring-file.Rmd</code></a></small>
       <div class="d-none name"><code>pgs-scoring-file.Rmd</code></div>
     </div>
 
@@ -121,26 +108,26 @@ They are labelled by their respective PGS Score ID
 effect alleles and respective score weights. The file is formatted to be
 a gzipped tab-delimited text file. The file starts with an header that
 contains brief metadata about the score.</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="do">###PGS CATALOG SCORING FILE - see https://www.pgscatalog.org/downloads/#dl_ftp_scoring for additional information</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#format_version=2.0</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="do">##POLYGENIC SCORE (PGS) INFORMATION</span></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">#pgs_id=PGS000117</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">#pgs_name=CVD_EJ2020</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">#trait_reported=Cardiovascular Disease </span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">#trait_mapped=cardiovascular disease</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#trait_efo=EFO_0000319</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">#weight_type=NR</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">#genome_build=GRCh37</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">#variants_number=267863</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="do">##SOURCE INFORMATION</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">#pgp_id=PGP000054</span></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">#citation=Elliott J et al. JAMA (2020). doi:10.1001/jama.2019.22241</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>rsID    chr_name    chr_position    effect_allele   other_allele    effect_weight</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>rs11240779  <span class="dv">1</span>   <span class="dv">808631</span>  A   G   <span class="fl">0.00077622</span></span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>rs1921  <span class="dv">1</span>   <span class="dv">949608</span>  A   G   <span class="sc">-</span><span class="fl">0.00583829</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>rs2710890   <span class="dv">1</span>   <span class="dv">958905</span>  G   A   <span class="sc">-</span><span class="fl">0.00182583</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>rs4970349   <span class="dv">1</span>   <span class="dv">967658</span>  T   C   <span class="sc">-</span><span class="fl">0.001855691</span></span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>rs2710887   <span class="dv">1</span>   <span class="dv">986443</span>  T   C   <span class="sc">-</span><span class="fl">0.003430246</span></span></code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="do">###PGS CATALOG SCORING FILE - see https://www.pgscatalog.org/downloads/#dl_ftp_scoring for additional information</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="co">#format_version=2.0</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="do">##POLYGENIC SCORE (PGS) INFORMATION</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">#pgs_id=PGS000117</span></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="co">#pgs_name=CVD_EJ2020</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="co">#trait_reported=Cardiovascular Disease </span></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="co">#trait_mapped=cardiovascular disease</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="co">#trait_efo=EFO_0000319</span></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="co">#weight_type=NR</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a><span class="co">#genome_build=GRCh37</span></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="co">#variants_number=267863</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="do">##SOURCE INFORMATION</span></span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a><span class="co">#pgp_id=PGP000054</span></span>
+<span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a><span class="co">#citation=Elliott J et al. JAMA (2020). doi:10.1001/jama.2019.22241</span></span>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a>rsID    chr_name    chr_position    effect_allele   other_allele    effect_weight</span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>rs11240779  <span class="dv">1</span>   <span class="dv">808631</span>  A   G   <span class="fl">0.00077622</span></span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>rs1921  <span class="dv">1</span>   <span class="dv">949608</span>  A   G   <span class="sc">-</span><span class="fl">0.00583829</span></span>
+<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a>rs2710890   <span class="dv">1</span>   <span class="dv">958905</span>  G   A   <span class="sc">-</span><span class="fl">0.00182583</span></span>
+<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>rs4970349   <span class="dv">1</span>   <span class="dv">967658</span>  T   C   <span class="sc">-</span><span class="fl">0.001855691</span></span>
+<span id="cb1-20"><a href="#cb1-20" tabindex="-1"></a>rs2710887   <span class="dv">1</span>   <span class="dv">986443</span>  T   C   <span class="sc">-</span><span class="fl">0.003430246</span></span></code></pre></div>
 </div>
 <div class="section level2">
 <h2 id="getting-pgs-scoring-files">Getting PGS scoring files<a class="anchor" aria-label="anchor" href="#getting-pgs-scoring-files"></a>
@@ -186,11 +173,11 @@ retrieved from the initial comment block of the file:</p>
 <span><span class="co">#&gt; $ number_of_variants <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 10</span></span>
 <span><span class="co">#&gt; $ pgp_id             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PGP000119"</span></span>
 <span><span class="co">#&gt; $ citation           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Namjou B et al. BMC Med (2019). doi:10.1186/s12916…</span></span>
-<span><span class="co">#&gt; $ license            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_build        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_date         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_match_chr    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_match_pos    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span></code></pre></div>
+<span><span class="co">#&gt; $ license            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_build        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_date         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_match_chr    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_match_pos    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span></code></pre></div>
 <p>From the metadata we can see that this score is for the trait
 <em>Non-alcoholic fatty liver disease</em>, and that it is composed of
 10 variants. Remember that you can retrieve more metadata information
@@ -263,15 +250,15 @@ then you can decide whether to read in all the information or not.</p>
 <span><span class="co">#&gt; $ mapped_trait       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "coronary artery disease"</span></span>
 <span><span class="co">#&gt; $ efo_trait          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "EFO_0001645"</span></span>
 <span><span class="co">#&gt; $ genome_build       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "hg19"</span></span>
-<span><span class="co">#&gt; $ weight_type        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
+<span><span class="co">#&gt; $ weight_type        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; $ number_of_variants <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 6630150</span></span>
 <span><span class="co">#&gt; $ pgp_id             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PGP000006"</span></span>
 <span><span class="co">#&gt; $ citation           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Khera AV et al. Nat Genet (2018). doi:10.1038/s415…</span></span>
 <span><span class="co">#&gt; $ license            <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Freely available to the academic community for res…</span></span>
-<span><span class="co">#&gt; $ HmPOS_build        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_date         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_match_chr    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span>
-<span><span class="co">#&gt; $ HmPOS_match_pos    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA</span></span></code></pre></div>
+<span><span class="co">#&gt; $ HmPOS_build        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_date         <span style="color: #949494; font-style: italic;">&lt;date&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_match_chr    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; $ HmPOS_match_pos    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span></span></span></code></pre></div>
 <p>As can be seen from the variable <code>number_of_variants</code>, the
 number of variants is greater than 6 million. This means that reading
 this PGS scoring file has these many rows which can make it burdensome
@@ -490,28 +477,26 @@ effect_allele copies.</td>
 <p>The information here provided is gathered from the PGS Catalog
 documentation on the PGS scoring file schema: <a href="https://www.pgscatalog.org/downloads/" class="external-link">PGS Scoring Files</a>.</p>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/cintesis.svg" height="24"></a>, <a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24"></a>.</p>
+  <p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/cintesis.svg" height="24" alt="CINTESIS logo"></a>, <a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24" alt="Pattern Institute logo"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>

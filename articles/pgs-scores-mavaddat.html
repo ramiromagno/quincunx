@@ -5,7 +5,6 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="description" content="quincunx">
 <title>Exploring PGS scores by Mavaddat et al. (2018) • quincunx</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -14,84 +13,72 @@
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<link href="../deps/bootstrap-5.2.2/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.2.2/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- bootstrap-toc --><script src="https://cdn.jsdelivr.net/gh/afeld/bootstrap-toc@v1.0.1/dist/bootstrap-toc.min.js" integrity="sha256-4veVQbu7//Lk5TSmc7YV48MxtMy98e26cf5MrgZYnwo=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Exploring PGS scores by Mavaddat et al. (2018)">
-<meta property="og:description" content="quincunx">
-<meta property="og:image" content="https://rmagno.eu/quincunx/logo.svg">
-<!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+<link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/Inconsolata-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
+<link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
+<script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Exploring PGS scores by Mavaddat et al. (2018)">
 </head>
 <body>
     <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
-    
 
-    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
-    
+
+    <nav class="navbar navbar-expand-lg fixed-top bg-none" data-bs-theme="light" aria-label="Site navigation"><div class="container">
+
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.7</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.8</small>
 
-    
+
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div id="navbar" class="collapse navbar-collapse ms-3">
       <ul class="navbar-nav me-auto">
-<li class="nav-item">
-  <a class="nav-link" href="../reference/index.html">Reference</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../reference/index.html">Reference</a></li>
 <li class="active nav-item dropdown">
-  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
-  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
-    <h6 class="dropdown-header" data-toc-skip>PGS Catalog Concepts</h6>
-    <a class="dropdown-item" href="../articles/identifiers.html">Identifiers</a>
-    <a class="dropdown-item" href="../articles/pgs-construction-process.html">PGS Construction Process and Stages</a>
-    <a class="dropdown-item" href="../articles/cohorts-samples-sample-sets.html">Cohorts, Samples and Sample Sets</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Getting PGS Catalog Data</h6>
-    <a class="dropdown-item" href="../articles/getting-pgs-scores.html">Getting PGS Scores</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-publications.html">Getting PGS Publications</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-sample-sets.html">Getting PGS Sample Sets</a>
-    <a class="dropdown-item" href="../articles/getting-pgs-performance-metrics.html">Getting PGS Performance Metrics</a>
-    <a class="dropdown-item" href="../articles/getting-traits.html">Getting Traits</a>
-    <a class="dropdown-item" href="../articles/getting-cohorts.html">Getting Cohorts</a>
-    <a class="dropdown-item" href="../articles/getting-releases.html">PGS Catalog Releases</a>
-    <a class="dropdown-item" href="../articles/pgs-scoring-file.html">PGS scoring file</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Wrangling PGS Catalog Data</h6>
-    <a class="dropdown-item" href="../articles/pgs-cat-ent-subsetting.html">PGS Catalog Entity Subsetting</a>
-    <div class="dropdown-divider"></div>
-    <h6 class="dropdown-header" data-toc-skip>Case Studies</h6>
-    <a class="dropdown-item" href="../articles/risk-strat-brs-patients.html">Risk of Brugada syndrome patients</a>
-    <a class="dropdown-item" href="../articles/pgs-scores-mavaddat.html">Exploring PGS scores by Mavaddat et al. (2018)</a>
-    <div class="dropdown-divider"></div>
-    <a class="dropdown-item" href="../articles/index.html">More articles...</a>
-  </div>
+  <button class="nav-link dropdown-toggle" type="button" id="dropdown-articles" data-bs-toggle="dropdown" aria-expanded="false" aria-haspopup="true">Articles</button>
+  <ul class="dropdown-menu" aria-labelledby="dropdown-articles">
+<li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>PGS Catalog Concepts</h6></li>
+    <li><a class="dropdown-item" href="../articles/identifiers.html">Identifiers</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-construction-process.html">PGS Construction Process and Stages</a></li>
+    <li><a class="dropdown-item" href="../articles/cohorts-samples-sample-sets.html">Cohorts, Samples and Sample Sets</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Getting PGS Catalog Data</h6></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-scores.html">Getting PGS Scores</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-publications.html">Getting PGS Publications</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-sample-sets.html">Getting PGS Sample Sets</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-pgs-performance-metrics.html">Getting PGS Performance Metrics</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-traits.html">Getting Traits</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-cohorts.html">Getting Cohorts</a></li>
+    <li><a class="dropdown-item" href="../articles/getting-releases.html">PGS Catalog Releases</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-scoring-file.html">PGS scoring file</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Wrangling PGS Catalog Data</h6></li>
+    <li><a class="dropdown-item" href="../articles/pgs-cat-ent-subsetting.html">PGS Catalog Entity Subsetting</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><h6 class="dropdown-header" data-toc-skip>Case Studies</h6></li>
+    <li><a class="dropdown-item" href="../articles/risk-strat-brs-patients.html">Risk of Brugada syndrome patients</a></li>
+    <li><a class="dropdown-item" href="../articles/pgs-scores-mavaddat.html">Exploring PGS scores by Mavaddat et al. (2018)</a></li>
+    <li><hr class="dropdown-divider"></li>
+    <li><a class="dropdown-item" href="../articles/index.html">More articles...</a></li>
+  </ul>
 </li>
-<li class="nav-item">
-  <a class="nav-link" href="../news/index.html">Changelog</a>
-</li>
+<li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul>
-<form class="form-inline my-2 my-lg-0" role="search">
-        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
-</form>
-
-      <ul class="navbar-nav">
-<li class="nav-item">
-  <a class="external-link nav-link" href="https://github.com/ramiromagno/quincunx/" aria-label="github">
-    <span class="fab fa fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
+<ul class="navbar-nav">
+<li class="nav-item"><form class="form-inline" role="search">
+ <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json">
+</form></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/ramiromagno/quincunx/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul>
 </div>
 
-    
+
   </div>
 </nav><div class="container template-article">
 
@@ -103,7 +90,7 @@
       <img src="../logo.svg" class="logo" alt=""><h1>Exploring PGS scores by Mavaddat et al. (2018)</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/ramiromagno/quincunx/blob/HEAD/vignettes/pgs-scores-mavaddat.Rmd" class="external-link"><code>vignettes/pgs-scores-mavaddat.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/ramiromagno/quincunx/blob/master/vignettes/pgs-scores-mavaddat.Rmd" class="external-link"><code>vignettes/pgs-scores-mavaddat.Rmd</code></a></small>
       <div class="d-none name"><code>pgs-scores-mavaddat.Rmd</code></div>
     </div>
 
@@ -151,13 +138,6 @@ author’s last name, i.e. “Mavaddat”:</p>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://dplyr.tidyverse.org" class="external-link">dplyr</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">pub_by_mavaddat</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_publications.html">get_publications</a></span><span class="op">(</span>author <span class="op">=</span> <span class="st">'Mavaddat'</span><span class="op">)</span> <span class="co"># Not case sensitive,</span></span>
-<span><span class="co">#&gt; Warning: Automatic coercion from integer to character was deprecated in purrr 1.0.0.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> Please use an explicit call to `as.character()` within `map_chr()` instead.</span></span>
-<span><span class="co">#&gt; <span style="color: #00BBBB;">ℹ</span> The deprecated feature was likely used in the <span style="color: #0000BB;">tidyjson</span> package.</span></span>
-<span><span class="co">#&gt;   Please report the issue at <span style="color: #0000BB; font-style: italic;">&lt;https://github.com/colearendt/tidyjson/issues&gt;</span>.</span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">This warning is displayed once every 8 hours.</span></span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">Call `lifecycle::last_lifecycle_warnings()` to see where this warning was</span></span></span>
-<span><span class="co">#&gt; <span style="color: #555555;">generated.</span></span></span>
 <span>                                                         <span class="co"># so "mavaddat" would</span></span>
 <span>                                                         <span class="co"># have worked just fine.</span></span></code></pre></div>
 <p>When you ask the PGS Catalog for publications, it returns an S4
@@ -171,13 +151,13 @@ name is “Mavaddat”:</p>
 <code class="sourceCode R"><span><span class="va">pub_by_mavaddat</span><span class="op">@</span><span class="va">publications</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 8</span></span></span>
 <span><span class="co">#&gt;   pgp_id    pubmed_id publication_date publication   title author_fullname doi  </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000001 25855707  2015-04-08       J Natl Cance… Pred… Mavaddat N      10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGP000002 30554720  2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGP000033 28376175  2017-07-01       J Natl Cance… Eval… Kuchenbaecker … 10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGP000109 33022221  2020-10-05       Am J Hum Gen… Brea… Kramer I        10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGP000112 32737321  2020-07-31       Nat Commun    Euro… Ho WK           10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGP000117 32665703  2020-07-15       Genet Med     Poly… Barnes DR       10.1…</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000001  25<span style="text-decoration: underline;">855</span>707 2015-04-08       J Natl Cance… Pred… Mavaddat N      10.1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGP000002  30<span style="text-decoration: underline;">554</span>720 2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGP000033  28<span style="text-decoration: underline;">376</span>175 2017-07-01       J Natl Cance… Eval… Kuchenbaecker … 10.1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGP000109  33<span style="text-decoration: underline;">022</span>221 2020-10-05       Am J Hum Gen… Brea… Kramer I        10.1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGP000112  32<span style="text-decoration: underline;">737</span>321 2020-07-31       Nat Commun    Euro… Ho WK           10.1…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGP000117  32<span style="text-decoration: underline;">665</span>703 2020-07-15       Genet Med     Poly… Barnes DR       10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: authors &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Seemingly there are 6 publications indexed in the PGS Catalog. Each
 publication added to the PGS Catalog gets an unique identifier. This
@@ -222,8 +202,8 @@ filtered for only this publication:</p>
 <span><span class="co">#&gt; Slot "publications":</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 8</span></span></span>
 <span><span class="co">#&gt;   pgp_id    pubmed_id publication_date publication   title author_fullname doi  </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002 30554720  2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002  30<span style="text-decoration: underline;">554</span>720 2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: authors &lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "pgs_ids":</span></span>
@@ -271,8 +251,8 @@ PubMed ID (30554720):</p>
 <span><span class="co">#&gt; Slot "publications":</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 1 × 8</span></span></span>
 <span><span class="co">#&gt;   pgp_id    pubmed_id publication_date publication   title author_fullname doi  </span></span>
-<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002 30554720  2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
+<span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGP000002  30<span style="text-decoration: underline;">554</span>720 2018-12-13       Am J Hum Gen… Poly… Mavaddat N      10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: authors &lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "pgs_ids":</span></span>
@@ -573,11 +553,11 @@ section <em>PGS Construction Process</em>, second page.</p>
 <span><span class="co">#&gt; $ sample_percent_male             <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0</span></span>
 <span><span class="co">#&gt; $ phenotype_description           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Invasive breast cancer-affected", "In…</span></span>
 <span><span class="co">#&gt; $ ancestry_category               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "European", "European", "European", "E…</span></span>
-<span><span class="co">#&gt; $ ancestry                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</span></span>
-<span><span class="co">#&gt; $ country                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</span></span>
-<span><span class="co">#&gt; $ ancestry_additional_description <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</span></span>
-<span><span class="co">#&gt; $ study_id                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</span></span>
-<span><span class="co">#&gt; $ pubmed_id                       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA…</span></span>
+<span><span class="co">#&gt; $ ancestry                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>…</span></span>
+<span><span class="co">#&gt; $ country                         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>…</span></span>
+<span><span class="co">#&gt; $ ancestry_additional_description <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>…</span></span>
+<span><span class="co">#&gt; $ study_id                        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>…</span></span>
+<span><span class="co">#&gt; $ pubmed_id                       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>…</span></span>
 <span><span class="co">#&gt; $ cohorts_additional_description  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "Training Cohort", "Validation Cohort"…</span></span></code></pre></div>
 <p>The PGS Catalog provides brief records of samples sizes (total
 number, number of cases, and number of controls):</p>
@@ -683,8 +663,8 @@ or not included in the PGS Catalog.</p>
 <code class="sourceCode R"><span><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">demographics</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 0 × 11</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 11 variables: pgs_id &lt;chr&gt;, sample_id &lt;int&gt;, variable &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   estimate_type &lt;chr&gt;, estimate &lt;dbl&gt;, unit &lt;chr&gt;, variability_type &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   variability &lt;dbl&gt;, interval_type &lt;chr&gt;, interval_lower &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   estimate_type &lt;chr&gt;, unit &lt;chr&gt;, variability_type &lt;chr&gt;, variability &lt;dbl&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   estimate &lt;dbl&gt;, interval_type &lt;chr&gt;, interval_lower &lt;dbl&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   interval_upper &lt;dbl&gt;</span></span></span></code></pre></div>
 <p>Nevertheless, the demographics variables, when present, are follow-up
 time, and age of study participants.</p>
@@ -757,8 +737,8 @@ with the function <code><a href="../reference/get_scores.html">get_scores()</a><
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scores_bc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_scores.html">get_scores</a></span><span class="op">(</span>efo_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">traits</span><span class="op">[[</span><span class="st">'efo_id'</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu">quincunx</span><span class="fu">::</span><span class="fu"><a href="../reference/n.html">n</a></span><span class="op">(</span><span class="va">scores_bc</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 113</span></span></code></pre></div>
-<p>So there are 113 scores present in the PGS Catalog. Included in this
+<span><span class="co">#&gt; [1] 155</span></span></code></pre></div>
+<p>So there are 155 scores present in the PGS Catalog. Included in this
 set are the 6 scores originating from <a href="https://doi.org/10.1016/j.ajhg.2018.11.002" class="external-link">Mavaddat et
 al. (2018)</a>. If we want to proceed with analysing these other scores
 without including those from the Mavaddat’s study, we could use the
@@ -768,22 +748,22 @@ function <code><a href="../reference/setop.html">setdiff()</a></code> to remove 
 <code class="sourceCode R"><span><span class="co"># Use quincunx::setdiff to avoid collision with dplyr::setdiff()</span></span>
 <span><span class="va">bc_scores_not_mavaddat2018</span> <span class="op">&lt;-</span> <span class="fu">quincunx</span><span class="fu">::</span><span class="fu"><a href="../reference/setop.html">setdiff</a></span><span class="op">(</span><span class="va">scores_bc</span>, <span class="va">mavaddat2018_scores</span><span class="op">)</span></span>
 <span><span class="fu">quincunx</span><span class="fu">::</span><span class="fu"><a href="../reference/n.html">n</a></span><span class="op">(</span><span class="va">bc_scores_not_mavaddat2018</span><span class="op">)</span></span>
-<span><span class="co">#&gt; [1] 107</span></span>
+<span><span class="co">#&gt; [1] 149</span></span>
 <span><span class="va">bc_scores_not_mavaddat2018</span><span class="op">@</span><span class="va">scores</span><span class="op">[</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">'pgs_id'</span>, <span class="st">'reported_trait'</span>,<span class="st">'n_variants'</span><span class="op">)</span><span class="op">]</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 107 × 3</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 149 × 3</span></span></span>
 <span><span class="co">#&gt;    pgs_id    reported_trait n_variants</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000001 Breast Cancer          77</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000001 Breast cancer          77</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> PGS000015 Breast cancer        <span style="text-decoration: underline;">5</span>218</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> PGS000028 Breast cancer          83</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> PGS000029 Breast cancer          76</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> PGS000045 Breast cancer          88</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PGS000050 Breast cancer          44</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS000051 Breast Cancer          67</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS000051 Breast cancer          67</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS000052 Breast cancer         161</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000072 Breast cancer         187</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000153 Breast cancer          66</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 97 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 139 more rows</span></span></span></code></pre></div>
 <p>For other set operations, check their documentation page:
 <code><a href="../reference/setop.html">union()</a></code>, <code><a href="../reference/setop.html">intersect()</a></code> and
 <code><a href="../reference/setop.html">setequal()</a></code>.</p>
@@ -817,12 +797,12 @@ Mavaddat’s publication are:</p>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 6 × 2</span></span></span>
 <span><span class="co">#&gt;   pgs_id    reported_trait           </span></span>
 <span><span class="co">#&gt;   <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                    </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGS000004 Breast Cancer            </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGS000005 ER-positive Breast Cancer</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGS000006 ER-negative Breast Cancer</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGS000007 Breast Cancer            </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGS000008 ER-positive Breast Cancer</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGS000009 ER-negative Breast Cancer</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">1</span> PGS000004 Breast cancer            </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">2</span> PGS000005 ER-positive breast cancer</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> PGS000006 ER-negative breast cancer</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">4</span> PGS000007 Breast cancer            </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">5</span> PGS000008 ER-positive breast cancer</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">6</span> PGS000009 ER-negative breast cancer</span></span></code></pre></div>
 <p>So we use these PGS identifiers to query the PGS Catalog for
 performance metrics using the function
 <code><a href="../reference/get_performance_metrics.html">get_performance_metrics()</a></code>.</p>
@@ -850,7 +830,7 @@ Note that all performance metrics are indexed with an unique identifier
 that starts with “PPM”.</p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">performance_metrics</span><span class="op">[</span><span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">]</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 146 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 175 × 4</span></span></span>
 <span><span class="co">#&gt;    ppm_id    pgs_id    reported_trait                                 covariates</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                          <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PPM000004 PGS000004 Invasive breast cancer                         study, ge…</span></span>
@@ -863,7 +843,7 @@ that starts with “PPM”.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000934 PGS000004 Metachronous contralateral breast cancer       Country   </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000935 PGS000004 Metachronous contralateral breast cancer       Country, …</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000936 PGS000004 Invasive metachronous contralateral breast ca… Country   </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 136 more rows</span></span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 165 more rows</span></span></span></code></pre></div>
 <p>According to the PGS Catalog documentation (<a href="http://www.pgscatalog.org/docs/" class="external-link uri">http://www.pgscatalog.org/docs/</a>):</p>
 <ul>
 <li>The <code>reported_trait</code> displays the reported trait, often
@@ -923,20 +903,20 @@ publication where that performance metrics was reported and
 collected.</p>
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">publications</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 146 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 175 × 8</span></span></span>
 <span><span class="co">#&gt;    ppm_id    pgp_id pubmed_id publication_date publication title author_fullname</span></span>
-<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PPM000004 PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> PPM000005 PGP00… 30554720  2018-12-13       Am J Hum G… Poly… Mavaddat N     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> PPM000650 PGP00… 32424353  2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> PPM000653 PGP00… 32424353  2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> PPM000656 PGP00… 32424353  2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PPM000659 PGP00… 32424353  2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PPM000662 PGP00… 32424353  2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000934 PGP00… 33022221  2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000935 PGP00… 33022221  2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000936 PGP00… 33022221  2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 136 more rows</span></span></span>
+<span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PPM000004 PGP00…  30<span style="text-decoration: underline;">554</span>720 2018-12-13       Am J Hum G… Poly… Mavaddat N     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> PPM000005 PGP00…  30<span style="text-decoration: underline;">554</span>720 2018-12-13       Am J Hum G… Poly… Mavaddat N     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> PPM000650 PGP00…  32<span style="text-decoration: underline;">424</span>353 2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> PPM000653 PGP00…  32<span style="text-decoration: underline;">424</span>353 2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> PPM000656 PGP00…  32<span style="text-decoration: underline;">424</span>353 2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PPM000659 PGP00…  32<span style="text-decoration: underline;">424</span>353 2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PPM000662 PGP00…  32<span style="text-decoration: underline;">424</span>353 2020-05-18       Nat Genet   Geno… Zhang H        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PPM000934 PGP00…  33<span style="text-decoration: underline;">022</span>221 2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PPM000935 PGP00…  33<span style="text-decoration: underline;">022</span>221 2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PPM000936 PGP00…  33<span style="text-decoration: underline;">022</span>221 2020-10-05       Am J Hum G… Brea… Kramer I       </span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 165 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: doi &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Here we can immediately see that there are more publications than
 just the Mavaddat <em>et al.</em> (pubmed_id = 30554720) that we started
@@ -955,7 +935,9 @@ original Mavaddat <em>et al.</em> paper.</p>
 <span><span class="co">#&gt;  [1] "2018-12-13" "2020-05-18" "2020-10-05" "2020-07-15" "2020-12-14"</span></span>
 <span><span class="co">#&gt;  [6] "2020-03-12" "2021-04-01" "2020-08-20" "2021-03-26" "2021-07-28"</span></span>
 <span><span class="co">#&gt; [11] "2021-07-14" "2021-08-02" "2022-02-09" "2022-01-01" "2022-06-02"</span></span>
-<span><span class="co">#&gt; [16] "2022-10-21" "2023-03-02" "2019-11-26" "2022-04-18"</span></span></code></pre></div>
+<span><span class="co">#&gt; [16] "2022-10-21" "2023-03-02" "2022-12-20" "2023-05-26" "2023-11-01"</span></span>
+<span><span class="co">#&gt; [21] "2023-01-23" "2020-07-06" "2020-09-01" "2024-05-13" "2024-02-01"</span></span>
+<span><span class="co">#&gt; [26] "2019-11-26" "2022-04-18"</span></span></code></pre></div>
 <p>We can choose to look at those publications later to see what
 evaluations (performance metrics) were reported in them (for which
 traits, adjusting for which covariates, etc.).</p>
@@ -1039,7 +1021,7 @@ tables.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">7</span> PPM000010 PSS000006         1 eval        <span style="text-decoration: underline;">11</span>428         <span style="text-decoration: underline;">1</span>259           <span style="text-decoration: underline;">10</span>169</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 9 more variables: sample_percent_male &lt;dbl&gt;, phenotype_description &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_category &lt;chr&gt;, ancestry &lt;chr&gt;, country &lt;chr&gt;,</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_additional_description &lt;chr&gt;, study_id &lt;chr&gt;, pubmed_id &lt;chr&gt;,</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_additional_description &lt;chr&gt;, study_id &lt;chr&gt;, pubmed_id &lt;int&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   cohorts_additional_description &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Here we can, for example see that the sample sizes are very different
 for each evaluation. Let’s take a quick look at their values.</p>
@@ -1068,23 +1050,23 @@ Catalog only describes two demographic variables: <em>age of
 participants</em> and <em>follow-up time</em>.</p>
 <p>The columns presented in the table are:</p>
 <ul>
-<li>ppm_id, pss_id, sample_id, variable, estimate_type, estimate, unit,
-variability_type, variability, interval_type, interval_lower,
+<li>ppm_id, pss_id, sample_id, variable, estimate_type, unit,
+variability_type, variability, estimate, interval_type, interval_lower,
 interval_upper</li>
 </ul>
 <div class="sourceCode" id="cb39"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">mavaddat2018_ppm</span><span class="op">@</span><span class="va">demographics</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span> <span class="fu">dplyr</span><span class="fu">::</span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html" class="external-link">glimpse</a></span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">#&gt; Rows: 18</span></span>
+<span><span class="co">#&gt; Rows: 29</span></span>
 <span><span class="co">#&gt; Columns: 12</span></span>
 <span><span class="co">#&gt; $ ppm_id           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PPM001345", "PPM001347", "PPM012909", "PPM012910", "…</span></span>
 <span><span class="co">#&gt; $ pss_id           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "PSS000450", "PSS000450", "PSS009609", "PSS009610", "…</span></span>
-<span><span class="co">#&gt; $ sample_id        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1</span></span>
+<span><span class="co">#&gt; $ sample_id        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,…</span></span>
 <span><span class="co">#&gt; $ variable         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "age", "age", "age", "age", "age", "age", "age", "age…</span></span>
 <span><span class="co">#&gt; $ estimate_type    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "mean age (at the end of follow-up)", "mean age (at t…</span></span>
-<span><span class="co">#&gt; $ estimate         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 58.5, 58.5, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</span></span>
 <span><span class="co">#&gt; $ unit             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "years", "years", "years", "years", "years", "years",…</span></span>
-<span><span class="co">#&gt; $ variability_type <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</span></span>
-<span><span class="co">#&gt; $ variability      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, NA, N…</span></span>
+<span><span class="co">#&gt; $ variability_type <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">N</span>…</span></span>
+<span><span class="co">#&gt; $ variability      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">N</span>…</span></span>
+<span><span class="co">#&gt; $ estimate         <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 58.5, 58.5, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">NA</span>, <span style="color: #BB0000;">N</span>…</span></span>
 <span><span class="co">#&gt; $ interval_type    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> "iqr", "iqr", "range", "range", "range", "range", "ra…</span></span>
 <span><span class="co">#&gt; $ interval_lower   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 45.10, 45.10, 0.00, 50.00, 0.00, 50.00, 50.00, 50.00,…</span></span>
 <span><span class="co">#&gt; $ interval_upper   <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> 72.20, 72.20, 50.00, 100.00, 50.00, 100.00, 70.00, 70…</span></span></code></pre></div>
@@ -1230,7 +1212,7 @@ paper citation.</li>
 <div class="section level2 unnumbered">
 <h2 class="unnumbered" id="references">References<a class="anchor" aria-label="anchor" href="#references"></a>
 </h2>
-<div id="refs" class="references csl-bib-body" line-spacing="2">
+<div id="refs" class="references csl-bib-body" entry-spacing="0" line-spacing="2">
 <div id="ref-mavaddat2019" class="csl-entry">
 <div class="csl-left-margin">1. </div>
 <div class="csl-right-inline">Mavaddat, N. <em>et al.</em> <a href="https://doi.org/10.1016/j.ajhg.2018.11.002" class="external-link"><span class="nocase">Polygenic Risk Scores for Prediction of Breast Cancer and
@@ -1252,28 +1234,26 @@ systematic evaluation</a>. <em>Nature Genetics</em> <strong>53</strong>,
 </div>
 </div>
 </div>
-  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+  </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
     </nav></aside>
 </div>
 
 
 
     <footer><div class="pkgdown-footer-left">
-  <p></p>
-<p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/cintesis.svg" height="24"></a>, <a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24"></a>.</p>
+  <p>Developed by <a href="https://rmagno.eu/" class="external-link">Ramiro Magno</a>, <a href="http://iduarte.eu/" class="external-link">Isabel Duarte</a>, Ana-Teresa Maia, <a href="https://cintesis.eu/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/cintesis.svg" height="24" alt="CINTESIS logo"></a>, <a href="https://www.pattern.institute/" class="external-link"><img src="https://rmagno.eu/quincunx/reference/figures/pi-logotype-canonical-whole-v01.svg" height="24" alt="Pattern Institute logo"></a>.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.7.</p>
+
 </div>
 
     </footer>
 </div>
 
-  
 
-  
+
+
 
   </body>
 </html>
