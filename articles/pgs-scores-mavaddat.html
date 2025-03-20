@@ -736,7 +736,7 @@ respective EFO identifiers (EFO_0000305, EFO_1000649, or EFO_1000650)
 with the function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
 <div class="sourceCode" id="cb27"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">scores_bc</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_scores.html">get_scores</a></span><span class="op">(</span>efo_id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/unique.html" class="external-link">unique</a></span><span class="op">(</span><span class="va">mavaddat2018_scores</span><span class="op">@</span><span class="va">traits</span><span class="op">[[</span><span class="st">'efo_id'</span><span class="op">]</span><span class="op">]</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  33% |  ETA: 16s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  33% |  ETA: 17s</span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■           </span>  67% |  ETA:  5s</span></span>
 <span><span class="fu">quincunx</span><span class="fu">::</span><span class="fu"><a href="../reference/n.html">n</a></span><span class="op">(</span><span class="va">scores_bc</span><span class="op">)</span></span>
 <span><span class="co">#&gt; [1] 155</span></span></code></pre></div>
@@ -813,7 +813,7 @@ performance metrics using the function
 <span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■                          </span>  17% |  ETA:  2m</span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■                     </span>  33% |  ETA:  1m</span></span>
 <span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■                </span>  50% |  ETA:  1m</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■      </span>  83% |  ETA: 11s</span></span></code></pre></div>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■      </span>  83% |  ETA: 12s</span></span></code></pre></div>
 <p>The output is an S4 object with 9 tables:</p>
 <ul>
 <li>performance_metrics, publications, sample_sets, samples,
