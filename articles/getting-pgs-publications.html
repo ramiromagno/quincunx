@@ -29,7 +29,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.8</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.9</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -276,7 +276,7 @@ those publications published in 2021:</p>
 <span>    <span class="va">all_pub</span><span class="op">@</span><span class="va">publications</span>,</span>
 <span>    <span class="va">publication_date</span> <span class="op">&gt;=</span> <span class="st">'2021-01-01'</span> <span class="op">&amp;</span></span>
 <span>      <span class="va">publication_date</span> <span class="op">&lt;=</span> <span class="st">'2021-12-31'</span></span>
-<span>  <span class="op">)</span> <span class="op"><a href="../reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/pull.html" class="external-link">pull</a></span><span class="op">(</span><span class="st">'pgp_id'</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Filtering based on the PGP ids</span></span>
