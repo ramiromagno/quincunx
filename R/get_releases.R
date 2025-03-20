@@ -35,7 +35,7 @@ get_release_by_release_date <-
       verbose = verbose,
       progress_bar = FALSE,
       .progress = progress_bar
-    ) %>%
+    ) |>
       purrr::pmap(dplyr::bind_rows)
 }
 
@@ -122,7 +122,7 @@ get_releases <- function(date = 'latest',
   if (identical(date, 'latest')) {
     tbl <- get_release_current(verbose = verbose,
                                warnings = warnings,
-                               progress_bar = progress_bar) %>%
+                               progress_bar = progress_bar)  |>
       coerce_to_s4_releases()
     return(tbl)
   }
@@ -130,7 +130,7 @@ get_releases <- function(date = 'latest',
   if (identical(date, 'all')) {
     tbl <- get_release_all(verbose = verbose,
                            warnings = warnings,
-                           progress_bar = progress_bar) %>%
+                           progress_bar = progress_bar) |>
       coerce_to_s4_releases()
 
     return(tbl)
@@ -142,7 +142,7 @@ get_releases <- function(date = 'latest',
       verbose = verbose,
       warnings = warnings,
       progress_bar = progress_bar
-    ) %>%
+    ) |>
       coerce_to_s4_releases()
 
     return(tbl)

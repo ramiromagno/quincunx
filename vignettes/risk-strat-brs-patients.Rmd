@@ -196,7 +196,7 @@ BrS_genotypes <- tidyr::expand_grid(
   rs11708996 = genotypes('G', 'C'),
   rs10428132 = genotypes('T', 'G'),
   rs9388451 = genotypes('T', 'C')
-) %>%
+) |>
   tibble::rowid_to_column('patient')
 
 print(BrS_genotypes, n = Inf)
@@ -232,7 +232,7 @@ And, *voilà*, here are the risk scores for all possible genotypes:
 
 ```{r}
 s <- PRS_BrS$PGS000737$data
-scores <- BrS_genotypes %>%
+scores <- BrS_genotypes |>
   dplyr::mutate(
     score = prs(s, 'rs11708996', rs11708996) +
       prs(s, 'rs10428132', rs10428132) +
@@ -248,9 +248,9 @@ And below a graphical visualisation of the risk scores from lowest (top) to high
 library(ggplot2)
 
 risk_plot <-
-  scores %>%
-  dplyr::mutate(genotype = paste(rs11708996, rs10428132, rs9388451, sep = '-')) %>%
-  dplyr::arrange(score) %>%
+  scores |>
+  dplyr::mutate(genotype = paste(rs11708996, rs10428132, rs9388451, sep = '-')) |>
+  dplyr::arrange(score) |>
   ggplot(aes(x = reorder(genotype, -score), y = score, fill = score < 0)) +
   geom_col() +
   coord_flip() +

@@ -54,10 +54,13 @@ get_ancestry_symbol_mappings <- function(verbose = FALSE,
         warnings %in% c(TRUE, FALSE)))
     stop("warnings must be either TRUE or FALSE")
 
-  get_ancestry_categories_all(verbose = verbose,
-                              warnings = warnings,
-                              progress_bar = progress_bar) %>%
-    return()
+  return(
+    get_ancestry_categories_all(
+      verbose = verbose,
+      warnings = warnings,
+      progress_bar = progress_bar
+    )
+  )
 }
 
 #' Get ancestry categories and classes

@@ -80,7 +80,7 @@ pgp_ids_2021 <-
     all_pub@publications,
     publication_date >= '2021-01-01' &
       publication_date <= '2021-12-31'
-  ) %>%
+  ) |>
   pull('pgp_id')
 
 # Filtering based on the PGP ids

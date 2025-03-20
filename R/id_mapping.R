@@ -11,13 +11,13 @@ get_gwas_get_score_ids <- function(resource,
                   warnings = warnings,
                   progress_bar = progress_bar)
 
-  tbl_json %>%
-    tidyjson::gather_array(column.name = 'dummy') %>%
-    tidyjson::gather_array(column.name = 'dummy2') %>%
-    tibble::add_column(study_id = study_id) %>%
-    tidyjson::append_values_string(column.name = 'pgs_id') %>%
-    dplyr::select(-c('dummy', 'dummy2')) %>%
-    tidyjson::as_tibble() %>%
+  tbl_json |>
+    tidyjson::gather_array(column.name = 'dummy') |>
+    tidyjson::gather_array(column.name = 'dummy2') |>
+    tibble::add_column(study_id = study_id) |>
+    tidyjson::append_values_string(column.name = 'pgs_id') |>
+    dplyr::select(-c('dummy', 'dummy2')) |>
+    tidyjson::as_tibble() |>
     relocate_metadata_cols()
 }
 
@@ -39,7 +39,7 @@ get_gwas_get_score_ids_by_gcst_id <- function(study_id,
     warnings = warnings,
     verbose = verbose,
     progress_bar = progress_bar
-  ) %>% dplyr::bind_rows()
+  ) |> dplyr::bind_rows()
 
 }
 
@@ -75,8 +75,8 @@ study_to_pgs <- function(study_id,
                                     warnings = warnings,
                                     progress_bar = progress_bar)
 
-  tbl <- drop_metadata_cols(tbl) %>%
-    dplyr::distinct() %>%
+  tbl <- drop_metadata_cols(tbl) |>
+    dplyr::distinct() |>
     tidyr::drop_na()
 
   return(tbl)
@@ -121,10 +121,9 @@ pgs_to_study <- function(pgs_id = NULL,
       progress_bar = progress_bar
     )
 
-  my_scores@samples[c('pgs_id', 'study_id')] %>%
-    dplyr::distinct() %>%
-    tidyr::drop_na() %>%
-    return()
+  return(my_scores@samples[c('pgs_id', 'study_id')] |>
+           dplyr::distinct() |>
+           tidyr::drop_na())
 
 }
 
@@ -164,10 +163,9 @@ pgp_to_pgs <- function(pgp_id = NULL,
       progress_bar = progress_bar
     )
 
-  my_pub@pgs_ids %>%
-    dplyr::distinct() %>%
-    tidyr::drop_na() %>%
-    return()
+  return(my_pub@pgs_ids |>
+           dplyr::distinct() |>
+           tidyr::drop_na())
 }
 
 #' Map PGP identifiers to PPM identifiers
@@ -249,7 +247,7 @@ pgp_to_pss <- function(pgp_id = NULL,
              warnings = warnings,
              progress_bar = progress_bar)
 
-  dplyr::left_join(pgp2ppm, ppm2pss, by = 'ppm_id') %>%
+  dplyr::left_join(pgp2ppm, ppm2pss, by = 'ppm_id') |>
     dplyr::select(-'ppm_id')
 
 }
@@ -290,10 +288,9 @@ pgs_to_pgp <- function(pgs_id = NULL,
       progress_bar = progress_bar
     )
 
-  my_scores@publications[c('pgs_id', 'pgp_id')] %>%
-    dplyr::distinct() %>%
-    tidyr::drop_na() %>%
-    return()
+  return(my_scores@publications[c('pgs_id', 'pgp_id')] |>
+           dplyr::distinct() |>
+           tidyr::drop_na())
 }
 
 #' Map PGS identifiers to PSS identifiers
@@ -330,18 +327,19 @@ pgs_to_pss <- function(pgs_id = NULL,
     get_sample_sets(pgs_id = pgs_id, ...)@sample_sets['pss_id']
   }
 
-  purrr::map_dfr(
-    pgs_id,
-    get_pss,
-    interactive = FALSE,
-    verbose = verbose,
-    warnings = warnings,
-    progress_bar = progress_bar,
-    .id = 'pgs_id'
-  ) %>%
-    dplyr::distinct() %>%
-    tidyr::drop_na() %>%
-    return()
+  return(
+    purrr::map_dfr(
+      pgs_id,
+      get_pss,
+      interactive = FALSE,
+      verbose = verbose,
+      warnings = warnings,
+      progress_bar = progress_bar,
+      .id = 'pgs_id'
+    ) |>
+      dplyr::distinct() |>
+      tidyr::drop_na()
+  )
 }
 
 #' Map PGS identifiers to PPM identifiers
@@ -425,9 +423,9 @@ pss_to_pgs <- function(pss_id,
 
   dplyr::left_join(pss_of_interest,
                    all_metrics@performance_metrics[c('ppm_id', 'pgs_id')],
-                   by = 'ppm_id') %>%
-    dplyr::select(-'ppm_id') %>%
-    dplyr::distinct() %>%
+                   by = 'ppm_id') |>
+    dplyr::select(-'ppm_id') |>
+    dplyr::distinct() |>
     tidyr::drop_na()
 
 }
@@ -470,9 +468,9 @@ pss_to_pgp <- function(pss_id,
 
   dplyr::left_join(pss_of_interest,
                    all_metrics@publications[c('ppm_id', 'pgp_id')],
-                   by = 'ppm_id') %>%
-    dplyr::select(-'ppm_id') %>%
-    dplyr::distinct() %>%
+                   by = 'ppm_id') |>
+    dplyr::select(-'ppm_id') |>
+    dplyr::distinct() |>
     tidyr::drop_na()
 }
 
@@ -509,7 +507,7 @@ pss_to_ppm <- function(pss_id,
                                          progress_bar = progress_bar)
 
   pss_ids <- pss_id
-  dplyr::filter(all_metrics@sample_sets, pss_id %in% pss_ids) %>%
+  dplyr::filter(all_metrics@sample_sets, pss_id %in% pss_ids) |>
     dplyr::relocate('pss_id', 'ppm_id')
 }
 

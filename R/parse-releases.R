@@ -1,7 +1,7 @@
 as_tidy_tables_releases <- function(tbl_json) {
 
   tbl_json2 <-
-    tbl_json %>%
+    tbl_json |>
     tidyjson::gather_array()
 
   releases <- unwrap_release(tbl_json2)
@@ -23,33 +23,33 @@ as_tidy_tables_releases <- function(tbl_json) {
 #' @importFrom rlang .data
 unwrap_release <- function(tbl_json) {
 
-  tbl_json %>%
+  tbl_json |>
     tidyjson::spread_values(
       date = tidyjson::jstring('date'),
       n_pgs = tidyjson::jnumber('score_count'),
       n_ppm = tidyjson::jnumber('performance_count'),
       n_pgp = tidyjson::jnumber('publication_count'),
-      notes = tidyjson::jstring('notes')) %>%
+      notes = tidyjson::jstring('notes')) |>
     # Coerce json number (default is R's double) to integer.
     dplyr::mutate(date = lubridate::ymd(.data$date),
                   n_pgs = as.integer(.data$n_pgs),
                   n_ppm = as.integer(.data$n_ppm),
-                  n_pgp = as.integer(.data$n_pgp)) %>%
-    dplyr::select(-'array.index') %>%
+                  n_pgp = as.integer(.data$n_pgp)) |>
+    dplyr::select(-'array.index') |>
     tidyjson::as_tibble()
 }
 
 #' @importFrom rlang .data
 unwrap_release_pgs_ids <- function(tbl_json) {
 
-  tbl_json %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::spread_values(date = tidyjson::jstring('date')) %>%
-    dplyr::mutate(date = lubridate::ymd(.data$date)) %>%
-    tidyjson::enter_object('released_score_ids') %>%
-    tidyjson::gather_array() %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::append_values_string('pgs_id') %>%
+  tbl_json |>
+    dplyr::select(-'array.index') |>
+    tidyjson::spread_values(date = tidyjson::jstring('date')) |>
+    dplyr::mutate(date = lubridate::ymd(.data$date)) |>
+    tidyjson::enter_object('released_score_ids') |>
+    tidyjson::gather_array() |>
+    dplyr::select(-'array.index') |>
+    tidyjson::append_values_string('pgs_id') |>
     tidyjson::as_tibble()
 
 }
@@ -57,14 +57,14 @@ unwrap_release_pgs_ids <- function(tbl_json) {
 #' @importFrom rlang .data
 unwrap_release_ppm_ids <- function(tbl_json) {
 
-    tbl_json %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::spread_values(date = tidyjson::jstring('date')) %>%
-    dplyr::mutate(date = lubridate::ymd(.data$date)) %>%
-    tidyjson::enter_object('released_performance_ids') %>%
-    tidyjson::gather_array() %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::append_values_string('ppm_id') %>%
+    tbl_json |>
+    dplyr::select(-'array.index') |>
+    tidyjson::spread_values(date = tidyjson::jstring('date')) |>
+    dplyr::mutate(date = lubridate::ymd(.data$date)) |>
+    tidyjson::enter_object('released_performance_ids') |>
+    tidyjson::gather_array() |>
+    dplyr::select(-'array.index') |>
+    tidyjson::append_values_string('ppm_id') |>
     tidyjson::as_tibble()
 
 }
@@ -72,14 +72,14 @@ unwrap_release_ppm_ids <- function(tbl_json) {
 #' @importFrom rlang .data
 unwrap_release_pgp_ids <- function(tbl_json) {
 
-  tbl_json %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::spread_values(date = tidyjson::jstring('date')) %>%
-    dplyr::mutate(date = lubridate::ymd(.data$date)) %>%
-    tidyjson::enter_object('released_publication_ids') %>%
-    tidyjson::gather_array() %>%
-    dplyr::select(-'array.index') %>%
-    tidyjson::append_values_string('pgp_id') %>%
+  tbl_json |>
+    dplyr::select(-'array.index') |>
+    tidyjson::spread_values(date = tidyjson::jstring('date')) |>
+    dplyr::mutate(date = lubridate::ymd(.data$date)) |>
+    tidyjson::enter_object('released_publication_ids') |>
+    tidyjson::gather_array() |>
+    dplyr::select(-'array.index') |>
+    tidyjson::append_values_string('pgp_id') |>
     tidyjson::as_tibble()
 
 }

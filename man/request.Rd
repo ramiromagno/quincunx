@@ -28,7 +28,7 @@ request(
 A named list of four elements:
 \describe{
 \item{resource}{The URL endpoint.}
-\item{code}{\href{https://tinyurl.com/8yqvhwf}{HTTP
+\item{code}{\href{https://en.wikipedia.org/wiki/List_of_HTTP_status_codes}{HTTP
 status code}.}
 \item{message}{A string describing the status of the response obtained:
 \code{'OK'} if successful or a description of the error.}

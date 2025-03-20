@@ -43,7 +43,7 @@ get_performance_by_ppm_id <- function(ppm_id, limit = 20L, verbose = FALSE, warn
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -62,7 +62,7 @@ get_performance_by_pgs_id <- function(pgs_id, limit = 20L, verbose = FALSE, warn
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -136,7 +136,7 @@ get_performance_metrics <- function(
     get_performance_by_ppm_id(ppm_id = ppm_id,
                         verbose = verbose,
                         warnings = warnings,
-                        progress_bar = progress_bar) %>%
+                        progress_bar = progress_bar) |>
     coerce_to_s4_performance_metrics()
 
   if (!rlang::is_null(pgs_id))
@@ -144,7 +144,7 @@ get_performance_metrics <- function(
     get_performance_by_pgs_id(pgs_id = pgs_id,
                           verbose = verbose,
                           warnings = warnings,
-                          progress_bar = progress_bar) %>%
+                          progress_bar = progress_bar) |>
     coerce_to_s4_performance_metrics()
 
   # If no criteria have been passed, i.e. all are NULL then got fetch all

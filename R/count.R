@@ -21,8 +21,8 @@ count <- function(json_string) {
     return(NA_integer_)
 
   count <-
-    json_string %>%
-    tidyjson::spread_values(count = tidyjson::jnumber('count')) %>%
+    json_string |>
+    tidyjson::spread_values(count = tidyjson::jnumber('count')) |>
     dplyr::pull('count')
 
   count <- as.integer(count)

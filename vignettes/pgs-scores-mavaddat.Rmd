@@ -118,10 +118,10 @@ section about the `get_scores()` function).
 
 ```{r pgs_develop_eval_stages}
 # Newly published PGS scores (development stage)
-pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "gwas/dev")
+pub_by_pmid_30554720@pgs_ids |> dplyr::filter(stage == "gwas/dev")
 
 # All PGS scores evaluated (evaluation stage)  
-pub_by_pmid_30554720@pgs_ids %>% dplyr::filter(stage == "eval") 
+pub_by_pmid_30554720@pgs_ids |> dplyr::filter(stage == "eval") 
 
 ```
 
@@ -333,14 +333,14 @@ dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == 'PGS000007')
 
 This means that the polygenic score (PGS000007) has been validated several times, using different models. In this case, we can immediately see that PGS000007 performance has been evaluated, for example, for alternative breast cancer types (different `reported_traits`), namely:  
 
-- `r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007") %>% dplyr::pull(reported_trait) %>% unique()`.
+- `r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007") |> dplyr::pull(reported_trait) |> unique()`.
 
 Additionally, we can see that the same `reported_trait` (*Breast Cancer (personal history)*) has been validated by
-`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") %>% dplyr::pull(ppm_id) %>% length()`
+`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") |> dplyr::pull(ppm_id) |> length()`
 different performance metrics (PPMs):
-`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") %>% dplyr::pull(ppm_id)`;
+`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") |> dplyr::pull(ppm_id)`;
 each having included different covariates in the model:
-`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") %>% dplyr::pull(covariates)`.
+`r dplyr::filter(mavaddat2018_ppm@performance_metrics, pgs_id == "PGS000007", reported_trait == "Breast Cancer (personal history)") |> dplyr::pull(covariates)`.
 (NA means that data for this field is *Not Available* in the records).
 
 
@@ -357,7 +357,7 @@ This is expected because we requested all the performance metrics for the PGS sc
 This is easily confirmed by checking that all other publications are dated after December 13th 2018, which is the date of publication of the original Mavaddat *et al.* paper. 
 
 ```{r ppm_pub_dates}
-mavaddat2018_ppm@publications$publication_date %>% unique()
+mavaddat2018_ppm@publications$publication_date |> unique()
 ```
 
 We can choose to look at those publications later to see what evaluations (performance metrics) were reported in them (for which traits, adjusting for which covariates, etc.).   
@@ -365,11 +365,11 @@ We can choose to look at those publications later to see what evaluations (perfo
 But for now, we are only interested in studying the performance metrics reported by Mavaddat *et al.* for the PGS scores newly developed in this publication. So, let's proceed with creating a vector containing only the `ppm_ids` of interest. We will do this by filtering the `ppm_ids` for the `pubmed_id` corresponding to the Mavaddat publication. We will then use this vector to subset the following tables (to display only the metrics for these PPMs of interest).
 
 ```{r ppm_vector}
-mavaddat2018_ppm_ids <- mavaddat2018_ppm@publications %>% dplyr::filter(pubmed_id == "30554720") %>% dplyr::pull(ppm_id)
+mavaddat2018_ppm_ids <- mavaddat2018_ppm@publications |> dplyr::filter(pubmed_id == "30554720") |> dplyr::pull(ppm_id)
 mavaddat2018_ppm_ids
 
 # Find the corresponding pgs_id, reported_trait, covariates, and comments
-mavaddat2018_ppm@performance_metrics %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@performance_metrics |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
 ```
  
 Here, we can immediately see that the Mavaddat publication has evaluated the PGS000004 twice, with two performance metrics (PPM000004 and PPM000005), that are different because they include a different set of SNPs (see the `comments` column for PPM000005).   
@@ -379,7 +379,7 @@ Here, we can immediately see that the Mavaddat publication has evaluated the PGS
 The PGS Catalog provides a Sample Set Id (PSS) that links the PPMs to the sample sets that were used to evaluate the corresponding PGS. This mapping is stored in the `sample_sets` table.
 
 ```{r ppm_sample_set}
-mavaddat2018_ppm@sample_sets %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids) 
+mavaddat2018_ppm@sample_sets |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids) 
 ```
 
 ### performance_metrics object | samples table
@@ -391,16 +391,16 @@ The `samples` table gathers more relevant information regarding the samples used
 Please note that the samples are not identified in PGS Catalog with a global unique identifier, but *quincunx* assigns a surrogate identifier (`sample_id`) to allow the mapping between tables.
 
 ```{r ppm_samples}
-mavaddat2018_ppm@samples %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@samples |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
 ```
 
 Here we can, for example see that the sample sizes are very different for each evaluation. Let's take a quick look at their values.
 
 ```{r ppm_samples_plot}
-mavaddat2018_ppm@samples %>%
-  dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids) %>%
-  dplyr::select(ppm_id, sample_cases, sample_controls) %>%
-  tidyr::pivot_longer(!ppm_id, names_to = "sample_type", values_to = "count") %>%
+mavaddat2018_ppm@samples |>
+  dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids) |>
+  dplyr::select(ppm_id, sample_cases, sample_controls) |>
+  tidyr::pivot_longer(!ppm_id, names_to = "sample_type", values_to = "count") |>
   ggplot2::ggplot(ggplot2::aes(fill=sample_type, y=count, x=ppm_id)) + 
   ggplot2::geom_bar(position="dodge", stat="identity") +
   ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 20, vjust = 0.5, hjust=0.5))
@@ -418,7 +418,7 @@ The columns presented in the table are:
 - `r colnames(mavaddat2018_ppm@demographics)`
 
 ```{r ppm_demographics}
-mavaddat2018_ppm@demographics %>% dplyr::glimpse()
+mavaddat2018_ppm@demographics |> dplyr::glimpse()
 ```
 
 Here we can see that neither of the PPMs shown is from the Mavaddat paper. This means that the performance metrics reported in the paper do not have any information regarding the demographics' variables that belong in this table (age and follow-up time).
@@ -428,7 +428,7 @@ Here we can see that neither of the PPMs shown is from the Mavaddat paper. This 
 Similarly to the `cohorts` table described above (in the `scores` object class), this table shows which cohorts are associated with each sample. However here, the unique identification of a sample can be obtained by combining the values of the first three columns: `ppm_id`, `pss_id` and `sample_id`. 
 
 ```{r ppm_cohorts}
-mavaddat2018_ppm@cohorts %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@cohorts |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
 ```
 
 ### performance_metrics object | PGS effect sizes & PGS classification metrics & PGS other metrics tables
@@ -451,9 +451,9 @@ According to the PGS Catalog online documentation (http://www.pgscatalog.org/doc
 Now, let's briefly explore the data in these tables (as usual filtered for only the PPMs that were newly reported in Mavaddat *et al.*).
 
 ```{r ppm_metrics_tables}
-mavaddat2018_ppm@pgs_effect_sizes %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
-mavaddat2018_ppm@pgs_classification_metrics %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
-mavaddat2018_ppm@pgs_other_metrics %>% dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@pgs_effect_sizes |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@pgs_classification_metrics |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
+mavaddat2018_ppm@pgs_other_metrics |> dplyr::filter(ppm_id %in% mavaddat2018_ppm_ids)
 ```
 
 We can immediately see that the third table (reserved for metrics other than effect sizes and classification metrics) is empty; and that the effect sizes were estimated using Odds Ratio and Hazard Ratio, and the classification metric applied was AUROC.

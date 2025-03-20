@@ -41,7 +41,7 @@ get_score_by_pgs_id <- function(pgs_id, limit = 20L, verbose = FALSE, warnings =
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -60,7 +60,7 @@ get_score_by_pubmed_id <- function(pubmed_id, limit = 20L, verbose = FALSE, warn
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -79,7 +79,7 @@ get_score_by_trait_id <- function(efo_id, limit = 20L, verbose = FALSE, warnings
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -152,21 +152,21 @@ get_scores <- function(pgs_id = NULL,
     list_of_scores[['get_score_by_pgs_id']] <-
     get_score_by_pgs_id(pgs_id = pgs_id,
                         verbose = verbose,
-                        warnings = warnings) %>%
+                        warnings = warnings) |>
     coerce_to_s4_scores()
 
   if (!rlang::is_null(efo_id))
     list_of_scores[['get_score_by_trait_id']] <-
     get_score_by_trait_id(efo_id = efo_id,
                         verbose = verbose,
-                        warnings = warnings) %>%
+                        warnings = warnings) |>
     coerce_to_s4_scores()
 
   if (!rlang::is_null(pubmed_id))
     list_of_scores[['get_score_by_pubmed_id']] <-
     get_score_by_pubmed_id(pubmed_id = pubmed_id,
                           verbose = verbose,
-                          warnings = warnings) %>%
+                          warnings = warnings) |>
     coerce_to_s4_scores()
 
   # If no criteria have been passed, i.e. all are NULL then got fetch all

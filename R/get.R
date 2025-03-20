@@ -39,12 +39,12 @@ get <- function(resource_url,
                            progress_bar = progress_bar)
 
   resources <- purrr::map_chr(responses, ~ .$resource)
-  timestamps <- purrr::map(responses, ~ .$timestamp) %>% purrr::reduce(c) # To preserve <dttm> class.
+  timestamps <- purrr::map(responses, ~ .$timestamp) |> purrr::reduce(c) # To preserve <dttm> class.
   tbl_jsons <- purrr::map_dfr(responses, ~ tidyjson::enter_object(make_paginated(.$json), 'results'))
 
   tbl_jsons2 <-
-    tbl_jsons %>%
-    dplyr::select(-'document.id') %>%
+    tbl_jsons |>
+    dplyr::select(-'document.id') |>
     tibble::add_column(..resource = resources,
                        ..timestamp = timestamps,
                        ..page = seq_along(resources))

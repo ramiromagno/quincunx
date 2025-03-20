@@ -30,7 +30,7 @@ get_sample_sets_by_pss_id <- function(pss_id, limit = 20L, verbose = FALSE, warn
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -49,7 +49,7 @@ get_sample_sets_by_pgs_id <- function(pgs_id, limit = 20L, verbose = FALSE, warn
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -129,7 +129,7 @@ get_sample_sets <- function(
     get_sample_sets_by_pss_id(pss_id = pss_id,
                               verbose = verbose,
                               warnings = warnings,
-                              progress_bar = progress_bar) %>%
+                              progress_bar = progress_bar) |>
     coerce_to_s4_sample_sets()
 
   if (!rlang::is_null(pgs_id))
@@ -137,7 +137,7 @@ get_sample_sets <- function(
     get_sample_sets_by_pgs_id(pgs_id = pgs_id,
                               verbose = verbose,
                               warnings = warnings,
-                              progress_bar = progress_bar) %>%
+                              progress_bar = progress_bar) |>
     coerce_to_s4_sample_sets()
 
   # If no criteria have been passed, i.e. all are NULL then got fetch all

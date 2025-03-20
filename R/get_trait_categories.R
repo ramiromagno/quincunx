@@ -52,11 +52,14 @@ get_trait_categories <- function(verbose = FALSE,
         warnings %in% c(TRUE, FALSE)))
     stop("warnings must be either TRUE or FALSE")
 
-  get_trait_category_all(verbose = verbose,
-                         warnings = warnings,
-                         progress_bar = progress_bar) %>%
-    coerce_to_s4_trait_categories() %>%
-    return()
+  return(
+    get_trait_category_all(
+      verbose = verbose,
+      warnings = warnings,
+      progress_bar = progress_bar
+    ) |>
+      coerce_to_s4_trait_categories()
+  )
 
 }
 

@@ -1,7 +1,7 @@
 Package: quincunx
 Type: Package
 Title: REST API Client for the 'PGS' Catalog
-Version: 0.1.8
+Version: 0.1.9
 Authors@R: c(
     person(given = "Ramiro", family = "Magno",
       email = "rmagno@pattern.institute",
@@ -31,7 +31,6 @@ Suggests:
     ggplot2
 Imports: 
     stringr,
-    magrittr,
     vroom,
     purrr,
     glue,
@@ -114,11 +113,10 @@ Collate:
     'unwrap_interval.R'
     'unwrap_publication.R'
     'unwrap_sample.R'
-    'utils-pipe.R'
     'warnings.R'
     'write_xlsx.R'
 Depends: 
-    R (>= 2.10)
+    R (>= 4.1.0)
 URL: https://github.com/ramiromagno/quincunx, https://rmagno.eu/quincunx/
 BugReports: https://github.com/ramiromagno/quincunx/issues
 Roxygen: list(markdown = TRUE)

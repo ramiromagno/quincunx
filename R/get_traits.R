@@ -57,7 +57,7 @@ get_trait_by_efo_id <-
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -94,7 +94,7 @@ get_trait_by_trait_term <-
     verbose = verbose,
     progress_bar = FALSE,
     .progress = progress_bar
-  ) %>%
+  ) |>
     purrr::pmap(dplyr::bind_rows)
 }
 
@@ -183,7 +183,7 @@ get_traits <- function(efo_id = NULL,
       verbose = verbose,
       warnings = warnings,
       progress_bar = progress_bar
-    ) %>%
+    ) |>
     coerce_to_s4_traits()
 
   list_of_traits[['get_trait_by_trait_term']] <-
@@ -195,7 +195,7 @@ get_traits <- function(efo_id = NULL,
         verbose = verbose,
         warnings = warnings,
         progress_bar = progress_bar
-      ) %>%
+      ) |>
         coerce_to_s4_traits()
 
       if (identical(include_children, FALSE)) {
@@ -208,7 +208,7 @@ get_traits <- function(efo_id = NULL,
           verbose = verbose,
           warnings = warnings,
           progress_bar = progress_bar
-        ) %>%
+        ) |>
           coerce_to_s4_traits()
       }
     }
@@ -238,13 +238,16 @@ get_traits <- function(efo_id = NULL,
         # Get first all traits without children
         all_traits_wo_children <- get_trait_all(verbose = verbose, warnings = warnings)
         # Now get all traits, one by one, including children
-        get_trait_by_efo_id(efo_id = all_traits_wo_children$traits$efo_id,
-                            include_children = TRUE,
-                            verbose = verbose,
-                            warnings = warnings,
-                            progress_bar = progress_bar) %>%
-          coerce_to_s4_traits() %>%
-          return()
+        return(
+          get_trait_by_efo_id(
+            efo_id = all_traits_wo_children$traits$efo_id,
+            include_children = TRUE,
+            verbose = verbose,
+            warnings = warnings,
+            progress_bar = progress_bar
+          ) |>
+            coerce_to_s4_traits()
+        )
       }
     }
     else
