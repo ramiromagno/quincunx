@@ -1,6 +1,7 @@
-## quincunx v0.1.8
+## quincunx v0.1.9
 
-This version adds fixes a bug connected with request rate limits.
+* Fixed invalid URLs detected in prior submission (v0.1.8).
+* Converted magrittr pipe to native pipe in internal code and in vignettes.
 
 ## R CMD check results
 

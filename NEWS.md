@@ -1,3 +1,7 @@
+# quincunx 0.1.9
+
+* Converted magrittr pipe to native pipe in internal code and in vignettes.
+
 # quincunx 0.1.8
 
 * Fixes issue https://github.com/maialab/quincunx/issues/3 by introducing a
