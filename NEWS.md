@@ -1,3 +1,7 @@
+# quincunx v0.1.10
+
+* Removed dependency on package concatenate as it is in risk of being archived.
+
 # quincunx 0.1.9
 
 * Converted magrittr pipe to native pipe in internal code and in vignettes.
