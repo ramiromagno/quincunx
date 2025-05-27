@@ -47,7 +47,7 @@ open_in_pgs_catalog <- function(identifier = NULL,
 
   if (any(rlang::are_na(identifier)))
     stop("The following positions of `identifier` are NAs: ",
-         concatenate::cc_and(which(rlang::are_na(identifier)), oxford = TRUE),
+         cc_and(which(rlang::are_na(identifier)), oxford = TRUE),
          ".")
 
   pgs_catalog_entity <- rlang::arg_match(pgs_catalog_entity)

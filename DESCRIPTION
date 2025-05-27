@@ -15,7 +15,7 @@ Authors@R: c(
       email = "maia.anateresa@gmail.com", role = "aut", 
       comment = c(ORCID = "0000-0002-0454-9207")),
     person("CINTESIS", role = c("cph", "fnd")),
-    person("Pattern Institute", role = c("cph", "fnd"))
+    person("Pattern Institute", role = c("cph", "fnd"), comment = c(ROR = "04jrgd746"))
     )
 Description: Programmatic access to the 'PGS' Catalog.
     This package provides easy access to 'PGS' Catalog data by
@@ -46,11 +46,11 @@ Imports:
     progress,
     methods,
     writexl,
-    concatenate,
     memoise,
     readr
 Collate: 
     'ancestry_categories.R'
+    'cc.R'
     'class-cohorts.R'
     'class-performance_metrics.R'
     'class-publications.R'
