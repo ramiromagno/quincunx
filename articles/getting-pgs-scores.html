@@ -6,17 +6,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Getting PGS Scores • quincunx</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/Inconsolata-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/Inconsolata-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/Source_Sans_Pro-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting PGS Scores">
@@ -29,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.10</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -161,7 +160,7 @@ the <code><a href="../reference/get_traits.html">get_traits()</a></code> functio
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">3</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    basophil percentage of l… A calculat… http…</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "pgs_ids":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 4</span></span></span>
 <span><span class="co">#&gt;    efo_id      parent_efo_id is_child pgs_id   </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS000088</span></span>
@@ -172,31 +171,36 @@ the <code><a href="../reference/get_traits.html">get_traits()</a></code> functio
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004728</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004729</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004730</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS005175</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS005181</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "child_pgs_ids":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 16 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 19 × 4</span></span></span>
 <span><span class="co">#&gt;    efo_id      parent_efo_id is_child child_pgs_id</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089   </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164   </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377   </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000088   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000163   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS001378   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS003940   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004727   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004728   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004729   </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004730   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS005181   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000088   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000163   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS001378   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS003940   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004727   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004728   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004729   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">17</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS004730   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">18</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS005175   </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">19</span> EFO_0803539 <span style="color: #BB0000;">NA</span>            FALSE    PGS005181   </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "trait_categories":</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 5 × 4</span></span></span>
@@ -233,7 +237,7 @@ the <code><a href="../reference/get_traits.html">get_traits()</a></code> functio
 provides the associated PGS identifiers.</p>
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">basophil_traits</span><span class="op">@</span><span class="va">pgs_ids</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 4</span></span></span>
 <span><span class="co">#&gt;    efo_id      parent_efo_id is_child pgs_id   </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>    </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS000088</span></span>
@@ -244,21 +248,24 @@ provides the associated PGS identifiers.</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004728</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004729</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS004730</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945</span></span></code></pre></div>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> EFO_0005090 <span style="color: #BB0000;">NA</span>            FALSE    PGS005175</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000089</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS000164</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS001377</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS003945</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> EFO_0007992 <span style="color: #BB0000;">NA</span>            FALSE    PGS005181</span></span></code></pre></div>
 <p>These identifiers can now be used to query score information using
 the function <code><a href="../reference/get_scores.html">get_scores()</a></code>:</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/get_scores.html">get_scores</a></span><span class="op">(</span>pgs_id <span class="op">=</span> <span class="va">basophil_traits</span><span class="op">@</span><span class="va">pgs_ids</span><span class="op">$</span><span class="va">pgs_id</span><span class="op">)</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■                          </span>  17% |  ETA: 10s</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■                   </span>  42% |  ETA:  8s</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■             </span>  58% |  ETA:  5s</span></span>
-<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■      </span>  83% |  ETA:  2s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■                           </span>  14% |  ETA: 12s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■                      </span>  29% |  ETA: 12s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■                </span>  50% |  ETA:  8s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■            </span>  64% |  ETA:  6s</span></span>
+<span><span class="co">#&gt;  <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■     </span>  86% |  ETA:  2s</span></span>
 <span><span class="co">#&gt; An object of class "scores"</span></span>
 <span><span class="co">#&gt; Slot "scores":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 12</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 12</span></span></span>
 <span><span class="co">#&gt;    pgs_id    pgs_name            scoring_file matches_publication reported_trait</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;lgl&gt;</span>               <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088 baso                https://ftp… TRUE                Basophil count</span></span>
@@ -269,16 +276,18 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PGS004728 Basophils_PRSmix_s… https://ftp… TRUE                Basophil count</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS004729 Basophils_PRSmixPl… https://ftp… TRUE                Basophil count</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS004730 Basophils_PRSmixPl… https://ftp… TRUE                Basophil count</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000089 baso_p              https://ftp… TRUE                Basophil perc…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000164 baso_p              https://ftp… TRUE                Basophil perc…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS001377 GBE_INI30220        https://ftp… TRUE                Basophil perc…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS003945 INI30220            https://ftp… TRUE                Basophil perc…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS005175 VPGS_BASO           https://ftp… TRUE                Basophil coun…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000089 baso_p              https://ftp… TRUE                Basophil perc…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000164 baso_p              https://ftp… TRUE                Basophil perc…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS001377 GBE_INI30220        https://ftp… TRUE                Basophil perc…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS003945 INI30220            https://ftp… TRUE                Basophil perc…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS005181 VPGS_BASO_P         https://ftp… TRUE                Basophil perc…</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 7 more variables: trait_additional_description &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   pgs_method_name &lt;chr&gt;, pgs_method_params &lt;chr&gt;, n_variants &lt;int&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   n_variants_interactions &lt;int&gt;, assembly &lt;chr&gt;, license &lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "publications":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 8</span></span></span>
 <span><span class="co">#&gt;    pgs_id    pgp_id pubmed_id publication_date publication title author_fullname</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>          </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088 PGP00…  35<span style="text-decoration: underline;">072</span>137 2022-01-12       Cell Genom  Mach… Xu Y           </span></span>
@@ -289,14 +298,16 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PGS004728 PGP00…  38<span style="text-decoration: underline;">508</span>198 2024-03-12       Cell Genom  Inte… Truong B       </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS004729 PGP00…  38<span style="text-decoration: underline;">508</span>198 2024-03-12       Cell Genom  Inte… Truong B       </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS004730 PGP00…  38<span style="text-decoration: underline;">508</span>198 2024-03-12       Cell Genom  Inte… Truong B       </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000089 PGP00…  35<span style="text-decoration: underline;">072</span>137 2022-01-12       Cell Genom  Mach… Xu Y           </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000164 PGP00…  32<span style="text-decoration: underline;">888</span>494 2020-09-01       Cell        The … Vuckovic D     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS001377 PGP00…  35<span style="text-decoration: underline;">324</span>888 2022-03-24       PLoS Genet  Sign… Tanigawa Y     </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS003945 PGP00…  37<span style="text-decoration: underline;">890</span>495 2023-09-19       AJHG        Powe… Tanigawa Y     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS005175 PGP00…  40<span style="text-decoration: underline;">335</span>489 2025-05-07       Nat Commun  Geno… Xiang R        </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000089 PGP00…  35<span style="text-decoration: underline;">072</span>137 2022-01-12       Cell Genom  Mach… Xu Y           </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000164 PGP00…  32<span style="text-decoration: underline;">888</span>494 2020-09-01       Cell        The … Vuckovic D     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS001377 PGP00…  35<span style="text-decoration: underline;">324</span>888 2022-03-24       PLoS Genet  Sign… Tanigawa Y     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS003945 PGP00…  37<span style="text-decoration: underline;">890</span>495 2023-09-19       AJHG        Powe… Tanigawa Y     </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS005181 PGP00…  40<span style="text-decoration: underline;">335</span>489 2025-05-07       Nat Commun  Geno… Xiang R        </span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: doi &lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "samples":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 15</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 16 × 15</span></span></span>
 <span><span class="co">#&gt;    pgs_id    sample_id stage sample_size sample_cases sample_controls</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088         1 gwas       <span style="text-decoration: underline;">404</span>718           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
@@ -308,11 +319,13 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS004728         1 dev         <span style="text-decoration: underline;">28</span>384           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS004729         1 dev         <span style="text-decoration: underline;">13</span>541           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS004730         1 dev         <span style="text-decoration: underline;">28</span>384           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000089         1 gwas       <span style="text-decoration: underline;">404</span>532           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000089         2 dev        <span style="text-decoration: underline;">323</span>626           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS000164         1 gwas       <span style="text-decoration: underline;">408</span>112           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS001377         1 dev        <span style="text-decoration: underline;">261</span>893           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS003945         1 dev        <span style="text-decoration: underline;">315</span>527           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS005175         1 dev        <span style="text-decoration: underline;">404</span>717           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000089         1 gwas       <span style="text-decoration: underline;">404</span>532           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS000089         2 dev        <span style="text-decoration: underline;">323</span>626           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS000164         1 gwas       <span style="text-decoration: underline;">408</span>112           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS001377         1 dev        <span style="text-decoration: underline;">261</span>893           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> PGS003945         1 dev        <span style="text-decoration: underline;">315</span>527           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> PGS005181         1 dev        <span style="text-decoration: underline;">404</span>531           <span style="color: #BB0000;">NA</span>              <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 9 more variables: sample_percent_male &lt;dbl&gt;, phenotype_description &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_category &lt;chr&gt;, ancestry &lt;chr&gt;, country &lt;chr&gt;,</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;">#   ancestry_additional_description &lt;chr&gt;, study_id &lt;chr&gt;, pubmed_id &lt;int&gt;,</span></span></span>
@@ -330,7 +343,7 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #949494;">#   interval_lower &lt;dbl&gt;, interval_upper &lt;dbl&gt;</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "cohorts":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 16 × 4</span></span></span>
 <span><span class="co">#&gt;    pgs_id    sample_id cohort_symbol cohort_name                                </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                                      </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088         1 UKB           UK Biobank                                 </span></span>
@@ -342,14 +355,16 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS004728         1 G&amp;H           Genes &amp; Health                             </span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS004729         1 AllofUs       All of Us Research Program | National Inst…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS004730         1 G&amp;H           Genes &amp; Health                             </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000089         1 UKB           UK Biobank                                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000089         2 UKB           UK Biobank                                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS000164         1 UKB           UK Biobank                                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS001377         1 UKB           UK Biobank                                 </span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS003945         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS005175         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000089         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS000089         2 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS000164         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS001377         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">15</span> PGS003945         1 UKB           UK Biobank                                 </span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">16</span> PGS005181         1 UKB           UK Biobank                                 </span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "traits":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 5</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 14 × 5</span></span></span>
 <span><span class="co">#&gt;    pgs_id    efo_id      trait                             description     url  </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                             <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088 EFO_0005090 basophil count                    The number of … http…</span></span>
@@ -360,13 +375,15 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> PGS004728 EFO_0005090 basophil count                    The number of … http…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> PGS004729 EFO_0005090 basophil count                    The number of … http…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS004730 EFO_0005090 basophil count                    The number of … http…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS000089 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000164 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS001377 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
-<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS003945 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS005175 EFO_0005090 basophil count                    The number of … http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS000089 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">11</span> PGS000164 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">12</span> PGS001377 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">13</span> PGS003945 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
+<span><span class="co">#&gt; <span style="color: #BCBCBC;">14</span> PGS005181 EFO_0007992 basophil percentage of leukocytes A calculated m… http…</span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "stages_tally":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 26 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 30 × 4</span></span></span>
 <span><span class="co">#&gt;    pgs_id    stage sample_size n_sample_sets</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;int&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088 gwas       <span style="text-decoration: underline;">404</span>718            <span style="color: #BB0000;">NA</span></span></span>
@@ -379,10 +396,10 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS003940 dev        <span style="text-decoration: underline;">315</span>523            <span style="color: #BB0000;">NA</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS003940 eval           <span style="color: #BB0000;">NA</span>             5</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS004727 dev         <span style="text-decoration: underline;">13</span>541            <span style="color: #BB0000;">NA</span></span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 16 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 20 more rows</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "ancestry_frequencies":</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 38 × 4</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 42 × 4</span></span></span>
 <span><span class="co">#&gt;    pgs_id    stage ancestry_class_symbol frequency</span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>     <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>                     <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGS000088 gwas  EUR                         100</span></span>
@@ -395,7 +412,7 @@ the function <code><a href="../reference/get_scores.html">get_scores()</a></code
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGS001378 eval  EAS                          20</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGS001378 eval  EUR                          40</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGS001378 eval  SAS                          20</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 28 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 32 more rows</span></span></span>
 <span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; Slot "multi_ancestry_composition":</span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 12 × 4</span></span></span>

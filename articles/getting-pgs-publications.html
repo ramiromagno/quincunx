@@ -6,17 +6,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Getting PGS Publications • quincunx</title>
-<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
-<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
-<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
-<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
-<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
+<!-- favicons --><link rel="icon" type="image/png" sizes="96x96" href="../favicon-96x96.png">
+<link rel="icon" type="”image/svg+xml”" href="../favicon.svg">
+<link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="icon" sizes="any" href="../favicon.ico">
+<link rel="manifest" href="../site.webmanifest">
 <script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="../deps/bootstrap-5.3.1/bootstrap.min.css" rel="stylesheet">
-<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/Inconsolata-0.4.9/font.css" rel="stylesheet">
-<link href="../deps/Source_Sans_Pro-0.4.9/font.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.3.1/bootstrap.bundle.min.js"></script><link href="../deps/Nunito-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/Inconsolata-0.4.10/font.css" rel="stylesheet">
+<link href="../deps/Source_Sans_Pro-0.4.10/font.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/all.min.css" rel="stylesheet">
 <link href="../deps/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet">
 <script src="../deps/headroom-0.11.0/headroom.min.js"></script><script src="../deps/headroom-0.11.0/jQuery.headroom.min.js"></script><script src="../deps/bootstrap-toc-1.0.1/bootstrap-toc.min.js"></script><script src="../deps/clipboard.js-2.0.11/clipboard.min.js"></script><script src="../deps/search-1.0.0/autocomplete.jquery.min.js"></script><script src="../deps/search-1.0.0/fuse.min.js"></script><script src="../deps/search-1.0.0/mark.min.js"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="Getting PGS Publications">
@@ -29,7 +28,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">quincunx</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.9</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.1.10</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -251,7 +250,7 @@ those publications published in 2021:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">all_pub</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/get_publications.html">get_publications</a></span><span class="op">(</span>interactive <span class="op">=</span> <span class="cn">FALSE</span><span class="op">)</span></span>
 <span><span class="va">all_pub</span><span class="op">@</span><span class="va">publications</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 708 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 722 × 8</span></span></span>
 <span><span class="co">#&gt;    pgp_id    pubmed_id publication_date publication  title author_fullname doi  </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>        <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span> <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGP000001  25<span style="text-decoration: underline;">855</span>707 2015-04-08       J Natl Canc… Pred… Mavaddat N      10.1…</span></span>
@@ -264,7 +263,7 @@ those publications published in 2021:</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGP000008  31<span style="text-decoration: underline;">184</span>202 2019-06-11       Circ Genom … Vali… Wünnemann F     10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGP000009  28<span style="text-decoration: underline;">456</span>682 2017-04-06       J Clin Lipi… Poly… Paquette M      10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGP000010  27<span style="text-decoration: underline;">513</span>194 2016-08-11       Genet Med    Pers… Läll K          10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 698 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 712 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: authors &lt;chr&gt;</span></span></span></code></pre></div>
 <p>Filtering based on the year 2021:</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
@@ -284,7 +283,7 @@ those publications published in 2021:</p>
 <span></span>
 <span><span class="co"># Print the first 10 PGS publications</span></span>
 <span><span class="va">pub_2021</span><span class="op">@</span><span class="va">publications</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 97 × 8</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># A tibble: 98 × 8</span></span></span>
 <span><span class="co">#&gt;    pgp_id    pubmed_id publication_date publication title  author_fullname doi  </span></span>
 <span><span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>         <span style="color: #949494; font-style: italic;">&lt;int&gt;</span> <span style="color: #949494; font-style: italic;">&lt;date&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>       <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>           <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span></span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> PGP000050  33<span style="text-decoration: underline;">579</span>919 2021-02-12       Nat Commun  Cross… Graff RE        10.1…</span></span>
@@ -297,7 +296,7 @@ those publications published in 2021:</p>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> PGP000146  33<span style="text-decoration: underline;">495</span>597 2021-01-25       Nat Genet   Commo… Harper AR       10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> PGP000147  33<span style="text-decoration: underline;">623</span>009 2021-02-23       Nat Commun  Whole… Thareja G       10.1…</span></span>
 <span><span class="co">#&gt; <span style="color: #BCBCBC;">10</span> PGP000148  33<span style="text-decoration: underline;">472</span>890 2021-01-20       Cancer Res  Asses… Hung RJ         10.1…</span></span>
-<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 87 more rows</span></span></span>
+<span><span class="co">#&gt; <span style="color: #949494;"># ℹ 88 more rows</span></span></span>
 <span><span class="co">#&gt; <span style="color: #949494;"># ℹ 1 more variable: authors &lt;chr&gt;</span></span></span></code></pre></div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
